@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import fetchAnything from '../../utils/apiFetches/fetchAnything';
 export class NextLaunch extends Component {
 
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      rocket: {}
+    }
   }
 
-  static getDerivedStateFromProps(newProp, currState) {
-    if (!newProp) return null;
-    const newId = newProp.rocketLaunch.id;
-    const oldId = currState.id;
+  getRocketImage = async (getImage) => {
+    const url = this.state.rocketLaunch.rocket.configuration.url;
+    const rocket = await fetchAnything(url);
+    const img = rocket.image_url;
+    this.setState({ rocket });
+    return img;
+  }
+
+
+  componentDidUpdate(prevProps) {
+    const newId = prevProps.rocketLaunch.id;
+    const oldId = this.props.rocketLaunch.id;
     switch(true) {
       case newId !== oldId:
-        return {...newProp };
+        this.setState({ ...this.props }, () => this.getRocketImage())
+        break;
       default:
         return null;
     }
@@ -21,8 +33,15 @@ export class NextLaunch extends Component {
 
   render() {
     return (
-      <section>
-        <h3>ROCKET LAUNCH</h3>
+      <section className='launch-card'>
+        { this.state.rocketLaunch && 
+          (<article>
+            <p>Next Rocket Launch</p>
+            <h3>{ this.state.name }</h3>
+            <img src={this.state.rocket.image_url} alt="rocket" />
+          </article>)
+        }
+
       </section>
     )
   }
@@ -30,7 +49,7 @@ export class NextLaunch extends Component {
 
 export const mapStateToProps = state => ({
   rocketLaunch: state.upcomingLaunches.results 
-    ? state.upcomingLaunches.results[0]
+    ? state.upcomingLaunches.results[2]
     : []
 })
 
