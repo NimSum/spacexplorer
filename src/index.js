@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
 import App from './containers/App/App';
+import { BrowserRouter, Route } from 'react-router-dom';
+import './index.scss';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -15,7 +16,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={ store }>
-    <App />
+    <BrowserRouter>
+      <Route path='/' component={ App } />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );
