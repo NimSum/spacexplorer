@@ -1,3 +1,5 @@
 const upcomingLaunchesReducer = (state = [], action) => {
-  return [];
+  return state;
 }
+
+export default upcomingLaunchesReducer;
