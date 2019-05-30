@@ -7,7 +7,8 @@ export class NextLaunch extends Component {
     super();
     this.state = {
       rocket: {},
-      rocketLaunch: {}
+      rocketLaunch: {},
+      rocketLaunches: []
     }
   }
 
@@ -38,7 +39,7 @@ export class NextLaunch extends Component {
         { this.state.rocketLaunch && 
           (<article>
             <p>Next Rocket Launch</p>
-            <h3>{ this.state.name }</h3>
+            <h3>{ this.state.rocketLaunch.name }</h3>
             <img src={this.state.rocket.image_url} alt="rocket" />
           </article>)
         }
@@ -50,7 +51,8 @@ export class NextLaunch extends Component {
 export const mapStateToProps = state => ({
   rocketLaunch: state.upcomingLaunches.results 
     ? state.upcomingLaunches.results[0]
-    : []
+    : {},
+  rocketLaunches: state.upcomingLaunches.results || []
 })
 
 
