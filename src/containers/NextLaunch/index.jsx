@@ -54,6 +54,4 @@ export const mapStateToProps = state => ({
   rocketLaunches: state.upcomingLaunches.results || []
 })
 
-
-
 export default connect(mapStateToProps)(NextLaunch);
