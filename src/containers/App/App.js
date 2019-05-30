@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AsideEvents from '../AsideEvents';
+import NextLaunchesContainer from '../NextLaunchesContainer';
 import Page404 from '../../components/Page404';
 import NextLaunch from '../NextLaunch';
 import { connect } from 'react-redux';
@@ -35,7 +36,7 @@ export class App extends Component {
           < Route exact path='/' render={ () => (
             <div>
               < NextLaunch />
-              <h2>Upcoming Launch</h2>
+              < NextLaunchesContainer />
             </div>
             )}/>
           < Route component={ Page404 } />
