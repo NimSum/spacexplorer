@@ -8,7 +8,6 @@ export class NextLaunch extends Component {
     this.state = {
       rocket: {},
       rocketLaunch: {},
-      rocketLaunches: [],
       error: ''
     }
   }
@@ -48,10 +47,7 @@ export class NextLaunch extends Component {
 }
 
 export const mapStateToProps = state => ({
-  rocketLaunch: state.upcomingLaunches.results 
-    ? state.upcomingLaunches.results[0]
-    : {},
-  rocketLaunches: state.upcomingLaunches.results || []
+  rocketLaunch: state.selectedLaunch
 })
 
 export default connect(mapStateToProps)(NextLaunch);
