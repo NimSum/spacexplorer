@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AsideEvents from '../AsideEvents';
 import Page404 from '../../components/Page404';
+import NextLaunch from '../NextLaunch';
 import { connect } from 'react-redux';
 import { addUpcomingLaunches } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
@@ -33,14 +34,13 @@ export class App extends Component {
         < Switch >
           < Route exact path='/' render={ () => (
             <div>
-              <h2>Next Launch</h2>
+              < NextLaunch />
               <h2>Upcoming Launch</h2>
             </div>
             )}/>
           < Route component={ Page404 } />
         </Switch>
       </main>
-      
     )
   }
 }

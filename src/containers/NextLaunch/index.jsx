@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 export class NextLaunch extends Component {
   render() {
     return (
@@ -10,7 +10,10 @@ export class NextLaunch extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  launches: state.upcomingLaunches
+})
 
 
 
-export default NextLaunch
+export default connect(mapStateToProps)(NextLaunch);
