@@ -4,16 +4,27 @@ import { addUpcomingLaunches } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
 
 export class App extends Component {
-  async componentDidMount() {
-    const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming';
-    const upcomingLaunches = await fetchAnything(url);
-    this.props.addUpcomingLaunches(upcomingLaunches);
+  constructor() {
+    super();
+    this.state = {
+      error: ''
+    }
   }
+  async componentDidMount() {
+    try {
+      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming';
+    // const upcomingLaunches = await fetchAnything(url);
+    // this.props.addUpcomingLaunches(upcomingLaunches);
+    } catch(error) {
+      this.setState({ error })
+    }
+  }
+
   render() {
     return (
-      <div>
-        
-      </div>
+      <main>
+
+      </main>
     )
   }
 }
