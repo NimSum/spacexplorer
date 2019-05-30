@@ -3,7 +3,7 @@ export const addUpcomingLaunches = launches => ({
   launches
 })
 
-export const addSpaceEvents = launches => ({
+export const addSpaceEvents = events => ({
   type: 'ADD_SPACE_EVENTS',
-  launches
+  events
 })
