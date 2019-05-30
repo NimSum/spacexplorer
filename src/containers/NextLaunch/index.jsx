@@ -6,11 +6,12 @@ export class NextLaunch extends Component {
   constructor() {
     super();
     this.state = {
-      rocket: {}
+      rocket: {},
+      rocketLaunch: {}
     }
   }
 
-  getRocketImage = async (getImage) => {
+  getRocketImage = async () => {
     const url = this.state.rocketLaunch.rocket.configuration.url;
     const rocket = await fetchAnything(url);
     const img = rocket.image_url;
@@ -41,7 +42,6 @@ export class NextLaunch extends Component {
             <img src={this.state.rocket.image_url} alt="rocket" />
           </article>)
         }
-
       </section>
     )
   }
@@ -49,7 +49,7 @@ export class NextLaunch extends Component {
 
 export const mapStateToProps = state => ({
   rocketLaunch: state.upcomingLaunches.results 
-    ? state.upcomingLaunches.results[2]
+    ? state.upcomingLaunches.results[0]
     : []
 })
 
