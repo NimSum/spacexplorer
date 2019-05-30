@@ -8,28 +8,27 @@ export class NextLaunch extends Component {
     this.state = {
       rocket: {},
       rocketLaunch: {},
-      rocketLaunches: []
+      rocketLaunches: [],
+      error: ''
     }
   }
 
   getRocketImage = async () => {
     const url = this.state.rocketLaunch.rocket.configuration.url;
-    const rocket = await fetchAnything(url);
-    const img = rocket.image_url;
-    this.setState({ rocket });
-    return img;
-  }
+    try {
+      const rocket = await fetchAnything(url);
+      this.setState({ rocket });
+    } catch(error) {
+      this.setState({ error });
+    }
 
+  }
 
   componentDidUpdate(prevProps) {
     const newId = prevProps.rocketLaunch.id;
     const oldId = this.props.rocketLaunch.id;
-    switch(true) {
-      case newId !== oldId:
-        this.setState({ ...this.props }, () => this.getRocketImage())
-        break;
-      default:
-        return null;
+    if (newId !== oldId) {
+      this.setState({ ...this.props }, () => this.getRocketImage())
     }
   }
 
