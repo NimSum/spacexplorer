@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AsideEvents from '../AsideEvents';
 import { connect } from 'react-redux';
 import { addUpcomingLaunches } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
@@ -24,6 +25,7 @@ export class App extends Component {
     return (
       <main>
         <h1>Hello</h1>
+        < AsideEvents />
       </main>
     )
   }
