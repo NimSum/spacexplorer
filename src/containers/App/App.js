@@ -19,8 +19,8 @@ export class App extends Component {
     this.setState({ loading: true })
     try {
       const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming';
-    // const upcomingLaunches = await fetchAnything(url);
-    // this.props.addUpcomingLaunches(upcomingLaunches);
+    const upcomingLaunches = await fetchAnything(url);
+    this.props.addUpcomingLaunches(upcomingLaunches);
       this.setState({ loading: false })
     } catch(error) {
       this.setState({ error })

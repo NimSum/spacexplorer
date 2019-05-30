@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 export class NextLaunch extends Component {
+
+  constructor() {
+    super();
+    this.state = {}
+  }
+
+  static getDerivedStateFromProps(newProp, currState) {
+    if (!newProp) return null;
+    const newId = newProp.rocketLaunch.id;
+    const oldId = currState.id;
+    switch(true) {
+      case newId !== oldId:
+        return {...newProp };
+      default:
+        return null;
+    }
+  }
+
   render() {
     return (
       <section>
@@ -11,7 +29,9 @@ export class NextLaunch extends Component {
 }
 
 export const mapStateToProps = state => ({
-  launches: state.upcomingLaunches
+  rocketLaunch: state.upcomingLaunches.results 
+    ? state.upcomingLaunches.results[0]
+    : []
 })
 
 
