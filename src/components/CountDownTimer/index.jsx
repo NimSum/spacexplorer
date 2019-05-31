@@ -27,13 +27,13 @@ export class CountDownTimer extends Component {
 
   calculateCountdown() {
     let { days, hours, minutes, seconds, totalTime } = this.state;
-    days = Math.round(totalTime / 86400000);
+    days = Math.floor(totalTime / 86400000);
     totalTime = totalTime % 8640000;
-    hours = Math.round(totalTime / 3600000);
+    hours = Math.floor(totalTime / 3600000);
     totalTime = totalTime % 3600000;
     minutes = Math.floor(totalTime / 60000); 
     totalTime = totalTime % 60000;
-    seconds = Math.round(totalTime/1000);
+    seconds = Math.floor(totalTime/1000);
     this.setState({ days, hours, minutes, seconds })
   }
   
