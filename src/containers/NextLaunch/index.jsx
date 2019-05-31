@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
+import CountDownTimer from '../../components/CountDownTimer';
+
 export class NextLaunch extends Component {
 
   constructor() {
@@ -33,6 +35,7 @@ export class NextLaunch extends Component {
   render() {
     return (
       <section className='launch-card'>
+        < CountDownTimer />
         { this.state.rocketLaunch && 
           (<article>
             <p>Next Rocket Launch</p>
