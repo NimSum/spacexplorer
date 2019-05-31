@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AsideEvents from '../AsideEvents';
+import CategoryMenu from '../CategoryMenu'
 import NextLaunchesContainer from '../NextLaunchesContainer';
 import Page404 from '../../components/Page404';
 import NextLaunch from '../NextLaunch';
@@ -34,6 +35,7 @@ export class App extends Component {
   render() {
     return (
       <main>
+        < CategoryMenu />
         {/* < AsideEvents /> */}
         < Switch >
           < Route exact path='/' render={ () => (
