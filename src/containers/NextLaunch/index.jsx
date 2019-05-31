@@ -35,7 +35,6 @@ export class NextLaunch extends Component {
   
 
   render() {
-    console.log(this.state.rocketLaunch)
     return (
       <section className='launch-card'>
         { this.state.rocketLaunch.url && 
