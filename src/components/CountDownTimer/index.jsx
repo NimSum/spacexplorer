@@ -38,15 +38,15 @@ export class CountDownTimer extends Component {
   }
   
   componentDidMount() {
-    const datee = new Date('2019-07-03T15:45:00Z');
-    const totalTime = (datee.getTime() - Date.now());
+    const nextDate = new Date(this.props.date);
+    const totalTime = (nextDate.getTime() - Date.now());
     this.setState({ totalTime }, () => this.updateTime());
   }
 
   render() {
     const { days, hours, minutes, seconds } = this.state;
     return (
-      <section>
+      <section className="countdown-timer">
         <div>
           <p>{ days < 10 ? `0${days}` : days }</p>
         </div>

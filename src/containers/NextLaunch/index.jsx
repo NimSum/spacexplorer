@@ -32,10 +32,16 @@ export class NextLaunch extends Component {
     }
   }
 
+  
+
   render() {
+    console.log(this.state.rocketLaunch)
     return (
       <section className='launch-card'>
-        < CountDownTimer />
+        { this.state.rocketLaunch.url && 
+          < CountDownTimer 
+            date={ this.state.rocketLaunch.net }/>
+        }
         { this.state.rocketLaunch && 
           (<article>
             <p>Next Rocket Launch</p>
