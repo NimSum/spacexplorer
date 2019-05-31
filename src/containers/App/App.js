@@ -34,7 +34,7 @@ export class App extends Component {
   render() {
     return (
       <main>
-        < AsideEvents />
+        {/* < AsideEvents /> */}
         < Switch >
           < Route exact path='/' render={ () => (
             <div>
