@@ -20,12 +20,11 @@ export class NextLaunch extends Component {
     } catch(error) {
       this.setState({ error });
     }
-
   }
 
   componentDidUpdate(prevProps) {
-    const newId = prevProps.rocketLaunch.id;
-    const oldId = this.props.rocketLaunch.id;
+    const oldId = prevProps.rocketLaunch.id;
+    const newId = this.props.rocketLaunch.id;
     if (newId !== oldId) {
       this.setState({ ...this.props }, () => this.getRocketImage())
     }
