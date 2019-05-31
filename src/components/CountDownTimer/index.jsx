@@ -11,11 +11,22 @@ export class index extends Component {
       seconds: ''
     }
   }
+
+  calculateCountdown(totalSeconds) {
+    let totalSecondsCopy = totalSeconds;
+    let days = Math.round(totalSecondsCopy / 86400000);
+    totalSecondsCopy = totalSecondsCopy % 8640000;
+    let hours = Math.round(totalSecondsCopy / 3600000);
+    totalSecondsCopy = totalSecondsCopy % 3600000;
+    let minutes = Math.round(totalSecondsCopy / 60000); 
+    totalSecondsCopy = totalSecondsCopy % 60000;
+    let seconds = Math.round(totalSecondsCopy/1000);
+    this.setState({ days, hours, minutes, seconds })
+  }
   
   componentDidMount() {
-    const datee = new Date('2019-07-02T11:00:00Z');
-    const seconds = Math.round((datee.getTime() - Date.now()) / 100);
-    this.setState({ seconds })
+    const datee = new Date('2019-07-03T15:45:00Z');
+    this.calculateCountdown(datee.getTime() - Date.now())
   }
 
   render() {
@@ -23,7 +34,7 @@ export class index extends Component {
       <div>
         <p>{ this.state.days }</p>
         <p>{ this.state.hours }</p>
-        <p>{ this.state.mins }</p>
+        <p>{ this.state.minutes }</p>
         <p>{ this.state.seconds }</p>
       </div>
     )
