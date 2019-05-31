@@ -2,7 +2,7 @@ import React from 'react'
 
 const EventCard = ({ event }) => {
   const { name, location, news_url, date } = event;
-
+  console.log('hi')
   return (
     <article>
       <h3>{ name }</h3>
