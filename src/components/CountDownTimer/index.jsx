@@ -16,7 +16,15 @@ export class CountDownTimer extends Component {
   updateTime() {
     setInterval(
       () => {
-        this.setState({ seconds: this.state.seconds + 1 });
+        this.setState({ 
+          seconds: this.state.seconds < 1
+            ? 60 
+            : this.state.seconds - 1 },
+          () => {
+            if (this.state.seconds === 0) {
+              this.setState({ minutes: this.state.minutes - 1})
+            }
+          });
       },
       1000
   );
