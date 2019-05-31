@@ -26,7 +26,14 @@ export class NextLaunchesContainer extends Component {
     }
   }
 
-  
+  generateCards = () => {
+    return this.state.launches.map(launch => (
+      < NextLaunchCard 
+        launch={ launch }
+        key={ launch.id }
+      />
+    ))
+  }
 
   render() {
     return (
