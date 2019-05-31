@@ -32,24 +32,31 @@ export class NextLaunch extends Component {
     }
   }
 
-  
+  generateLaunchCard() {
+    const { name, status, pad, mission } = this.state.rocketLaunch;
+    return (
+      <article>
+        <p>{ name }</p>
+        <p>{ status.name }</p>
+        <p>{ mission.orbit ? mission.orbit : 'Unknown' }</p>
+        <p>{ pad.location.name }</p>
+      </article>
+    )
+  }
 
   render() {
-    return (
-      <section className='launch-card'>
-        { this.state.rocketLaunch.url && 
-          < CountDownTimer 
-            date={ this.state.rocketLaunch.net }/>
-        }
-        { this.state.rocketLaunch && 
-          (<article>
-            <p>Next Rocket Launch</p>
-            <h3>{ this.state.rocketLaunch.name }</h3>
-            <img src={this.state.rocket.image_url} alt="rocket" />
-          </article>)
-        }
-      </section>
-    )
+    return this.state.rocketLaunch.url 
+    ? (<section className='launch-card'>
+        { this.generateLaunchCard() }
+        < CountDownTimer 
+          date={ this.state.rocketLaunch.net }/>
+        <article>
+          <p>Next Rocket Launch</p>
+          <h3>{ this.state.rocketLaunch.name }</h3>
+          <img src={this.state.rocket.image_url} alt="rocket" />
+        </article>
+      </section>)
+    : <div>HI</div>
   }
 }
 

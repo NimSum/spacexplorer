@@ -20,30 +20,38 @@ export class App extends Component {
   }
 
   async componentDidMount() {
-    // this.setState({ loading: true })
-    // try {
-    //   const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming';
-    // const upcomingLaunches = await fetchAnything(url);
-    // this.props.addUpcomingLaunches(upcomingLaunches);
-    // this.props.addSelectedLaunch(upcomingLaunches.results[0])
-    //   this.setState({ loading: false })
-    // } catch(error) {
-    //   this.setState({ error })
-    // }
+    this.setState({ loading: true })
+    try {
+      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming';
+    const upcomingLaunches = await fetchAnything(url);
+    this.props.addUpcomingLaunches(upcomingLaunches);
+    this.props.addSelectedLaunch(upcomingLaunches.results[0])
+      this.setState({ loading: false })
+    } catch(error) {
+      this.setState({ error })
+    }
   }
 
   render() {
     return (
       <main>
-        < CategoryMenu />
+        {/* < CategoryMenu /> */}
         {/* < AsideEvents /> */}
         < Switch >
           < Route exact path='/' render={ () => (
             <div>
-              {/* < NextLaunch /> */}
-              {/* < NextLaunchesContainer /> */}
+              < NextLaunch />
+              < NextLaunchesContainer />
             </div>
             )}/>
+          < Route path='/rockets/:id' render={ ({ match }) => {
+            console.log(match.params.id)
+            return (<div>
+              <h3>Rockets</h3>
+              {/* < NextLaunch /> */}
+              {/* < NextLaunchesContainer /> */}
+            </div>)
+            }}/>
           < Route component={ Page404 } />
         </Switch>
       </main>
