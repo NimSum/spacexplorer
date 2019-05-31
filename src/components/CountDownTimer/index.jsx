@@ -9,7 +9,8 @@ export class CountDownTimer extends Component {
       days: '',
       hours: '',
       minutes: '',
-      seconds: ''
+      seconds: '',
+      totalTime: ''
     }
   }
 
@@ -17,34 +18,29 @@ export class CountDownTimer extends Component {
     setInterval(
       () => {
         this.setState({ 
-          seconds: this.state.seconds < 1
-            ? 60 
-            : this.state.seconds - 1 },
-          () => {
-            if (this.state.seconds === 0) {
-              this.setState({ minutes: this.state.minutes - 1})
-            }
-          });
+          totalTime: this.state.totalTime - 1000
+          }, () => this.calculateCountdown(this.state.totalTime));
       },
       1000
   );
   }
 
-  calculateCountdown(totalSeconds) {
-    let totalSecondsCopy = totalSeconds;
-    let days = Math.round(totalSecondsCopy / 86400000);
-    totalSecondsCopy = totalSecondsCopy % 8640000;
-    let hours = Math.round(totalSecondsCopy / 3600000);
-    totalSecondsCopy = totalSecondsCopy % 3600000;
-    let minutes = Math.round(totalSecondsCopy / 60000); 
-    totalSecondsCopy = totalSecondsCopy % 60000;
-    let seconds = Math.round(totalSecondsCopy/1000);
-    this.setState({ days, hours, minutes, seconds }, this.updateTime())
+  calculateCountdown() {
+    let { days, hours, minutes, seconds, totalTime } = this.state;
+    days = Math.round(totalTime / 86400000);
+    totalTime = totalTime % 8640000;
+    hours = Math.round(totalTime / 3600000);
+    totalTime = totalTime % 3600000;
+    minutes = Math.floor(totalTime / 60000); 
+    totalTime = totalTime % 60000;
+    seconds = Math.round(totalTime/1000);
+    this.setState({ days, hours, minutes, seconds })
   }
   
   componentDidMount() {
     const datee = new Date('2019-07-03T15:45:00Z');
-    this.calculateCountdown(datee.getTime() - Date.now())
+    const totalTime = (datee.getTime() - Date.now());
+    this.setState({ totalTime }, () => this.updateTime());
   }
 
   render() {
