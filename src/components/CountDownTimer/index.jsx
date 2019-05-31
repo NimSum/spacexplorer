@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { setInterval } from 'timers';
 
-export class index extends Component {
+export class CountDownTimer extends Component {
 
   constructor() {
     super();
@@ -12,6 +13,15 @@ export class index extends Component {
     }
   }
 
+  updateTime() {
+    setInterval(
+      () => {
+        this.setState({ seconds: this.state.seconds + 1 });
+      },
+      1000
+  );
+  }
+
   calculateCountdown(totalSeconds) {
     let totalSecondsCopy = totalSeconds;
     let days = Math.round(totalSecondsCopy / 86400000);
@@ -21,7 +31,7 @@ export class index extends Component {
     let minutes = Math.round(totalSecondsCopy / 60000); 
     totalSecondsCopy = totalSecondsCopy % 60000;
     let seconds = Math.round(totalSecondsCopy/1000);
-    this.setState({ days, hours, minutes, seconds })
+    this.setState({ days, hours, minutes, seconds }, this.updateTime())
   }
   
   componentDidMount() {
@@ -41,4 +51,4 @@ export class index extends Component {
   }
 }
 
-export default index
+export default CountDownTimer
