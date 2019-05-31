@@ -8,19 +8,26 @@ export class AsideEvents extends Component {
     super();
     this.state = {
       loading: false,
-      error: ''
+      error: '',
+      events: []
     }
   }
 
   async componentDidMount() {
     try {
       const url = 'https://spacelaunchnow.me/api/3.3.1/event/upcoming'
-      // const events = await fetchAnything(url);
-      // this.props.addUpcomingEvents(events);
+      const events = await fetchAnything(url);
+      this.props.addUpcomingEvents(events);
+      this.setState({ events })
     } catch(error) {
       this.setState({ error });
     }
   }
+
+  cardGenerator = () => {
+
+  }
+
   render() {
     return (
       <aside>

@@ -37,8 +37,8 @@ export class App extends Component {
         < Switch >
           < Route exact path='/' render={ () => (
             <div>
-              < NextLaunch />
-              < NextLaunchesContainer />
+              {/* < NextLaunch />
+              < NextLaunchesContainer /> */}
             </div>
             )}/>
           < Route component={ Page404 } />
