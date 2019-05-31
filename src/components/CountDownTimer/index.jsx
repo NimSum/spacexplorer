@@ -6,11 +6,11 @@ export class CountDownTimer extends Component {
   constructor() {
     super();
     this.state = {
-      days: '',
-      hours: '',
-      minutes: '',
-      seconds: '',
-      totalTime: ''
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      totalTime: 0
     }
   }
 
@@ -44,13 +44,22 @@ export class CountDownTimer extends Component {
   }
 
   render() {
+    const { days, hours, minutes, seconds } = this.state;
     return (
-      <div>
-        <p>{ this.state.days }</p>
-        <p>{ this.state.hours }</p>
-        <p>{ this.state.minutes }</p>
-        <p>{ this.state.seconds }</p>
-      </div>
+      <section>
+        <div>
+          <p>{ days < 10 ? `0${days}` : days }</p>
+        </div>
+        <div>
+          <p>{ hours < 10 ? `0${hours}` : hours }</p>
+        </div>
+        <div>
+          <p>{ minutes < 10 ? `0${minutes}`: minutes }</p>
+        </div>
+        <div>
+          <p>{ seconds < 10 ? `0${seconds}` : seconds }</p>
+        </div>
+      </section>
     )
   }
 }
