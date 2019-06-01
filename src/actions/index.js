@@ -32,3 +32,8 @@ export const addOrbiters = orbiters => ({
   type: 'ADD_ORBITERS',
   orbiters
 })
+
+export const addAstronauts = astronauts => ({
+  type: 'ADD_ASTRONAUTS',
+  astronauts
+})
