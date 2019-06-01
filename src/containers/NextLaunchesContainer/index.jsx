@@ -1,34 +1,44 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import fetchAnything from '../../utils/apiFetches/fetchAnything';
+import NextLaunchCard from '../NextLaunchCard';
+import NextLaunch from '../NextLaunch';
 
 export class NextLaunchesContainer extends Component {
   constructor() {
     super();
     this.state = {
-      cardsArray: []
+      launches: [],
+      showInfo: false
     }
   }
   
   componentDidUpdate(prevProps) {
     if (this.props.rocketLaunches !== prevProps.rocketLaunches) {
-      this.props.rocketLaunches.results
-        .forEach(async launch => {
-          const rocketUrl = launch.rocket.configuration.url;
-          const result = await fetchAnything(rocketUrl);
-          launch.rocket_image = result.image_url;
-          Promise.all([result])
-            .then(card => this.setState({ 
-              cardsArray: [...this.state.cardsArray, ...card] 
-            }))
-        })
+      this.setState({ launches: this.props.rocketLaunches.results })
     }
+  }
+
+  generateCards = () => {
+    return this.state.launches.map(launch => (
+      < NextLaunchCard 
+        launch={ launch }
+        key={ launch.id }
+      />
+    ))
+  }
+
+  toggleInfo = () => {
+    this.setState({ showInfo: !this.state.showInfo })
   }
 
   render() {
     return (
       <section className="next-launches-container">
         <h1>HIIIIII</h1>
+        < NextLaunch />
+        <div>
+          { this.state.launches.length && this.generateCards() }
+        </div>
       </section>
     )
   }

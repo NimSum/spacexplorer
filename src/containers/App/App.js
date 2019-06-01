@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AsideEvents from '../AsideEvents';
+import CategoryMenu from '../CategoryMenu'
 import NextLaunchesContainer from '../NextLaunchesContainer';
 import Page404 from '../../components/Page404';
 import NextLaunch from '../NextLaunch';
 import { connect } from 'react-redux';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
+import categoryManager from '../../thunks/categoryManager';
 
 export class App extends Component {
   constructor() {
@@ -20,7 +22,7 @@ export class App extends Component {
   async componentDidMount() {
     this.setState({ loading: true })
     try {
-      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming';
+      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
     const upcomingLaunches = await fetchAnything(url);
     this.props.addUpcomingLaunches(upcomingLaunches);
     this.props.addSelectedLaunch(upcomingLaunches.results[0])
@@ -33,14 +35,15 @@ export class App extends Component {
   render() {
     return (
       <main>
-        < AsideEvents />
+        < CategoryMenu />
+        {/* < AsideEvents /> */}
         < Switch >
-          < Route exact path='/' render={ () => (
-            <div>
-              < NextLaunch />
-              < NextLaunchesContainer />
-            </div>
-            )}/>
+          {/* < Route exact path='/'
+            component={ NextLaunchesContainer}/> */}
+          < Route path='/rockets' render={() => {
+            //  this.props.selectCategory('rockets');
+             console.log('oolooo')
+          }}/>
           < Route component={ Page404 } />
         </Switch>
       </main>
@@ -50,7 +53,8 @@ export class App extends Component {
 
 const mapDispatchToProps = dispatch => ({
   addUpcomingLaunches: launches => dispatch(addUpcomingLaunches(launches)),
-  addSelectedLaunch: event => dispatch(addSelectedLaunch(event))
+  addSelectedLaunch: event => dispatch(addSelectedLaunch(event)),
+  selectCategory: category => dispatch(categoryManager(category))
 })
 
 export default connect(null, mapDispatchToProps)(App);
