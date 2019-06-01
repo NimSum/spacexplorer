@@ -15,16 +15,7 @@ export class NextLaunchesContainer extends Component {
   
   componentDidUpdate(prevProps) {
     if (this.props.rocketLaunches !== prevProps.rocketLaunches) {
-      this.props.rocketLaunches.results
-        .forEach(async launch => {
-          const rocketUrl = launch.rocket.configuration.url;
-          const result = await fetchAnything(rocketUrl);
-          launch.rocket_image = result.image_url;
-          Promise.all([launch])
-            .then(card => this.setState({ 
-              launches: [...this.state.launches, ...card] 
-            }))
-        })
+      this.setState({ launches: this.props.rocketLaunches.results })
     }
   }
 

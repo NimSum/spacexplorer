@@ -37,8 +37,8 @@ export class App extends Component {
         < CategoryMenu />
         {/* < AsideEvents /> */}
         < Switch >
-          {/* < Route exact path='/'
-            component={ NextLaunchesContainer}/> */}
+          < Route exact path='/'
+            component={ NextLaunchesContainer}/>
           {/* < Route path='/rockets' component={ }/> */}
           < Route component={ Page404 } />
         </Switch>

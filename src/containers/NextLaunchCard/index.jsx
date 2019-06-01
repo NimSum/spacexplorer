@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { toggleLaunchInfo, addSelectedLaunch } from '../../actions';
 
 const NextLaunchCard = ({ launch, toggleLaunchInfo, updateSelectedLaunch }) => {
-  const { name, pad, status, mission } = launch;
+  const { name, pad, status, mission, rocket } = launch;
+  console.log(rocket.configuration.image_url)
   const showSelectedLaunch = () => {
     toggleLaunchInfo(true);
     updateSelectedLaunch(launch);
