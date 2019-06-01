@@ -6,30 +6,37 @@ export class CategorySection extends Component {
   constructor() {
     super();
     this.state = {
-      renderedCards: []
+      cardsToRender: []
     }
   }
 
   checkAndUpdate() {
-    const categorySelectedArray = this.props[this.props.category];
-    if (categorySelectedArray.next) this.generateCards();
+    const categorySelected = this.props[this.props.category];
+    if (categorySelected.next) {
+      this.generateCards(categorySelected)
+    } else this.props.selectCategory(this.props.category);
   }
 
-
+  generateCards(categorySelected) {
+    const cards = categorySelected.results.map(item => (
+      <h2>OLAAAA</h2>
+    ))
+    this.setState({ cardsToRender: cards })
+  }
 
   componentDidMount() {
     this.checkAndUpdate();
   }
   
   componentDidUpdate(prevProps) {
-    if(prevProps.category !== this.props.category) this.checkAndUpdate();
+    if(prevProps !== this.props) this.checkAndUpdate();
   }
 
   render() {
     return (
       <section className='category-section'>
         { this.props.category }
-        { this.state.renderedCards }
+        { this.state.cardsToRender }
       </section>
     )
   }
