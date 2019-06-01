@@ -13,19 +13,19 @@ export class CategoryMenu extends Component {
   generateMenu() {
     return (
       <nav>
-        < NavLink to='/rockets'>
+        < NavLink to='/about/rockets'>
           Rockets
         </NavLink>
-        < NavLink to='/space-stations'>
+        < NavLink to='/about/space-stations'>
           Space Stations
         </NavLink>
-        < NavLink to='/orbiters'>
+        < NavLink to='/about/orbiters'>
           Orbiters
         </NavLink>
-        < NavLink to='/astronauts'>
+        < NavLink to='/about/astronauts'>
           Astronauts
         </NavLink>
-        < NavLink to='/launch-providers'>
+        < NavLink to='/about/launch-providers'>
           Launch Providers
         </NavLink>
       </nav>
