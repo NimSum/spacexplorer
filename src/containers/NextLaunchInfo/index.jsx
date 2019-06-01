@@ -8,17 +8,17 @@ const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
     return (
       <article 
         className='next-launch-info-card'
-        onMouseLeave={ () => 
-        hideInfo(false) }
+        // onMouseLeave={ () => 
+        // hideInfo(false) }
       >
         <h2>{ name }</h2>
-        <div>
+        <div className="mission">
           <h3>Mission Description:</h3>
           <p>Type: { mission ? mission.type : 'Unknown' }</p>
           <p>{ mission ? mission.description : 'Unknown' }</p>
           <a href={ launchInfo.slug }>Space Launch Now Info</a>
         </div>
-        <div>
+        <div className="rocket-provider">
           <h3>Rocket</h3>
           <p>Thrust: { rocket.configuration.to_thrust }kN</p>
           <p>Height:  { rocket.configuration.length }M Width: { rocket.configuration.diameter }M</p>

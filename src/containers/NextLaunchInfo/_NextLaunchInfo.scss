@@ -1,4 +1,22 @@
 article.next-launch-info-card {
   position: relative;
   z-index: 1;
+  max-width: 80%;
+  display: flex;
+
+  h2, button {
+    position: absolute;
+  }
+
+  button {
+    bottom: 0;
+  }
+
+  div {
+    flex: 1;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
