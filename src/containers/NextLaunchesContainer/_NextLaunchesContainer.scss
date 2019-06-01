@@ -1,0 +1,10 @@
+section.next-launches-container {
+  height: 100vh;
+
+  div.card-container {
+    display: flex;
+    max-width: 82vw;
+    white-space: nowrap;
+    overflow: scroll;
+  }
+}
