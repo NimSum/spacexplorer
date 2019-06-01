@@ -6,12 +6,18 @@ section.countdown-timer {
   margin: 30px auto;
   text-align: center;
   padding: 10px;
-
+  font-family: $font-rajdani;
+  transform: scaleY(1.2);
+  
   div {
     flex: 3;
 
     p {
       font-size: 4rem;
+    }
+
+    span {
+      font-weight: bold;
     }
   }
 
