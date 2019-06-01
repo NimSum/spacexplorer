@@ -8,6 +8,7 @@ import NextLaunch from '../NextLaunch';
 import { connect } from 'react-redux';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
+import categoryManager from '../../thunks/categoryManager';
 
 export class App extends Component {
   constructor() {
@@ -39,7 +40,10 @@ export class App extends Component {
         < Switch >
           {/* < Route exact path='/'
             component={ NextLaunchesContainer}/> */}
-          {/* < Route path='/rockets' component={ }/> */}
+          < Route path='/rockets' render={() => {
+            //  this.props.selectCategory('rockets');
+             console.log('oolooo')
+          }}/>
           < Route component={ Page404 } />
         </Switch>
       </main>
@@ -49,7 +53,8 @@ export class App extends Component {
 
 const mapDispatchToProps = dispatch => ({
   addUpcomingLaunches: launches => dispatch(addUpcomingLaunches(launches)),
-  addSelectedLaunch: event => dispatch(addSelectedLaunch(event))
+  addSelectedLaunch: event => dispatch(addSelectedLaunch(event)),
+  selectCategory: category => dispatch(categoryManager(category))
 })
 
 export default connect(null, mapDispatchToProps)(App);

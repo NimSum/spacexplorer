@@ -4,7 +4,6 @@ import fetchAnything from '../utils/apiFetches/fetchAnything';
 const categoryManager = category => {
   return async (dispatch, getState) => {
     const state = getState();
-    console.log(state)
     const urls = {
       rockets: 'https://spacelaunchnow.me/api/3.3.1/config/launcher/?mode=detailed',
       astronauts: 'https://spacelaunchnow.me/api/3.3.1/astronaut/?mode=detailed'
