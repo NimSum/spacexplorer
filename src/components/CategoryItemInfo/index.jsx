@@ -23,6 +23,9 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
     <article>
       <h2>Category</h2>
       { renderThis }
+      <button onClick={() => showInfo({}, false)}>
+        x
+      </button>
     </article>
   )
 }
