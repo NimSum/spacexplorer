@@ -25,5 +25,7 @@ section.next-launch-container {
     top: 0;
     z-index: 0;
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
