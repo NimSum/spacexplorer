@@ -5,8 +5,11 @@ import { toggleLaunchInfo } from '../../actions'
 const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
   const { name, rocket, mission, pad } = launchInfo;
     return (
-      <article onMouseLeave={ () => 
-        hideInfo(false) }>
+      <article 
+        className='next-launch-info-card'
+        onMouseLeave={ () => 
+        hideInfo(false) }
+      >
         <button onClick={ () => 
           hideInfo(false) }>
             X
