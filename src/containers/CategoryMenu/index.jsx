@@ -16,7 +16,7 @@ export class CategoryMenu extends Component {
         < NavLink to='/about/rockets'>
           Rockets
         </NavLink>
-        < NavLink to='/about/space-stations'>
+        < NavLink to='/about/space_stations'>
           Space Stations
         </NavLink>
         < NavLink to='/about/orbiters'>
@@ -25,7 +25,7 @@ export class CategoryMenu extends Component {
         < NavLink to='/about/astronauts'>
           Astronauts
         </NavLink>
-        < NavLink to='/about/launch-providers'>
+        < NavLink to='/about/launch_providers'>
           Launch Providers
         </NavLink>
       </nav>

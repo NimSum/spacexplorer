@@ -9,11 +9,13 @@ export class CategorySection extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props[this.props.category])
   }
   
   componentDidUpdate(prevProps) {
     console.log(prevProps.category !== this.props.category)
     console.log('hi')
+    console.log(this.props[this.props.category])
   }
 
   render() {
@@ -27,10 +29,10 @@ export class CategorySection extends Component {
 
 const mapStateToProps = state => ({
   rockets: state.rockets,
-  spaceStations: state.spaceStations,
+  space_stations: state.spaceStations,
   orbiters: state.orbiters,
   astronauts: state.astronauts,
-  launchProviders: state.launchProviders
+  launch_providers: state.launchProviders
 })
 
 const mapDispatchToProps = dispatch => ({
