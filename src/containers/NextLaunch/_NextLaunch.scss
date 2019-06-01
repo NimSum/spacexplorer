@@ -1,0 +1,17 @@
+section.next-launch-container {
+  position: relative;
+
+  article.upcoming-launch-card {
+    z-index: 1;
+    position: relative;
+    p {
+      color: red;
+    }
+  }
+
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+}

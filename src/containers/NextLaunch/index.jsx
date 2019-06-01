@@ -25,7 +25,7 @@ export class NextLaunch extends Component {
   generateLaunchCard() {
     const { name, status, pad, mission } = this.state.rocketLaunch;
     return (
-      <article>
+      <article className="upcoming-launch-card">
         <p>{ name }</p>
         <p>{ status.name }</p>
         <p>{ mission ? mission.orbit : 'Unknown' }</p>
@@ -40,7 +40,7 @@ export class NextLaunch extends Component {
 
   render() {
     return this.state.rocketLaunch.id 
-    ? (<section className='launch-card'>
+    ? (<section className='next-launch-container'>
         { this.generateLaunchCard() }
         { this.props.showInfo && < NextLaunchInfo /> }
         < CountDownTimer 
