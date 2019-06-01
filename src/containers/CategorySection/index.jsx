@@ -8,7 +8,9 @@ export class CategorySection extends Component {
   constructor() {
     super();
     this.state = {
-      cardsToRender: []
+      cardsToRender: [],
+      cardInfoToRender: {},
+      showCardInfo: false
     }
   }
 
@@ -39,6 +41,10 @@ export class CategorySection extends Component {
       default:
         return <p>NADA</p>
     }
+  }
+
+  showInfo = (card, bool) => {
+    this.setState({ showCardInfo: card, showInfo: bool })
   }
 
   componentDidMount() {
