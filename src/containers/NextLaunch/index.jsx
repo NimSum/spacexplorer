@@ -40,7 +40,7 @@ export class NextLaunch extends Component {
       <article>
         <p>{ name }</p>
         <p>{ status.name }</p>
-        <p>{ mission.orbit ? mission.orbit : 'Unknown' }</p>
+        <p>{ mission ? mission.orbit : 'Unknown' }</p>
         <p>{ pad.location.name }</p>
         <button onClick={ this.props.toggleLaunchInfo }>
             More
@@ -68,7 +68,7 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  toggleLaunchInfo: () => dispatch(toggleLaunchInfo())
+  toggleLaunchInfo: (bool) => dispatch(toggleLaunchInfo(bool))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(NextLaunch);

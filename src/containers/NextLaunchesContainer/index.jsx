@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
-import NextLaunchCard from '../../components/NextLaunchCard';
+import NextLaunchCard from '../NextLaunchCard';
 import NextLaunch from '../NextLaunch';
 
 export class NextLaunchesContainer extends Component {
@@ -45,9 +45,7 @@ export class NextLaunchesContainer extends Component {
     return (
       <section className="next-launches-container">
         <h1>HIIIIII</h1>
-        < NextLaunch 
-          toggleInfo={ this.toggleMoreInfo }
-          showInfo={ this.state.showInfo }/>
+        < NextLaunch />
         <div>
           { this.state.launches.length && this.generateCards() }
         </div>
