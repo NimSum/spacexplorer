@@ -15,24 +15,29 @@ export class CategoryMenu extends Component {
     const callThunk = this.props.selectCategory;
     return (
       <nav>
-        < NavLink onClick={() => callThunk('rockets')}
-           to='/rockets'>
+        < NavLink 
+          onClick={() => callThunk('rockets')}
+          to='/rockets'>
           Rockets
         </NavLink>
-        < NavLink onClick={() => callThunk('spaceStations')}
-           to='/space-stations'>
+        < NavLink 
+          onClick={() => callThunk('spaceStations')}
+          to='/space-stations'>
           Space Stations
         </NavLink>
-        < NavLink onClick={() => callThunk('orbiters')}
-           to='/orbiters'>
+        < NavLink 
+          onClick={() => callThunk('orbiters')}
+          to='/orbiters'>
           Orbiters
         </NavLink>
-        < NavLink onClick={() => callThunk('astronauts')}
-           to='/astronauts'>
+        < NavLink 
+          onClick={() => callThunk('astronauts')}
+          to='/astronauts'>
           Astronauts
         </NavLink>
-        < NavLink onClick={() => callThunk('launchProviders')}
-           to='/launch-providers'>
+        < NavLink 
+          onClick={() => callThunk('launchProviders')}
+          to='/launch-providers'>
           Launch Providers
         </NavLink>
       </nav>
