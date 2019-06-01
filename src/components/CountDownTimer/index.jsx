@@ -47,13 +47,25 @@ export class CountDownTimer extends Component {
     const { days, hours, minutes, seconds } = this.state;
     return (
       <section className="countdown-timer">
-        <p>{ days < 10 ? `0${days}` : days }</p>
-        <span>:</span>
-        <p>{ hours < 10 ? `0${hours}` : hours }</p>
-        <span>:</span>
-        <p>{ minutes < 10 ? `0${minutes}`: minutes }</p>
-        <span>:</span>
-        <p>{ seconds < 10 ? `0${seconds}` : seconds }</p>
+        <div>
+          <p>{ days < 10 ? `0${days}` : days }</p>
+          <span>Days</span>
+        </div>
+        <span className="colon">:</span>
+        <div>
+          <p>{ hours < 10 ? `0${hours}` : hours }</p>
+          <span>Hours</span>
+        </div>
+        <span className="colon">:</span>
+        <div>
+          <p>{ minutes < 10 ? `0${minutes}`: minutes }</p>
+          <span>Minutes</span>
+        </div>
+        <span className="colon">:</span>
+        <div>
+          <p>{ seconds < 10 ? `0${seconds}` : seconds }</p>
+          <span>Seconds</span>
+        </div>
       </section>
     )
   }

@@ -5,15 +5,18 @@ section.countdown-timer {
   width: 60%;
   margin: 30px auto;
   text-align: center;
-  font-size: 4rem;
+  padding: 10px;
 
-
-  p {
+  div {
     flex: 3;
-    margin: 0;
+
+    p {
+      font-size: 4rem;
+    }
   }
 
-  span {
+  span.colon {
     flex: 1;
+    font-size: 4rem;
   }
 }
