@@ -1,18 +1,29 @@
 section.next-launch-container {
   position: relative;
+  height: 65vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   article.upcoming-launch-card {
     z-index: 1;
     position: relative;
+    margin: 0 auto;
+
     p {
       color: red;
     }
   }
 
+  article.next-launch-info-card {
+    margin: 0 auto;
+  }
+
   img {
-    width: 100%;
     position: absolute;
     top: 0;
     z-index: 0;
+    height: 100%;
   }
 }
