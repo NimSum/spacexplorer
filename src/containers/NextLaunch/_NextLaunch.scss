@@ -10,7 +10,6 @@ section.next-launch-container {
     z-index: 1;
     position: relative;
     margin: 0 auto;
-    height: 250px;
     width: 350px;
     background-color: hsla(303, 100%, 96%, .85);
     border-radius: 20px;
@@ -39,6 +38,7 @@ section.next-launch-container {
 
     button {
       @include more-info-btn;
+      margin-bottom: 10px;
     }
   }
 

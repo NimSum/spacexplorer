@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { toggleLaunchInfo, addSelectedLaunch } from '../../actions';
 import moment from 'moment';
 
-const NextLaunchCard = ({ launch, toggleLaunchInfo, updateSelectedLaunch }) => {
+const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaunch }) => {
   const { pad, status, mission, rocket } = launch;
   const showSelectedLaunch = () => {
-    toggleLaunchInfo(true);
+    showInfo ? toggleLaunchInfo(false) : toggleLaunchInfo(true);
     updateSelectedLaunch(launch);
   }
   const readableDate = moment(launch.net).format('MMM DD LT');
@@ -30,9 +30,13 @@ const NextLaunchCard = ({ launch, toggleLaunchInfo, updateSelectedLaunch }) => {
   )
 }
 
+export const mapStateToProps = state => ({
+  showInfo: state.showLaunchInfo
+})
+
 export const mapDispatchToProps = dispatch => ({
   toggleLaunchInfo: (bool) => dispatch(toggleLaunchInfo(bool)),
   updateSelectedLaunch: (launch) => dispatch(addSelectedLaunch(launch))
 })
 
-export default connect(null, mapDispatchToProps)(NextLaunchCard);
+export default connect(mapStateToProps, mapDispatchToProps)(NextLaunchCard);
