@@ -13,7 +13,7 @@ export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
         <h3>Next Rocket Launch:</h3>
         <h2>{ name }</h2>
         <p><span>Status: </span> { status.name }</p>
-        <p><span>Mission Type: </span> { mission.id ? mission.type : 'Unknown' }</p>
+        <p><span>Mission Type: </span> { mission ? mission.type : 'Unknown' }</p>
         <p><span>Location: </span> { pad.location.name }</p>
         <button onClick={ () => 
           toggleLaunchInfo(true) }>
@@ -25,7 +25,7 @@ export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
 
   return rocketLaunch.id 
   ? (<section className='next-launch-container'>
-      { generateLaunchCard() }
+      { !showInfo && generateLaunchCard() }
       { showInfo && < NextLaunchInfo /> }
       < CountDownTimer 
         date={ rocketLaunch.net }/>

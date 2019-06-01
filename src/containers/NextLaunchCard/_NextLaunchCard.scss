@@ -48,7 +48,7 @@ article.next-launch-card {
       position: absolute;
       bottom: 10px;
       right: 20px;
-      border-radius: 20px;
+      @include more-info-btn;
     }
   }
 }

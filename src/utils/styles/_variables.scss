@@ -16,6 +16,7 @@ $secondary-light: hsl(303, 100%, 96%);
   color: #fff;
   border: none;
   background-color: $primary-light;
+  transition: all 150ms ease-in-out;
 
   &:hover {
     cursor: pointer;
