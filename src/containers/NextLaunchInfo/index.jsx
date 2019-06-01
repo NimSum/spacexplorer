@@ -5,7 +5,12 @@ import { toggleLaunchInfo } from '../../actions'
 const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
   const { name, rocket, mission, pad } = launchInfo;
     return (
-      <article>
+      <article onMouseLeave={ () => 
+        hideInfo(false) }>
+        <button onClick={ () => 
+          hideInfo(false) }>
+            X
+        </button>
         <h3>{ name }</h3>
       </article>
     )

@@ -42,7 +42,8 @@ export class NextLaunch extends Component {
         <p>{ status.name }</p>
         <p>{ mission ? mission.orbit : 'Unknown' }</p>
         <p>{ pad.location.name }</p>
-        <button onClick={ this.props.toggleLaunchInfo }>
+        <button onClick={ () => 
+          this.props.toggleLaunchInfo(true) }>
             More
         </button>
       </article>
