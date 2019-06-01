@@ -1,0 +1,16 @@
+main {
+  display: flex;
+
+  aside {
+    flex: 1
+  }
+
+  section.next-launches-container {
+    flex: 3.5;
+  }
+
+  section.category-section {
+    flex: 3.5;
+  }
+
+}
