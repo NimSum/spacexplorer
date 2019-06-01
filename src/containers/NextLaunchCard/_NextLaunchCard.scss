@@ -6,7 +6,7 @@ article.next-launch-card {
   background-color: $secondary-light;
   border-radius: 5px;
   height: 95%;
-  padding: 5px;
+  padding: 10px;
 
   h3 {
     margin: 5px 0;
@@ -24,7 +24,7 @@ article.next-launch-card {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-
+    
     img {
       width: 100%;
       height: 80%;
