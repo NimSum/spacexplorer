@@ -4,7 +4,10 @@ article.next-launch-card {
   white-space: normal;
   margin: 0 10px;
   display: flex;
-  
+  background-color: $secondary-light;
+  border-radius: 5px;
+  height: 95%;
+
   h3 {
     margin: 10px 0;
   }
@@ -15,14 +18,19 @@ article.next-launch-card {
 
   div.image-side {
     flex: 1.5;
+    text-align: center;
 
     img {
       width: 100%;
       height: 80%;
       object-fit: cover;
+      border-radius: 5px;
     }
   }
   div.info-side {
     flex: 2;
+    p, h3 {
+      margin: 10px;
+    }
   }
 }
