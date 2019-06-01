@@ -1,10 +1,13 @@
 import React from 'react'
 
-const AstronautCard = ({ astronaut }) => {
+const AstronautCard = ({ astronaut, showInfo }) => {
   const { name } = astronaut;
   return (
     <article>
       <h3>{ name }</h3>
+      <button onClick={() => showInfo(astronaut, true)}>
+        more
+      </button>
     </article>
   )
 }

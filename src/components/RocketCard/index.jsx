@@ -1,10 +1,13 @@
 import React from 'react'
 
-const RocketCard = ({ rocket }) => {
+const RocketCard = ({ rocket, showInfo }) => {
   const { name } = rocket;
   return (
     <article>
       <h3>{ name }</h3>
+      <button onClick={() => showInfo(rocket, true)}>
+        more
+      </button>
     </article>
   )
 }

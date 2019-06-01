@@ -10,7 +10,7 @@ export class CategorySection extends Component {
     this.state = {
       cardsToRender: [],
       cardInfoToRender: {},
-      showCardInfo: false
+      showInfo: false
     }
   }
 
@@ -31,20 +31,20 @@ export class CategorySection extends Component {
   cardSelector(item) {
     switch (this.props.category) {
       case 'rockets':
-        return < RocketCard rocket={item} />;
+        return < RocketCard rocket={item} showInfo={ this.showInfo } />;
       case 'space_stations':
           return <p>space stations</p>
       case 'orbiters':
         return <p>orbiters</p>
       case 'astronauts':
-        return < AstronautCard astronaut={item} />;
+        return < AstronautCard astronaut={item} showInfo={ this.showInfo } />;
       default:
         return <p>NADA</p>
     }
   }
 
   showInfo = (card, bool) => {
-    this.setState({ showCardInfo: card, showInfo: bool })
+    this.setState({ cardInfoToRender: card, showInfo: bool })
   }
 
   componentDidMount() {
