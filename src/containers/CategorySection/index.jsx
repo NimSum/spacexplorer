@@ -18,10 +18,25 @@ export class CategorySection extends Component {
   }
 
   generateCards(categorySelected) {
-    const cards = categorySelected.results.map(item => (
-      <h2>OLAAAA</h2>
-    ))
+    const cards = categorySelected.results.map(item => 
+      this.cardSelector()
+    )
     this.setState({ cardsToRender: cards })
+  }
+
+  cardSelector() {
+    switch (this.props.category) {
+      case 'rockets':
+        return <p>Rockets</p>;
+      case 'space_stations':
+          return <p>space stations</p>
+      case 'orbiters':
+        return <p>orbiters</p>
+      case 'astronauts':
+        return <p>astrooo</p>
+      default:
+        return <p>NADA</p>
+    }
   }
 
   componentDidMount() {
