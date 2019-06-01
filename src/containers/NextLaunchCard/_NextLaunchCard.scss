@@ -1,15 +1,17 @@
 article.next-launch-card {
-  max-width: 30%;
-  min-width: 300px;
+  min-width: 310px;
   white-space: normal;
   margin: 0 10px;
   display: flex;
   background-color: $secondary-light;
   border-radius: 5px;
   height: 95%;
+  padding: 5px;
 
   h3 {
-    margin: 10px 0;
+    margin: 5px 0;
+    padding: 0 5px;
+    color: $primary-dark;
   }
 
   p {
@@ -19,6 +21,9 @@ article.next-launch-card {
   div.image-side {
     flex: 1.5;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 
     img {
       width: 100%;
@@ -27,10 +32,23 @@ article.next-launch-card {
       border-radius: 5px;
     }
   }
+
   div.info-side {
     flex: 2;
-    p, h3 {
+    position: relative;
+    
+    p {
       margin: 10px;
+    }
+
+    h3 {
+      margin: 14px 0;
+    }
+
+    button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
     }
   }
 }
