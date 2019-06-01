@@ -1,8 +1,9 @@
 import React from 'react'
+import moment from 'moment';
 
 const EventCard = ({ event }) => {
-  const { name, location, news_url, date } = event;
-  console.log('hi')
+  const { name, location, news_url } = event;
+  const date = moment(event.date).format('MMM DD LT');
   return (
     <article>
       <h3>{ name }</h3>
