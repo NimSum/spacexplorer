@@ -7,16 +7,9 @@ export class NextLaunchesContainer extends Component {
   constructor() {
     super();
     this.state = {
-      launches: [],
       showInfo: false
     }
   }
-  
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.rocketLaunches !== prevProps.rocketLaunches) {
-  //     this.setState({ launches: this.props.rocketLaunches.results })
-  //   }
-  // }
 
   generateCards = () => {
     return this.props.rocketLaunches.results.map(launch => (
