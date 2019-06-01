@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import CountDownTimer from '../../components/CountDownTimer';
+import NextLaunchInfo from '../NextLaunchInfo';
 
 export class NextLaunch extends Component {
 
@@ -48,6 +49,7 @@ export class NextLaunch extends Component {
     return this.state.rocketLaunch.url 
     ? (<section className='launch-card'>
         { this.generateLaunchCard() }
+        < NextLaunchInfo />
         < CountDownTimer 
           date={ this.state.rocketLaunch.net }/>
         <article>

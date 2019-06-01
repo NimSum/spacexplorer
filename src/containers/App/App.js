@@ -8,7 +8,6 @@ import NextLaunch from '../NextLaunch';
 import { connect } from 'react-redux';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
-import CountdownTimer from '../../components/CountDownTimer';
 
 export class App extends Component {
   constructor() {
@@ -38,12 +37,8 @@ export class App extends Component {
         {/* < CategoryMenu /> */}
         {/* < AsideEvents /> */}
         < Switch >
-          < Route exact path='/' render={ () => (
-            <div>
-              < NextLaunch />
-              < NextLaunchesContainer />
-            </div>
-            )}/>
+          < Route exact path='/'
+            component={ NextLaunchesContainer}/>
           < Route path='/rockets/:id' render={ ({ match }) => {
             console.log(match.params.id)
             return (<div>
