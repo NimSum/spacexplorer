@@ -20,26 +20,26 @@ export class App extends Component {
   }
 
   async componentDidMount() {
-    // this.setState({ loading: true })
-    // try {
-    //   const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
-    // const upcomingLaunches = await fetchAnything(url);
-    // this.props.addUpcomingLaunches(upcomingLaunches);
-    // this.props.addSelectedLaunch(upcomingLaunches.results[0])
-    //   this.setState({ loading: false })
-    // } catch(error) {
-    //   this.setState({ error })
-    // }
+    this.setState({ loading: true })
+    try {
+      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
+    const upcomingLaunches = await fetchAnything(url);
+    this.props.addUpcomingLaunches(upcomingLaunches);
+    this.props.addSelectedLaunch(upcomingLaunches.results[0])
+      this.setState({ loading: false })
+    } catch(error) {
+      this.setState({ error })
+    }
   }
 
   render() {
     return (
       <main>
         < CategoryMenu />
-        {/* < AsideEvents /> */}
+        < AsideEvents />
         < Switch >
-          {/* < Route exact path='/'
-            component={ NextLaunchesContainer}/> */}
+          < Route exact path='/'
+            component={ NextLaunchesContainer}/>
           < Route path='/about/:category' render={({ match }) => {
               return (
                 < CategorySection 
