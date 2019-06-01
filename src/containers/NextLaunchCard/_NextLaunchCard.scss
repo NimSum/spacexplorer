@@ -1,7 +1,9 @@
 article.next-launch-card {
-  min-width: 20%;
+  max-width: 30%;
+  min-width: 300px;
   white-space: normal;
   margin: 10px;
+  display: flex;
   
   h3 {
     margin: 10px 0;
@@ -9,5 +11,18 @@ article.next-launch-card {
 
   p {
     margin: 5px 0;
+  }
+
+  div.image-side {
+    flex: 1.5;
+
+    img {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+    }
+  }
+  div.info-side {
+    flex: 2;
   }
 }
