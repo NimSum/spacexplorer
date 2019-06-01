@@ -28,6 +28,9 @@ export class CategoryMenu extends Component {
         < NavLink to='/about/launch_providers'>
           Launch Providers
         </NavLink>
+        < NavLink to='/'>
+          Upcoming Launches
+        </NavLink>
       </nav>
     )
   }

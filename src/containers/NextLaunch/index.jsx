@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import CountDownTimer from '../../components/CountDownTimer';
 import NextLaunchInfo from '../NextLaunchInfo';
 import { toggleLaunchInfo } from '../../actions'
+import defaulRocketImg from '../../images/default-rocket-img.svg';
 
 export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
-
+  const { name, status, pad, mission, rocket } = rocketLaunch;
   const generateLaunchCard = () => {
-    const { name, status, pad, mission } = rocketLaunch;
     return (
       <article className="upcoming-launch-card">
         <h3>Next Rocket Launch:</h3>
@@ -29,7 +29,9 @@ export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
       { showInfo && < NextLaunchInfo /> }
       < CountDownTimer 
         date={ rocketLaunch.net }/>
-      <img src={ rocketLaunch.rocket.configuration.image_url } alt="rocket" />
+      <img src={ rocket.configuration.image_url 
+        ? rocket.configuration.image_url 
+        : defaulRocketImg } alt="rocket" />
     </section>)
   : <div>LOOOOOOOODINGGGG</div>
 }
