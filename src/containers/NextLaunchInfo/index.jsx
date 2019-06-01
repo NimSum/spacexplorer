@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { toggleLaunchInfo } from '../../actions'
 
-const NextLaunchInfo  = ({ launchInfo }) => {
+const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
   const { name, rocket, mission, pad } = launchInfo;
     return (
       <article>
@@ -14,7 +15,11 @@ const mapStateToProps = state => ({
   launchInfo: state.selectedLaunch
 })
 
-export default connect(mapStateToProps)(NextLaunchInfo);
+const mapDispatchToProps = dispatch => ({
+  hideInfo: (bool) => dispatch(toggleLaunchInfo(bool))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(NextLaunchInfo);
 
 // {
 //   "id": "41495097-341b-4ec5-b7e5-a450cf45fc23",
