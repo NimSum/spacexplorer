@@ -28,3 +28,7 @@ export const addSpaceStations = spaceStations => ({
   spaceStations
 })
 
+export const addOrbiters = orbiters => ({
+  type: 'ADD_ORBITERS',
+  orbiters
+})
