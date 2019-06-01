@@ -21,7 +21,7 @@ export class App extends Component {
   async componentDidMount() {
     this.setState({ loading: true })
     try {
-      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming';
+      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
     const upcomingLaunches = await fetchAnything(url);
     this.props.addUpcomingLaunches(upcomingLaunches);
     this.props.addSelectedLaunch(upcomingLaunches.results[0])

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import CountDownTimer from '../../components/CountDownTimer';
 import NextLaunchInfo from '../NextLaunchInfo';
 import { toggleLaunchInfo } from '../../actions'
@@ -10,19 +9,8 @@ export class NextLaunch extends Component {
   constructor() {
     super();
     this.state = {
-      rocket: {},
       rocketLaunch: {},
       error: ''
-    }
-  }
-
-  getRocketImage = async () => {
-    const url = this.state.rocketLaunch.rocket.configuration.url;
-    try {
-      const rocket = await fetchAnything(url);
-      this.setState({ rocket });
-    } catch(error) {
-      this.setState({ error });
     }
   }
 
@@ -30,7 +18,7 @@ export class NextLaunch extends Component {
     const oldId = prevProps.rocketLaunch.id;
     const newId = this.props.rocketLaunch.id;
     if (newId !== oldId) {
-      this.setState({ ...this.props }, () => this.getRocketImage())
+      this.setState({ ...this.props })
     }
   }
 
@@ -51,13 +39,13 @@ export class NextLaunch extends Component {
   }
 
   render() {
-    return this.state.rocketLaunch.url 
+    return this.state.rocketLaunch.id 
     ? (<section className='launch-card'>
         { this.generateLaunchCard() }
         { this.props.showInfo && < NextLaunchInfo /> }
         < CountDownTimer 
           date={ this.state.rocketLaunch.net }/>
-        <img src={this.state.rocket.image_url} alt="rocket" />
+        <img src={ this.state.rocketLaunch.rocket.configuration.image_url } alt="rocket" />
       </section>)
     : <div>HI</div>
   }
