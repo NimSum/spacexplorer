@@ -28,7 +28,7 @@ export class NextLaunchesContainer extends Component {
     return (
       <section className="next-launches-container">
         < NextLaunch />
-        <h3>Upcoming Launches</h3>
+        <h3 className="next-launches-title">Upcoming Launches</h3>
         <div className="card-container">
           { this.props.rocketLaunches.results && this.generateCards() }
         </div>

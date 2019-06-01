@@ -5,7 +5,6 @@ article.next-launch-card {
   display: flex;
   background-color: $secondary-light;
   border-radius: 5px;
-  height: 95%;
   padding: 10px;
 
   h3 {
@@ -47,8 +46,9 @@ article.next-launch-card {
 
     button {
       position: absolute;
-      bottom: 20px;
+      bottom: 10px;
       right: 20px;
+      border-radius: 20px;
     }
   }
 }

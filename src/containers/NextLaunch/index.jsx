@@ -10,10 +10,11 @@ export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
     const { name, status, pad, mission } = rocketLaunch;
     return (
       <article className="upcoming-launch-card">
-        <p>{ name }</p>
-        <p>{ status.name }</p>
-        <p>{ mission ? mission.orbit : 'Unknown' }</p>
-        <p>{ pad.location.name }</p>
+        <h3>Next Rocket Launch:</h3>
+        <h2>{ name }</h2>
+        <p><span>Status: </span> { status.name }</p>
+        <p><span>Mission Type: </span> { mission.id ? mission.type : 'Unknown' }</p>
+        <p><span>Location: </span> { pad.location.name }</p>
         <button onClick={ () => 
           toggleLaunchInfo(true) }>
             More

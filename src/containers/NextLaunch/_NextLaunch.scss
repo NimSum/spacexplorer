@@ -10,9 +10,35 @@ section.next-launch-container {
     z-index: 1;
     position: relative;
     margin: 0 auto;
+    height: 250px;
+    width: 350px;
+    background-color: hsla(303, 100%, 96%, .85);
+    border-radius: 20px;
+    text-align: center;
+
+    h3 {
+      width: 55%;
+      margin: auto;
+      border-bottom: 2px solid $secondary-dark;
+      padding: 10px 0;
+      color: $secondary-dark;
+    }
+
+    h2 {
+      margin: 10px;
+      color: $primary-dark;
+    }
 
     p {
-      color: red;
+      color: $primary-dark;
+      margin: 10px;
+      span {
+        color: $secondary-dark;
+      }
+    }
+
+    button {
+      @include more-info-btn;
     }
   }
 
