@@ -38,9 +38,20 @@ export class CountDownTimer extends Component {
   }
   
   componentDidMount() {
-    const nextDate = new Date(this.props.date);
-    const totalTime = (nextDate.getTime() - Date.now());
+    const totalTime = this.calculateDateDifference();
     this.setState({ totalTime }, () => this.updateTime());
+  }
+
+  calculateDateDifference() {
+    const nextDate = new Date(this.props.date);
+    return (nextDate.getTime() - Date.now());
+  }
+
+  componentDidUpdate(prevProps) {
+    if(this.props.date !== prevProps.date) {
+      const totalTime = this.calculateDateDifference();
+      this.setState({ totalTime })
+    }
   }
 
   render() {

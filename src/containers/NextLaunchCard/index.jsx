@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleLaunchInfo, addSelectedLaunch } from '../../actions';
+import moment from 'moment';
 
 const NextLaunchCard = ({ launch, toggleLaunchInfo, updateSelectedLaunch }) => {
   const { pad, status, mission, rocket } = launch;
@@ -8,6 +9,7 @@ const NextLaunchCard = ({ launch, toggleLaunchInfo, updateSelectedLaunch }) => {
     toggleLaunchInfo(true);
     updateSelectedLaunch(launch);
   }
+  const readableDate = moment(launch.net).format('MMM DD LT');
   return (
     <article className='next-launch-card'>
       <div className="image-side">
@@ -15,7 +17,7 @@ const NextLaunchCard = ({ launch, toggleLaunchInfo, updateSelectedLaunch }) => {
         <img src={ rocket.configuration.image_url } alt="rocket" />
       </div>
       <div className="info-side">    
-        <h3>{ launch.net }</h3>
+        <h3>{ readableDate }</h3>
         <p>Mission: { mission ? mission.name : 'Unknown' }</p>  
         <p>Orbit: { mission ? mission.orbit : 'Uknown' }</p>
         <p>Status: { status.name }</p>
