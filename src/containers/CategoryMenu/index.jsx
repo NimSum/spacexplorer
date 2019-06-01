@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import categoryManager from '../../thunks/categoryManager';
 
 export class CategoryMenu extends Component {
   constructor() {
@@ -50,4 +52,8 @@ export class CategoryMenu extends Component {
   }
 }
 
-export default CategoryMenu
+const mapDispatchToProps = dispatch => ({
+  selectCategory: (category) => dispatch(categoryManager(category))
+})
+
+export default connect(null, mapDispatchToProps)(CategoryMenu);

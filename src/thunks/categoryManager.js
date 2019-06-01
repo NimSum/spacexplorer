@@ -1,7 +1,7 @@
 import * as action from "../actions";
 import fetchAnything from '../utils/apiFetches/fetchAnything';
 
-export const categoryManager = category => {
+const categoryManager = category => {
   return async dispatch => {
     switch (category) {
       case 'rockets':
@@ -15,6 +15,7 @@ export const categoryManager = category => {
   }
 }
 
+export default categoryManager;
 
 // export const addNewNote = note => {
 //   return async dispatch => {
