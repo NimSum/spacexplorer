@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux';
 
 const NextLaunchInfo  = ({ launchInfo }) => {
-  console.log(launchInfo)
+  const { name, rocket, mission, pad } = launchInfo;
     return (
       <article>
-        <h3>HIIIIIIIIIII</h3>
+        <h3>{ name }</h3>
       </article>
     )
 }
