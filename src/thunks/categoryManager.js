@@ -5,10 +5,12 @@ export const categoryManager = category => {
   return async dispatch => {
     switch (category) {
       case 'rockets':
-        const url =
-        // const rockets = await fetchAnything()
+        const url = 'https://spacelaunchnow.me/api/3.3.1/config/launcher/?mode=detailed'
+        const rockets = await fetchAnything(url);
+        dispatch(action.addRockets(rockets));
+        break;
       default:
-
+        console.log('yolo')
     }
   }
 }

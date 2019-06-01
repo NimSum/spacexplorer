@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import NextLaunchCard from '../NextLaunchCard';
 import NextLaunch from '../NextLaunch';
 
