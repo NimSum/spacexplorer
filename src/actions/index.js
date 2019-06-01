@@ -17,3 +17,14 @@ export const toggleLaunchInfo = (bool) => ({
   type: 'TOGGLE_LAUNCH_INFO',
   bool: bool
 })
+
+export const addRockets = rockets => ({
+  type: 'ADD_ROCKETS',
+  rockets
+})
+
+export const addSpaceStations = spaceStations => ({
+  type: 'ADD_SPACE_STATIONS',
+  spaceStations
+})
+
