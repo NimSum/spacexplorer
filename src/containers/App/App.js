@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import categoryManager from '../../thunks/categoryManager';
+import CategorySection from '../CategorySection';
 
 export class App extends Component {
   constructor() {
@@ -40,9 +41,11 @@ export class App extends Component {
         < Switch >
           {/* < Route exact path='/'
             component={ NextLaunchesContainer}/> */}
-          < Route path='/rockets' render={() => {
-            //  this.props.selectCategory('rockets');
-             console.log('oolooo')
+          < Route path='/about/:category' render={({ match }) => {
+              return (
+                < CategorySection 
+                  category={ match.params.category }/>
+              )
           }}/>
           < Route component={ Page404 } />
         </Switch>

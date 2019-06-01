@@ -12,7 +12,7 @@ export class CategorySection extends Component {
   render() {
     return (
       <section className='category-section'>
-        
+        oloooo
       </section>
     )
   }
