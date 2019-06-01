@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import categoryManager from '../../thunks/categoryManager';
+import RocketCard from '../../components/RocketCard';
+import AstronautCard from '../../components/AstronautCard';
 
 export class CategorySection extends Component {
   constructor() {
@@ -19,21 +21,21 @@ export class CategorySection extends Component {
 
   generateCards(categorySelected) {
     const cards = categorySelected.results.map(item => 
-      this.cardSelector()
+      this.cardSelector(item)
     )
     this.setState({ cardsToRender: cards })
   }
 
-  cardSelector() {
+  cardSelector(item) {
     switch (this.props.category) {
       case 'rockets':
-        return <p>Rockets</p>;
+        return < RocketCard rocket={item} />;
       case 'space_stations':
           return <p>space stations</p>
       case 'orbiters':
         return <p>orbiters</p>
       case 'astronauts':
-        return <p>astrooo</p>
+        return < AstronautCard astronaut={item} />;
       default:
         return <p>NADA</p>
     }
