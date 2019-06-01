@@ -26,3 +26,5 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
     </article>
   )
 }
+
+export default CategoryItemInfo;

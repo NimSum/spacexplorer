@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import categoryManager from '../../thunks/categoryManager';
 import RocketCard from '../../components/RocketCard';
 import AstronautCard from '../../components/AstronautCard';
-
+import CategoryItemInfo from '../../components/CategoryItemInfo';
 export class CategorySection extends Component {
   constructor() {
     super();
@@ -15,6 +15,7 @@ export class CategorySection extends Component {
   }
 
   checkAndUpdate() {
+    this.setState({ showInfo: false })
     const categorySelected = this.props[this.props.category];
     if (categorySelected.next) {
       this.generateCards(categorySelected)
@@ -57,11 +58,22 @@ export class CategorySection extends Component {
     if(prevProps !== this.props) this.checkAndUpdate();
   }
 
+  generateCardInfo() {
+    console.log('hi')
+    return (
+      < CategoryItemInfo 
+        item={ this.state.cardInfoToRender }
+        category={ this.props.category }
+        showInfo={ this.showInfo } />
+    )
+  }
+
   render() {
     return (
       <section className='category-section'>
         { this.props.category }
         { this.state.cardsToRender }
+        { this.state.showInfo && this.generateCardInfo() }
       </section>
     )
   }
