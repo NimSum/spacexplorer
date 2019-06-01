@@ -8,7 +8,6 @@ import NextLaunch from '../NextLaunch';
 import { connect } from 'react-redux';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
-import categoryManager from '../../thunks/categoryManager';
 import CategorySection from '../CategorySection';
 
 export class App extends Component {
@@ -21,16 +20,16 @@ export class App extends Component {
   }
 
   async componentDidMount() {
-    this.setState({ loading: true })
-    try {
-      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
-    const upcomingLaunches = await fetchAnything(url);
-    this.props.addUpcomingLaunches(upcomingLaunches);
-    this.props.addSelectedLaunch(upcomingLaunches.results[0])
-      this.setState({ loading: false })
-    } catch(error) {
-      this.setState({ error })
-    }
+    // this.setState({ loading: true })
+    // try {
+    //   const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
+    // const upcomingLaunches = await fetchAnything(url);
+    // this.props.addUpcomingLaunches(upcomingLaunches);
+    // this.props.addSelectedLaunch(upcomingLaunches.results[0])
+    //   this.setState({ loading: false })
+    // } catch(error) {
+    //   this.setState({ error })
+    // }
   }
 
   render() {
@@ -57,7 +56,6 @@ export class App extends Component {
 const mapDispatchToProps = dispatch => ({
   addUpcomingLaunches: launches => dispatch(addUpcomingLaunches(launches)),
   addSelectedLaunch: event => dispatch(addSelectedLaunch(event)),
-  selectCategory: category => dispatch(categoryManager(category))
 })
 
 export default connect(null, mapDispatchToProps)(App);
