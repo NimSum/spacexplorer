@@ -37,3 +37,8 @@ export const addAstronauts = astronauts => ({
   type: 'ADD_ASTRONAUTS',
   astronauts
 })
+
+export const addLaunchProviders = launchProviders => ({
+  type: 'ADD_LAUNCH_PROVIDERS',
+  launchProviders
+})
