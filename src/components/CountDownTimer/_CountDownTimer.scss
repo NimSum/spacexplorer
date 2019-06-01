@@ -1,0 +1,19 @@
+section.countdown-timer {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+
+
+  p {
+    flex: 3;
+    margin: 0;
+  }
+
+  span {
+    flex: 1;
+  }
+}
