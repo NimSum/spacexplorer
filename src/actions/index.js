@@ -12,3 +12,7 @@ export const addSelectedLaunch = event => ({
   type: 'ADD_SELECTED_LAUNCH',
   event
 })
+
+export const toggleLaunchInfo = () => ({
+  type: 'TOGGLE_LAUNCH_INFO'
+})

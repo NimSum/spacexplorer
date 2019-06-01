@@ -1,4 +1,6 @@
-export const toggleLaunchInfoReducer = (state = false, action) => {
+const toggleLaunchInfoReducer = (state = false, action) => {
   if (action.type === 'TOGGLE_LAUNCH_INFO') return !state;
   return state;
 }
+
+export default toggleLaunchInfoReducer;

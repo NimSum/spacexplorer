@@ -8,7 +8,8 @@ export class NextLaunchesContainer extends Component {
   constructor() {
     super();
     this.state = {
-      launches: []
+      launches: [],
+      showInfo: false
     }
   }
   
@@ -36,11 +37,17 @@ export class NextLaunchesContainer extends Component {
     ))
   }
 
+  toggleInfo = () => {
+    this.setState({ showInfo: !this.state.showInfo })
+  }
+
   render() {
     return (
       <section className="next-launches-container">
         <h1>HIIIIII</h1>
-        < NextLaunch />
+        < NextLaunch 
+          toggleInfo={ this.toggleMoreInfo }
+          showInfo={ this.state.showInfo }/>
         <div>
           { this.state.launches.length && this.generateCards() }
         </div>

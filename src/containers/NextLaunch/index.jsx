@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import CountDownTimer from '../../components/CountDownTimer';
 import NextLaunchInfo from '../NextLaunchInfo';
+import { toggleLaunchInfo } from '../../actions'
 
 export class NextLaunch extends Component {
 
@@ -41,6 +42,9 @@ export class NextLaunch extends Component {
         <p>{ status.name }</p>
         <p>{ mission.orbit ? mission.orbit : 'Unknown' }</p>
         <p>{ pad.location.name }</p>
+        <button onClick={ this.props.toggleLaunchInfo }>
+            More
+        </button>
       </article>
     )
   }
@@ -49,21 +53,22 @@ export class NextLaunch extends Component {
     return this.state.rocketLaunch.url 
     ? (<section className='launch-card'>
         { this.generateLaunchCard() }
-        < NextLaunchInfo />
+        { this.props.showInfo && < NextLaunchInfo /> }
         < CountDownTimer 
           date={ this.state.rocketLaunch.net }/>
-        <article>
-          <p>Next Rocket Launch</p>
-          <h3>{ this.state.rocketLaunch.name }</h3>
-          <img src={this.state.rocket.image_url} alt="rocket" />
-        </article>
+        <img src={this.state.rocket.image_url} alt="rocket" />
       </section>)
     : <div>HI</div>
   }
 }
 
 export const mapStateToProps = state => ({
-  rocketLaunch: state.selectedLaunch
+  rocketLaunch: state.selectedLaunch,
+  showInfo: state.showLaunchInfo
 })
 
-export default connect(mapStateToProps)(NextLaunch);
+export const mapDispatchToProps = dispatch => ({
+  toggleLaunchInfo: () => dispatch(toggleLaunchInfo())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(NextLaunch);
