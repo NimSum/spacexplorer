@@ -34,19 +34,12 @@ export class App extends Component {
   render() {
     return (
       <main>
-        {/* < CategoryMenu /> */}
+        < CategoryMenu />
         {/* < AsideEvents /> */}
         < Switch >
-          < Route exact path='/'
-            component={ NextLaunchesContainer}/>
-          < Route path='/rockets/:id' render={ ({ match }) => {
-            console.log(match.params.id)
-            return (<div>
-              <h3>Rockets</h3>
-              {/* < NextLaunch /> */}
-              {/* < NextLaunchesContainer /> */}
-            </div>)
-            }}/>
+          {/* < Route exact path='/'
+            component={ NextLaunchesContainer}/> */}
+          {/* < Route path='/rockets' component={ }/> */}
           < Route component={ Page404 } />
         </Switch>
       </main>
