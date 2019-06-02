@@ -1,10 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import AstronautCard from './index';
-import mockAstronaut from '../../utils/mockData'
+import { mockAstronaut } from '../../utils/mockData/'
 
 describe('AstronautCard', () => {
-
   const mockShowInfo = jest.fn();
   let wrapper;
   beforeEach(() => {
@@ -18,6 +17,7 @@ describe('AstronautCard', () => {
   it('should match component snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   })
+
 
 })
 

@@ -1,3 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AstronautCard should match component snapshot 1`] = `undefined`;
+exports[`AstronautCard should match component snapshot 1`] = `
+<article
+  className="astronaut-card"
+>
+  <div
+    className="image-side"
+  >
+    <img
+      alt="Astronaut"
+      src="https://daszojo4xmsc6.cloudfront.net/media/default/cache/15/18/151821a1575b1c84201de6e3e4f11d73.jpg"
+    />
+    <button
+      onClick={[Function]}
+    >
+      BIO
+    </button>
+  </div>
+  <div
+    className="details-side"
+  >
+    <h3>
+      Bill Nelson
+    </h3>
+    <p>
+      DOB: 
+      <span>
+        1942-09-29
+      </span>
+    </p>
+    <p>
+      Status: 
+      <span>
+        Retired
+      </span>
+    </p>
+    <p>
+      Nationality: 
+      <span>
+        American
+      </span>
+    </p>
+  </div>
+</article>
+`;

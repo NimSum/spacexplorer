@@ -6,7 +6,7 @@ const AstronautCard = ({ astronaut, showInfo }) => {
   return (
     <article className="astronaut-card">
       <div className="image-side">
-        <img src={ profile_image_thumbnail || defaultAstronautImg } alt=""/>
+        <img src={ profile_image_thumbnail || defaultAstronautImg } alt="Astronaut"/>
         <button onClick={() => showInfo(astronaut, true)}>
           BIO
         </button>
