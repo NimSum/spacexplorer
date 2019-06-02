@@ -59,9 +59,9 @@ describe('AsideEvents', () => {
     const mockDispatch = jest.fn();
     const mappedProps = mapDispatchToProps(mockDispatch);
     it('should dispatch addSpaceEvents with the correct params', () => {
-      const mappedAddUpcomingEvents = addSpaceEvents(mockEvents);
+      const actionToDispatch = addSpaceEvents(mockEvents);
       mappedProps.addUpcomingEvents(mockEvents);
-      expect(mockDispatch).toHaveBeenCalledWith(mappedAddUpcomingEvents);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     })
   })
 

@@ -9,7 +9,7 @@ exports[`AstronautCard should match component snapshot 1`] = `
   >
     <img
       alt="Astronaut"
-      src="https://daszojo4xmsc6.cloudfront.net/media/default/cache/15/18/151821a1575b1c84201de6e3e4f11d73.jpg"
+      src="default-astronaut.svg"
     />
     <button
       onClick={[Function]}
@@ -21,12 +21,12 @@ exports[`AstronautCard should match component snapshot 1`] = `
     className="details-side"
   >
     <h3>
-      Bill Nelson
+      Gregory Olsen
     </h3>
     <p>
       DOB: 
       <span>
-        1942-09-29
+        1945-04-20
       </span>
     </p>
     <p>

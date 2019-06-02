@@ -1,9 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import AstronautCard from './index';
-import { mockAstronaut } from '../../utils/mockData/'
+import { mockAstronauts } from '../../utils/mockData/'
 
 describe('AstronautCard', () => {
+  const mockAstronaut = mockAstronauts.results[0];
   const mockShowInfo = jest.fn();
   let wrapper;
   beforeEach(() => {

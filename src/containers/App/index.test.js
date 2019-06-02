@@ -56,15 +56,15 @@ describe('App', () => {
       const mappedProps = mapDispatchToProps(mockDispatch);
 
       it('should should dispatch launches using correct params', () => {
-        const mappedAddUpcomingLaunches = addUpcomingLaunches(mockLaunches);
+        const actionToDispatch = addUpcomingLaunches(mockLaunches);
         mappedProps.addUpcomingLaunches(mockLaunches);
-        expect(mockDispatch).toHaveBeenCalledWith(mappedAddUpcomingLaunches);
+        expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
       })
 
       it('should should dispatch selected launch using correct params', () => {
-        const mappedAddSelectedLaunch = addSelectedLaunch(mockLaunches.results[0])
+        const addUpcomingEvents = addSelectedLaunch(mockLaunches.results[0])
         mappedProps.addSelectedLaunch(mockLaunches.results[0]);
-        expect(mockDispatch).toHaveBeenCalledWith(mappedAddSelectedLaunch);
+        expect(mockDispatch).toHaveBeenCalledWith(addUpcomingEvents);
       })
   })
 
