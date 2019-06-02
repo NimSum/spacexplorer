@@ -73,7 +73,9 @@ export class CategorySection extends Component {
       <section className='category-section'>
         { this.state.showInfo && this.generateCardInfo() }
         { this.props.category }
-        { this.state.cardsToRender }
+        <div className="card-container">
+          { this.state.cardsToRender }
+        </div>
       </section>
     )
   }

@@ -1,28 +1,9 @@
-article.astronaut-card {
-  @include transparent-light-bg;
-  display: flex;
-  margin: 10px;
-  padding: 20px;
-  
-  div.image-side {
+section.category-section {
+  .card-container {
     display: flex;
-    flex-direction: column;
-
-    button {
-      @include category-info-btn;
-    }
-  }
-
-  div.details-side {
-    padding: 5px 10px;
-
-    p {
-      margin: 5px 0;
-    }
-  }
-
-  img {
-    width: 100px;
-    border-radius: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    height: 40vh;
   }
 }
