@@ -58,4 +58,20 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);
     })
   })
+
+  describe('rocketsReducer', () => {
+
+    it('should return a default state', () => {
+      const result = rocketsReducer(undefined, {})
+      const expected = {}
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return the action payload if action type is valid', () => {
+      const mockValidAction = action.addRockets(mockData.mockRockets);
+      const result = rocketsReducer(undefined, mockValidAction)
+      const expected = mockData.mockRockets;
+      expect(result).toEqual(expected);
+    })
+  })
 })
