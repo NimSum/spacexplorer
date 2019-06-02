@@ -54,6 +54,18 @@ describe('NextLaunchCard', () => {
     })
   })
 
+  describe('mapStateToProps', () => {
+    const mockState = {
+      showLaunchInfo: true
+    };
+    const expected = {
+      showInfo: true
+    }
+    it('should map state from mock state', () => {
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected)
+    })
+  })
 
 
 })
