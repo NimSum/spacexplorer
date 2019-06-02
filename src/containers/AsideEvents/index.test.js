@@ -55,5 +55,15 @@ describe('AsideEvents', () => {
     })
   })
 
+  describe('mapDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    it('should dispatch addSpaceEvents with the correct params', () => {
+      const mappedAddUpcomingEvents = addSpaceEvents(mockEvents);
+      mappedProps.addUpcomingEvents(mockEvents);
+      expect(mockDispatch).toHaveBeenCalledWith(mappedAddUpcomingEvents);
+    })
+  })
+
 
 })
