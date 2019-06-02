@@ -8,7 +8,7 @@ exports[`NextLaunch should match component snapshot 1`] = `
     className="upcoming-launch-card"
   >
     <h3>
-      Next Rocket Launch:
+      Upcoming Rocket Launch:
     </h3>
     <h2>
       Long March 11 | Jilin-1
