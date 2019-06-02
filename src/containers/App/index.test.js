@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React, { Component } from 'react';
+import App from './index';
+import { shallow } from 'enzyme';
+import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
+import fetchAnything from '../../utils/apiFetches/fetchAnything';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('App', () => {
+  
+})
