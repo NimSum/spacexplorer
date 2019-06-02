@@ -39,9 +39,11 @@ describe('App', () => {
       expect(fetchAnything).toHaveBeenCalledWith(expected);
     })
   
-    it('should fetch data using correct params', () => {
-      const expected = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
-      expect(fetchAnything).toHaveBeenCalledWith(expected);
+    it('should set state error when fetch fails', () => {
+      const expected = new Error('Failed to Fetch');
+      fetchAnything.mockImplementation(() => { throw expected });
+      wrapper.instance().componentDidMount();
+      expect(wrapper.state().error).toEqual(expected)
     })
 
     it('should pass data fetched to props', () => {
