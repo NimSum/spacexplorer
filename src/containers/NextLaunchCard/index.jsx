@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { toggleLaunchInfo, addSelectedLaunch } from '../../actions';
 import moment from 'moment';
+import defaultRocketImage from '../../images/default-rocket-img.svg';
 
 const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaunch }) => {
   const { pad, status, mission, rocket } = launch;
@@ -14,7 +15,7 @@ const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaun
     <article className='next-launch-card'>
       <div className="image-side">
         <h3>{ rocket.configuration.name }</h3>
-        <img src={ rocket.configuration.image_url } alt="rocket" />
+        <img src={ rocket.configuration.image_url || defaultRocketImage } alt="rocket" />
       </div>
       <div className="info-side">    
         <h3>{ readableDate }</h3>

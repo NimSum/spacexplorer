@@ -2,11 +2,30 @@ div.menu-container {
   nav {
     display: flex;
     flex-direction: column;
+    color: $secondary-light;
+
+    .is-active {
+      background-color: $secondary-dark;
+      color: $primary-dark;
+    }
+
+  }
+
+  p {
+    border-bottom: 1px solid #9EA9F0;
+    padding: 5px;
+    color: $secondary-dark;
   }
 
   position: absolute;
   top: 0;
   right: 0;
   z-index: 10;
+  margin: 10px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  background-color: hsla(259, 40%, 39%, .8);
+  padding: 5px 15px 15px 15px;
+  text-align: center;
 
 }

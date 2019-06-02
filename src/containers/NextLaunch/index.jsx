@@ -29,9 +29,7 @@ export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
       { showInfo && < NextLaunchInfo /> }
       < CountDownTimer 
         date={ rocketLaunch.net }/>
-      <img src={ rocket.configuration.image_url 
-        ? rocket.configuration.image_url 
-        : defaulRocketImg } alt="rocket" />
+      <img src={ rocket.configuration.image_url || defaulRocketImg } alt="rocket" />
     </section>)
   : <div>LOOOOOOOODINGGGG</div>
 }
