@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountDownTimer should match component snapshot 1`] = `
+<section
+  className="countdown-timer"
+>
+  <div>
+    <p>
+      00
+    </p>
+    <span>
+      Days
+    </span>
+  </div>
+  <span
+    className="colon"
+  >
+    :
+  </span>
+  <div>
+    <p>
+      00
+    </p>
+    <span>
+      Hours
+    </span>
+  </div>
+  <span
+    className="colon"
+  >
+    :
+  </span>
+  <div>
+    <p>
+      00
+    </p>
+    <span>
+      Minutes
+    </span>
+  </div>
+  <span
+    className="colon"
+  >
+    :
+  </span>
+  <div>
+    <p>
+      00
+    </p>
+    <span>
+      Seconds
+    </span>
+  </div>
+</section>
+`;
