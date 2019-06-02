@@ -38,7 +38,7 @@ export class NextLaunchesContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   rocketLaunches: state.upcomingLaunches || {}
 })
 

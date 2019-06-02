@@ -48,4 +48,17 @@ describe('NextLaunchesContainer', () => {
     expect(wrapper.state().showInfo).toBe(false);
   })
 
+  
+  describe('mapStateToProps', () => {
+    const mockState = {
+      upcomingLaunches: mockLaunches
+    };
+    const expected = {
+      rocketLaunches: mockLaunches
+    }
+    it('should map state from mock state', () => {
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected)
+    })
+  })
 })
