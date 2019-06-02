@@ -90,5 +90,16 @@ describe('Actions', () => {
       expect(result).toEqual(expected);
     })
   })
+  
+  describe('ADD_LAUNCH_PROVIDERS', () => {
+    it('should return object with valid action type and payload', () => {
+      const result = action.addLaunchProviders(mockData.mockLaunchProviders);
+      const expected = {
+        type: 'ADD_LAUNCH_PROVIDERS',
+        launchProviders: mockData.mockLaunchProviders  
+      };
+      expect(result).toEqual(expected);
+    })
+  })
 
 })
