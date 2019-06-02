@@ -19,4 +19,11 @@ describe('CategoryMenu', () => {
   it('should have default state', () => {
     expect(wrapper.state()).toEqual(defaultState);
   })
+
+  it('should set state showMenu based on param', () => {
+    wrapper.instance().showMenu(true);
+    expect(wrapper.state().showMenu).toEqual(true);
+    wrapper.instance().showMenu(false);
+    expect(wrapper.state().showMenu).toEqual(false);
+  })
 })
