@@ -28,4 +28,15 @@ describe('NextLaunchInfo', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  describe('Events', () => {
+    it('should trigger hideInfo with the correct params on click', () => {
+      wrapper.find('button').simulate('click');
+      expect(mockHideInfo).toHaveBeenCalledWith(false);
+    })
+
+    it('should hideInfo with the correct params on mouse leave', () => {
+      wrapper.find('article').simulate('mouseLeave');
+      expect(mockHideInfo).toHaveBeenCalledWith(false);
+    })
+  })
 })
