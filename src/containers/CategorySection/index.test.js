@@ -46,11 +46,18 @@ describe('CategorySection', () => {
     expect(wrapper.state().cardsToRender).toHaveLength(4)
   })
 
-  it('should set state info card based on props sent in', () => {
+  it('should set state info card passed to showInfo method', () => {
     const expected = mockAstronauts.results[0];
     wrapper.instance().showInfo(mockAstronauts.results[0], true);
     expect(wrapper.state().cardInfoToRender).toEqual(expected);
     expect(wrapper.state().showInfo).toEqual(true);
+  })
+
+  it('should generateCards based results of categorySelected object', () => {
+    const modified = { ...mockAstronauts };
+    modified.results.pop();
+    wrapper.instance().generateCards(modified);
+    expect(wrapper.state().cardsToRender).toHaveLength(3)
   })
 
   it('cardSelector should return specifc card based on category', () => {
