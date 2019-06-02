@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
   const { name, rocket, mission, pad } = launchInfo;
-  console.log(rocket)
     return (
       <article 
         className='next-launch-info-card'
