@@ -6,10 +6,12 @@ import { mockAstronauts } from '../../utils/mockData';
 import AstronautCard from '../../components/AstronautCard';
 
 Math.random = jest.fn().mockImplementation(() => 1);
+jest.mock('../../thunks/categoryManager');
 
 describe('CategorySection', () => {
   let mockAstronautsData = mockAstronauts;
   let checkAndUpdateSpy;
+  let generateCardsSpy;
   let mockCategory = 'astronauts';
   let mockSelectCategory = jest.fn();
   let mockLaunch_providers = {};
@@ -30,10 +32,12 @@ describe('CategorySection', () => {
       />
     )
     checkAndUpdateSpy = jest.spyOn(wrapper.instance(), 'checkAndUpdate');
+    generateCardsSpy = jest.spyOn(wrapper.instance(), 'generateCards');
   })
 
   afterEach(() => {
     checkAndUpdateSpy.mockClear();
+    generateCardsSpy.mockClear();
   })
 
   it('should match component snapshot', () => {
@@ -79,6 +83,32 @@ describe('CategorySection', () => {
     it('should trigger checkAndUpdate spy on component update', () => {
       wrapper.setProps({ category: 'rockets' })
       expect(checkAndUpdateSpy).toHaveBeenCalledTimes(1)
+    })
+  })
+
+  describe('checkAndUpdate', () => {
+    it('should set state showInfo false', () => {
+      wrapper.setState({ showInfo: true });
+      wrapper.instance().checkAndUpdate();
+      expect(wrapper.state().showInfo).toBe(false)
+    })
+
+    it('should trigger generateCards', () => {
+      wrapper.instance().checkAndUpdate();
+      expect(checkAndUpdateSpy).toHaveBeenCalledTimes(1)
+    })
+
+    it.skip('should set state card info to render', () => {
+      wrapper.instance().checkAndUpdate();
+      expect(wrapper.state().cardInfoToRender).toEqual(mockAstronauts.results[1])
+    })
+
+    it('should invoke selectCategory using correct params', () => {
+      const modified = { ...mockAstronauts };
+      modified.next = null;
+      wrapper.setProps({ astronauts: modified })
+      wrapper.instance().checkAndUpdate();
+      expect(mockSelectCategory).toHaveBeenCalledWith('astronauts')
     })
   })
 
