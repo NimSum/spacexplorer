@@ -16,4 +16,16 @@ describe('NextLaunchInfo', () => {
       />
     )
   })
+
+  it('should match component snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should match component snapshot with launches without mission', () => {
+    const modifiedLaunch = { ...mockLaunches.results[0] };
+    modifiedLaunch.mission = null;
+    wrapper.setProps({ launchInfo: modifiedLaunch });
+    expect(wrapper).toMatchSnapshot();
+  })
+
 })

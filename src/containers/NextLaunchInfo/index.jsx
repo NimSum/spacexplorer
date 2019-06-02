@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { toggleLaunchInfo } from '../../actions'
 import PropTypes from 'prop-types';
 
-const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
+export const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
   const { name, rocket, mission, pad } = launchInfo;
     return (
       <article 
@@ -35,11 +35,11 @@ const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
     )
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   launchInfo: state.selectedLaunch
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   hideInfo: (bool) => dispatch(toggleLaunchInfo(bool))
 })
 

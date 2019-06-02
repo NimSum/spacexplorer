@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NextLaunchInfo should match component snapshot 1`] = `
+<article
+  className="next-launch-info-card"
+  onMouseLeave={[Function]}
+>
+  <h2>
+    Long March 11 | Jilin-1
+  </h2>
+  <div
+    className="mission"
+  >
+    <h3>
+      Mission Description:
+    </h3>
+    <p>
+      Type: 
+      Earth Science
+    </p>
+    <p>
+      The first sea launch of Long March 11 rocket. It carries two Jilin-1 Earth observation satellites.
+    </p>
+    <a
+      href="https://spacelaunchnow.me/launch/long-march-11-jilin-1-1927"
+    >
+      Space Launch Now Info
+    </a>
+  </div>
+  <div
+    className="rocket-provider"
+  >
+    <h3>
+      Rocket: 
+      Long March 11
+    </h3>
+    <p>
+      Thrust: 
+      1177
+      kN
+    </p>
+    <p>
+      Height:  
+      20
+      M Width: 
+      2
+      M
+    </p>
+    <a
+      href="https://en.wikipedia.org/wiki/Long_March_11"
+    >
+      Rocket Wiki
+    </a>
+    <h3>
+      Launch Provider: 
+      China National Space Administration
+       
+    </h3>
+    <p>
+      The China National Space Administration (CNSA) is the national space agency of the People's Republic of China. It is responsible for the national space program and for planning and development of space activities. CNSA and China Aerospace Corporation (CASC) assumed the authority over space development efforts previously held by the Ministry of Aerospace Industry. The CNSA has many launch sites around China with their orbital sites located in Jiuquan, Xichang, Taiyuan and Wenchang.
+    </p>
+    <a
+      href="http://www.cnsa.gov.cn/"
+    >
+      Provider Website
+    </a>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    x
+  </button>
+</article>
+`;
+
+exports[`NextLaunchInfo should match component snapshot with launches without mission 1`] = `
+<article
+  className="next-launch-info-card"
+  onMouseLeave={[Function]}
+>
+  <h2>
+    Long March 11 | Jilin-1
+  </h2>
+  <div
+    className="mission"
+  >
+    <h3>
+      Mission Description:
+    </h3>
+    <p>
+      Type: 
+      Unknown
+    </p>
+    <p>
+      Unknown
+    </p>
+    <a
+      href="https://spacelaunchnow.me/launch/long-march-11-jilin-1-1927"
+    >
+      Space Launch Now Info
+    </a>
+  </div>
+  <div
+    className="rocket-provider"
+  >
+    <h3>
+      Rocket: 
+      Long March 11
+    </h3>
+    <p>
+      Thrust: 
+      1177
+      kN
+    </p>
+    <p>
+      Height:  
+      20
+      M Width: 
+      2
+      M
+    </p>
+    <a
+      href="https://en.wikipedia.org/wiki/Long_March_11"
+    >
+      Rocket Wiki
+    </a>
+    <h3>
+      Launch Provider: 
+      China National Space Administration
+       
+    </h3>
+    <p>
+      The China National Space Administration (CNSA) is the national space agency of the People's Republic of China. It is responsible for the national space program and for planning and development of space activities. CNSA and China Aerospace Corporation (CASC) assumed the authority over space development efforts previously held by the Ministry of Aerospace Industry. The CNSA has many launch sites around China with their orbital sites located in Jiuquan, Xichang, Taiyuan and Wenchang.
+    </p>
+    <a
+      href="http://www.cnsa.gov.cn/"
+    >
+      Provider Website
+    </a>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    x
+  </button>
+</article>
+`;
