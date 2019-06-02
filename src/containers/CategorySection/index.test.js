@@ -4,13 +4,10 @@ import categoryManager from '../../thunks/categoryManager';
 import { CategorySection, mapDispatchToProps, mapStateToProps } from './index';
 import { mockAstronauts } from '../../utils/mockData';
 
+Math.random = jest.fn().mockImplementation(() => 1);
+
 describe('CategorySection', () => {
-  const defaultState = {
-    cardsToRender: [],
-    cardInfoToRender: {},
-    showInfo: false
-  }
-  let mockAstronauts = mockAstronauts;
+  let mockAstronautsData = mockAstronauts;
   let mockCategory = 'astronauts';
   let mockSelectCategory = jest.fn();
   let mockLaunch_providers = {};
@@ -21,7 +18,7 @@ describe('CategorySection', () => {
   beforeEach(() => {
     wrapper = shallow(
       < CategorySection 
-        astronauts={ mockAstronauts }
+        astronauts={ mockAstronautsData }
         category={ mockCategory }
         selectCategory={ mockSelectCategory }
         launch_providers={ mockLaunch_providers }
@@ -32,5 +29,13 @@ describe('CategorySection', () => {
     )
   })
 
-  
+  it('should match component snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should set state "random" item, rendered cards from props on mounting', () => {
+    wrapper.instance().checkAndUpdate();
+    expect(wrapper.state().cardInfoToRender).toEqual(mockAstronauts[1]);
+    expect(wrapper.state().cardsToRender).toHaveLength(4)
+  })
 })

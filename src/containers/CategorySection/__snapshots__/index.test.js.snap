@@ -1,0 +1,569 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategorySection should match component snapshot 1`] = `
+<section
+  className="category-section"
+>
+  <CategoryItemInfo
+    category="astronauts"
+    showInfo={[Function]}
+  />
+  <div
+    className="card-container"
+  >
+    <AstronautCard
+      astronaut={
+        Object {
+          "agency": null,
+          "bio": "Gregory Olsen (born April 20, 1945) is an American entrepreneur, engineer and scientist who, in October 2005, became the third private citizen to make a self-funded trip to the International Space Station with the company Space Adventures.",
+          "date_of_birth": "1945-04-20",
+          "date_of_death": null,
+          "flights": Array [
+            Object {
+              "id": "0e886a0d-2e51-445b-bb5e-93b1f7083733",
+              "launch_library_id": 893,
+              "mission": Object {
+                "id": 126,
+                "launch_library_id": 290,
+                "name": "Soyuz TMA-7",
+                "type": "Human Exploration",
+              },
+              "name": "Soyuz-FG | Soyuz TMA-7",
+              "net": "2005-10-01T03:55:00Z",
+              "orbit": "LEO",
+              "pad": Object {
+                "id": 32,
+                "location": Object {
+                  "id": 15,
+                  "name": "Baikonur Cosmodrome, Republic of Kazakhstan",
+                },
+                "name": "1/5, Baikonur Cosmodrome, Kazakhstan",
+              },
+              "rocket": Object {
+                "configuration": Object {
+                  "full_name": "Soyuz FG",
+                  "id": 34,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/soyuz_image_20190224025009.jpeg",
+                  "launch_service_provider": Object {
+                    "id": 63,
+                    "name": "Russian Federal Space Agency (ROSCOSMOS)",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/63/",
+                  },
+                  "name": "Soyuz",
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/launcher/34/",
+                },
+                "id": 513,
+              },
+              "slug": "https://spacelaunchnow.me/launch/soyuz-fg-soyuz-tma-7-893",
+              "status": Object {
+                "id": 3,
+                "name": "Success",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/launch/0e886a0d-2e51-445b-bb5e-93b1f7083733/",
+              "window_end": "2005-10-01T03:55:00Z",
+              "window_start": "2005-10-01T03:55:00Z",
+            },
+          ],
+          "id": 617,
+          "instagram": null,
+          "landings": Array [
+            Object {
+              "destination": "International Space Station",
+              "id": 210,
+              "launch": Object {
+                "id": "98e6547f-fefd-436e-8540-8befc0a7774a",
+                "image": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/soyuz_image_20190224025009.jpeg",
+                "landing": null,
+                "landing_success": null,
+                "launch_library_id": 894,
+                "launcher": null,
+                "location": "Baikonur Cosmodrome, Republic of Kazakhstan",
+                "mission": "Soyuz TMA-6",
+                "mission_type": "Human Exploration",
+                "name": "Soyuz-FG | Soyuz TMA-6",
+                "net": "2005-04-15T00:46:25Z",
+                "orbit": "LEO",
+                "pad": "1/5, Baikonur Cosmodrome, Kazakhstan",
+                "slug": "https://spacelaunchnow.me/launch/soyuz-fg-soyuz-tma-6-894",
+                "status": Object {
+                  "id": 3,
+                  "name": "Success",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/launch/98e6547f-fefd-436e-8540-8befc0a7774a/",
+                "window_end": "2005-04-15T00:46:25Z",
+                "window_start": "2005-04-15T00:46:25Z",
+              },
+              "mission_end": "2005-10-11T01:09:00Z",
+              "spacecraft": Object {
+                "configuration": Object {
+                  "agency": Object {
+                    "id": 63,
+                    "name": "Russian Federal Space Agency (ROSCOSMOS)",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/63/",
+                  },
+                  "id": 1,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/orbiter_images/soyuz_image_20190207032523.jpeg",
+                  "in_use": true,
+                  "name": "Soyuz",
+                  "type": Object {
+                    "id": 1,
+                    "name": "Unknown",
+                  },
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/spacecraft/1/",
+                },
+                "description": "Soyuz TMA-6 was a Soyuz spacecraft which launched on 15 April 2005 00:46 UTC. It transported two members of the Expedition 11 crew and one astronaut to the International Space Station. The Expedition 11 crew consisted of Sergei Krikalev and John Phillips. The astronaut was ESA astronaut Roberto Vittori.",
+                "id": 87,
+                "name": "Soyuz TMA-6",
+                "serial_number": "Soyuz TMA 11F732A17 #216",
+                "status": Object {
+                  "id": 4,
+                  "name": "Single Use",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/87/",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/flight/210/",
+            },
+          ],
+          "name": "Gregory Olsen",
+          "nationality": "American",
+          "profile_image": null,
+          "profile_image_thumbnail": null,
+          "status": Object {
+            "id": 2,
+            "name": "Retired",
+          },
+          "twitter": null,
+          "type": Object {
+            "id": 4,
+            "name": "Non-Astronaut Passenger",
+          },
+          "url": "https://spacelaunchnow.me/api/3.3.1/astronaut/617/",
+          "wiki": "https://en.wikipedia.org/wiki/Gregory_Olsen",
+        }
+      }
+      key="617"
+      showInfo={[Function]}
+    />
+    <AstronautCard
+      astronaut={
+        Object {
+          "agency": Object {
+            "id": 44,
+            "name": "National Aeronautics and Space Administration",
+            "type": "Government",
+            "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+          },
+          "bio": "Robert \\"Bob\\" Thomas Hines, Jr. is an American fighter pilot and NASA astronaut candidate of the class of 2017.",
+          "date_of_birth": "1975-01-11",
+          "date_of_death": null,
+          "flights": Array [],
+          "id": 142,
+          "instagram": null,
+          "landings": Array [],
+          "name": "Robert Hines",
+          "nationality": "American",
+          "profile_image": "https://daszojo4xmsc6.cloudfront.net/media/astronaut_images/robert2520hines_image_20181129205955.jpg",
+          "profile_image_thumbnail": "https://daszojo4xmsc6.cloudfront.net/media/default/cache/21/f1/21f1222a77ab913fea2ef8b2f5ffd953.jpg",
+          "status": Object {
+            "id": 3,
+            "name": "In-Training",
+          },
+          "twitter": null,
+          "type": Object {
+            "id": 2,
+            "name": "Government",
+          },
+          "url": "https://spacelaunchnow.me/api/3.3.1/astronaut/142/",
+          "wiki": "https://en.wikipedia.org/wiki/Robert_Hines_(astronaut)",
+        }
+      }
+      key="142"
+      showInfo={[Function]}
+    />
+    <AstronautCard
+      astronaut={
+        Object {
+          "agency": Object {
+            "id": 44,
+            "name": "National Aeronautics and Space Administration",
+            "type": "Government",
+            "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+          },
+          "bio": "Clarence William Nelson II (born September 29, 1942) is an American politician serving as the senior United States Senator from Florida, first elected to that seat in 2000. A member of the Democratic Party, he previously served in the Florida House of Representatives from 1972 to 1978 and in the United States House of Representatives from 1979 to 1991. In January 1986, he became the second sitting member of Congress to fly in space when he served as a payload specialist on the Space Shuttle Columbia.",
+          "date_of_birth": "1942-09-29",
+          "date_of_death": null,
+          "flights": Array [
+            Object {
+              "id": "bbb4c25a-152d-4402-beee-2f62969b98c1",
+              "launch_library_id": 188,
+              "mission": Object {
+                "id": 682,
+                "launch_library_id": 920,
+                "name": "STS-61-C",
+                "type": "Communications",
+              },
+              "name": "Space Shuttle Columbia / OV-102 | STS-61-C",
+              "net": "1986-01-12T11:55:00Z",
+              "orbit": "LEO",
+              "pad": Object {
+                "id": 87,
+                "location": Object {
+                  "id": 27,
+                  "name": "Kennedy Space Center, FL, USA",
+                },
+                "name": "Launch Complex 39A, Kennedy Space Center, FL",
+              },
+              "rocket": Object {
+                "configuration": Object {
+                  "full_name": "Space Shuttle Columbia OV-102",
+                  "id": 170,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/space2520shuttle2520columbia2520ov-102_image_20190222030326.jpeg",
+                  "launch_service_provider": Object {
+                    "id": 44,
+                    "name": "National Aeronautics and Space Administration",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+                  },
+                  "name": "Space Shuttle Columbia OV-102",
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/launcher/170/",
+                },
+                "id": 314,
+              },
+              "slug": "https://spacelaunchnow.me/launch/space-shuttle-columbia-ov-102-sts-61-c-188",
+              "status": Object {
+                "id": 3,
+                "name": "Success",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/launch/bbb4c25a-152d-4402-beee-2f62969b98c1/",
+              "window_end": "1986-01-12T11:55:00Z",
+              "window_start": "1986-01-12T11:55:00Z",
+            },
+          ],
+          "id": 596,
+          "instagram": null,
+          "landings": Array [
+            Object {
+              "destination": "Low Earth Orbit",
+              "id": 67,
+              "launch": Object {
+                "id": "bbb4c25a-152d-4402-beee-2f62969b98c1",
+                "image": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/space2520shuttle2520columbia2520ov-102_image_20190222030326.jpeg",
+                "landing": null,
+                "landing_success": null,
+                "launch_library_id": 188,
+                "launcher": null,
+                "location": "Kennedy Space Center, FL, USA",
+                "mission": "STS-61-C",
+                "mission_type": "Communications",
+                "name": "Space Shuttle Columbia / OV-102 | STS-61-C",
+                "net": "1986-01-12T11:55:00Z",
+                "orbit": "LEO",
+                "pad": "Launch Complex 39A, Kennedy Space Center, FL",
+                "slug": "https://spacelaunchnow.me/launch/space-shuttle-columbia-ov-102-sts-61-c-188",
+                "status": Object {
+                  "id": 3,
+                  "name": "Success",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/launch/bbb4c25a-152d-4402-beee-2f62969b98c1/",
+                "window_end": "1986-01-12T11:55:00Z",
+                "window_start": "1986-01-12T11:55:00Z",
+              },
+              "mission_end": "1986-01-18T13:58:00Z",
+              "spacecraft": Object {
+                "configuration": Object {
+                  "agency": Object {
+                    "id": 44,
+                    "name": "National Aeronautics and Space Administration",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+                  },
+                  "id": 14,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/orbiter_images/space2520shuttle_image_20190207032524.jpeg",
+                  "in_use": false,
+                  "name": "Space Shuttle",
+                  "type": Object {
+                    "id": 1,
+                    "name": "Unknown",
+                  },
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/spacecraft/14/",
+                },
+                "description": "Space Shuttle Columbia (Orbiter Vehicle Designation: OV-102) was the first space-rated orbiter in NASA's Space Shuttle fleet. It launched for the first time on mission STS-1 on April 12, 1981, the first flight of the Space Shuttle program. Over 22 years of service, it completed 27 missions before disintegrating during re-entry near the end of its 28th mission, STS-107 on February 1, 2003, resulting in the deaths of all seven crew members.",
+                "id": 36,
+                "name": "Space Shuttle Columbia",
+                "serial_number": "OV-102",
+                "status": Object {
+                  "id": 3,
+                  "name": "Destroyed",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/36/",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/flight/67/",
+            },
+          ],
+          "name": "Bill Nelson",
+          "nationality": "American",
+          "profile_image": "https://daszojo4xmsc6.cloudfront.net/media/astronaut_images/bill2520nelson_image_20190211162351.jpeg",
+          "profile_image_thumbnail": "https://daszojo4xmsc6.cloudfront.net/media/default/cache/15/18/151821a1575b1c84201de6e3e4f11d73.jpg",
+          "status": Object {
+            "id": 2,
+            "name": "Retired",
+          },
+          "twitter": null,
+          "type": Object {
+            "id": 4,
+            "name": "Non-Astronaut Passenger",
+          },
+          "url": "https://spacelaunchnow.me/api/3.3.1/astronaut/596/",
+          "wiki": "https://en.wikipedia.org/wiki/Bill_Nelson",
+        }
+      }
+      key="596"
+      showInfo={[Function]}
+    />
+    <AstronautCard
+      astronaut={
+        Object {
+          "agency": Object {
+            "id": 44,
+            "name": "National Aeronautics and Space Administration",
+            "type": "Government",
+            "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+          },
+          "bio": "Terry W. Virts Jr. is a former NASA astronaut, and Colonel in the United States Air Force.",
+          "date_of_birth": "1967-12-01",
+          "date_of_death": null,
+          "flights": Array [
+            Object {
+              "id": "80db2215-04bd-4d16-b998-311fb73db4fe",
+              "launch_library_id": 480,
+              "mission": Object {
+                "id": 340,
+                "launch_library_id": 393,
+                "name": "STS-130",
+                "type": "Human Exploration",
+              },
+              "name": "Space Shuttle Endeavour / OV-101 | STS-130",
+              "net": "2010-02-08T09:14:00Z",
+              "orbit": "LEO",
+              "pad": Object {
+                "id": 87,
+                "location": Object {
+                  "id": 27,
+                  "name": "Kennedy Space Center, FL, USA",
+                },
+                "name": "Launch Complex 39A, Kennedy Space Center, FL",
+              },
+              "rocket": Object {
+                "configuration": Object {
+                  "full_name": "Space Shuttle Endeavour OV-105",
+                  "id": 41,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/space2520shuttle2520endeavour2520ov-101_image_20190222030547.jpeg",
+                  "launch_service_provider": Object {
+                    "id": 44,
+                    "name": "National Aeronautics and Space Administration",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+                  },
+                  "name": "Space Shuttle Endeavour OV-105",
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/launcher/41/",
+                },
+                "id": 1441,
+              },
+              "slug": "https://spacelaunchnow.me/launch/space-shuttle-endeavour-ov-101-sts-130-480",
+              "status": Object {
+                "id": 3,
+                "name": "Success",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/launch/80db2215-04bd-4d16-b998-311fb73db4fe/",
+              "window_end": "2010-02-08T09:14:00Z",
+              "window_start": "2010-02-08T09:14:00Z",
+            },
+            Object {
+              "id": "8edebcd0-6f94-432d-8559-8424a49abf90",
+              "launch_library_id": 352,
+              "mission": Object {
+                "id": 176,
+                "launch_library_id": 259,
+                "name": "Soyuz TMA-15M",
+                "type": "Human Exploration",
+              },
+              "name": "Soyuz FG | Soyuz TMA-15M",
+              "net": "2014-11-23T21:01:14Z",
+              "orbit": "LEO",
+              "pad": Object {
+                "id": 32,
+                "location": Object {
+                  "id": 15,
+                  "name": "Baikonur Cosmodrome, Republic of Kazakhstan",
+                },
+                "name": "1/5, Baikonur Cosmodrome, Kazakhstan",
+              },
+              "rocket": Object {
+                "configuration": Object {
+                  "full_name": "Soyuz FG",
+                  "id": 34,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/soyuz_image_20190224025009.jpeg",
+                  "launch_service_provider": Object {
+                    "id": 63,
+                    "name": "Russian Federal Space Agency (ROSCOSMOS)",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/63/",
+                  },
+                  "name": "Soyuz",
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/launcher/34/",
+                },
+                "id": 1803,
+              },
+              "slug": "https://spacelaunchnow.me/launch/soyuz-fg-soyuz-tma-15m-352",
+              "status": Object {
+                "id": 3,
+                "name": "Success",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/launch/8edebcd0-6f94-432d-8559-8424a49abf90/",
+              "window_end": "2014-11-23T21:01:14Z",
+              "window_start": "2014-11-23T21:01:14Z",
+            },
+          ],
+          "id": 10,
+          "instagram": "https://www.instagram.com/astro_terry/",
+          "landings": Array [
+            Object {
+              "destination": "International Space Station",
+              "id": 194,
+              "launch": Object {
+                "id": "80db2215-04bd-4d16-b998-311fb73db4fe",
+                "image": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/space2520shuttle2520endeavour2520ov-101_image_20190222030547.jpeg",
+                "landing": null,
+                "landing_success": null,
+                "launch_library_id": 480,
+                "launcher": null,
+                "location": "Kennedy Space Center, FL, USA",
+                "mission": "STS-130",
+                "mission_type": "Human Exploration",
+                "name": "Space Shuttle Endeavour / OV-101 | STS-130",
+                "net": "2010-02-08T09:14:00Z",
+                "orbit": "LEO",
+                "pad": "Launch Complex 39A, Kennedy Space Center, FL",
+                "slug": "https://spacelaunchnow.me/launch/space-shuttle-endeavour-ov-101-sts-130-480",
+                "status": Object {
+                  "id": 3,
+                  "name": "Success",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/launch/80db2215-04bd-4d16-b998-311fb73db4fe/",
+                "window_end": "2010-02-08T09:14:00Z",
+                "window_start": "2010-02-08T09:14:00Z",
+              },
+              "mission_end": "2010-02-22T03:22:00Z",
+              "spacecraft": Object {
+                "configuration": Object {
+                  "agency": Object {
+                    "id": 44,
+                    "name": "National Aeronautics and Space Administration",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+                  },
+                  "id": 14,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/orbiter_images/space2520shuttle_image_20190207032524.jpeg",
+                  "in_use": false,
+                  "name": "Space Shuttle",
+                  "type": Object {
+                    "id": 1,
+                    "name": "Unknown",
+                  },
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/spacecraft/14/",
+                },
+                "description": "Space Shuttle Endeavour (Orbiter Vehicle Designation: OV-105) is a retired orbiter from NASA's Space Shuttle program and the fifth and final operational shuttle built. It embarked on its first mission, STS-49, in May 1992 and its 25th and final mission, STS-134, in May 2011. STS-134 was expected to be the final mission of the Space Shuttle program, but with the authorization of STS-135, Atlantis became the last shuttle to fly.  The United States Congress approved the construction of Endeavour in 1987 to replace Challenger, which was lost in 1986.  Structural spares built during the construction of Discovery and Atlantis were used in its assembly. NASA chose, on cost grounds, to build Endeavour from spares rather than refitting Enterprise.",
+                "id": 40,
+                "name": "Space Shuttle Endeavour",
+                "serial_number": "OV-105",
+                "status": Object {
+                  "id": 2,
+                  "name": "Retired",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/40/",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/flight/194/",
+            },
+            Object {
+              "destination": "International Space Station",
+              "id": 167,
+              "launch": Object {
+                "id": "8edebcd0-6f94-432d-8559-8424a49abf90",
+                "image": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/soyuz_image_20190224025009.jpeg",
+                "landing": null,
+                "landing_success": null,
+                "launch_library_id": 352,
+                "launcher": null,
+                "location": "Baikonur Cosmodrome, Republic of Kazakhstan",
+                "mission": "Soyuz TMA-15M",
+                "mission_type": "Human Exploration",
+                "name": "Soyuz FG | Soyuz TMA-15M",
+                "net": "2014-11-23T21:01:14Z",
+                "orbit": "LEO",
+                "pad": "1/5, Baikonur Cosmodrome, Kazakhstan",
+                "slug": "https://spacelaunchnow.me/launch/soyuz-fg-soyuz-tma-15m-352",
+                "status": Object {
+                  "id": 3,
+                  "name": "Success",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/launch/8edebcd0-6f94-432d-8559-8424a49abf90/",
+                "window_end": "2014-11-23T21:01:14Z",
+                "window_start": "2014-11-23T21:01:14Z",
+              },
+              "mission_end": "2015-06-11T13:44:00Z",
+              "spacecraft": Object {
+                "configuration": Object {
+                  "agency": Object {
+                    "id": 63,
+                    "name": "Russian Federal Space Agency (ROSCOSMOS)",
+                    "type": "Government",
+                    "url": "https://spacelaunchnow.me/api/3.3.1/agencies/63/",
+                  },
+                  "id": 1,
+                  "image_url": "https://daszojo4xmsc6.cloudfront.net/media/orbiter_images/soyuz_image_20190207032523.jpeg",
+                  "in_use": true,
+                  "name": "Soyuz",
+                  "type": Object {
+                    "id": 1,
+                    "name": "Unknown",
+                  },
+                  "url": "https://spacelaunchnow.me/api/3.3.1/config/spacecraft/1/",
+                },
+                "description": "Soyuz TMA-15M was a Soyuz spacecraft which launched on 23 November 2014 21:00 UTC. It transported three members of the Expedition 42 crew to the International Space Station. The crew consisted of Anton Shkaplerov, Samantha Cristoforetti, and Terry W. Virts.",
+                "id": 56,
+                "name": "Soyuz TMA-15M",
+                "serial_number": "Soyuz TMA-M 11F732A47 #715",
+                "status": Object {
+                  "id": 4,
+                  "name": "Single Use",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/56/",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/flight/167/",
+            },
+          ],
+          "name": "Terry W. Virts",
+          "nationality": "American",
+          "profile_image": "https://daszojo4xmsc6.cloudfront.net/media/astronaut_images/terry2520w.2520virts_image_20181127211351.jpg",
+          "profile_image_thumbnail": "https://daszojo4xmsc6.cloudfront.net/media/default/cache/ea/9a/ea9a34259c99da703f6b9c70e9067fe8.jpg",
+          "status": Object {
+            "id": 2,
+            "name": "Retired",
+          },
+          "twitter": "https://twitter.com/AstroTerry",
+          "type": Object {
+            "id": 2,
+            "name": "Government",
+          },
+          "url": "https://spacelaunchnow.me/api/3.3.1/astronaut/10/",
+          "wiki": "https://en.wikipedia.org/wiki/Terry_W._Virts",
+        }
+      }
+      key="10"
+      showInfo={[Function]}
+    />
+  </div>
+</section>
+`;

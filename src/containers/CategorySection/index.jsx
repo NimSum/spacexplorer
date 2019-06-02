@@ -77,7 +77,7 @@ export class CategorySection extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
+const mapStateToProps = state => ({
   rockets: state.rockets,
   space_stations: state.spaceStations,
   orbiters: state.orbiters,
@@ -85,7 +85,7 @@ export const mapStateToProps = state => ({
   launch_providers: state.launchProviders
 })
 
-export const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   selectCategory: category => dispatch(categoryManager(category))
 })
 
