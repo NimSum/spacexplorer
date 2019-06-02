@@ -45,3 +45,10 @@ $secondary-light: hsl(303, 100%, 96%);
   background-color: hsla(303, 100%, 96%, .85);
   border-radius: 10px;
 }
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
