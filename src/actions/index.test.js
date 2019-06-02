@@ -80,5 +80,15 @@ describe('Actions', () => {
     })
   })
   
+  describe('ADD_ASTRONAUTS', () => {
+    it('should return object with valid action type and payload', () => {
+      const result = action.addAstronauts(mockData.mockAstronauts);
+      const expected = {
+        type: 'ADD_ASTRONAUTS',
+        astronauts: mockData.mockAstronauts    
+      };
+      expect(result).toEqual(expected);
+    })
+  })
 
 })
