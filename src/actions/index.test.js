@@ -68,6 +68,17 @@ describe('Actions', () => {
       expect(result).toEqual(expected);
     })
   })
+
+  describe('ADD_ORBITERS', () => {
+    it('should return object with valid action type and payload', () => {
+      const result = action.addOrbiters(mockData.mockOrbiters)
+      const expected = {
+        type: 'ADD_ORBITERS',
+        orbiters: mockData.mockOrbiters  
+      };
+      expect(result).toEqual(expected);
+    })
+  })
   
 
 })
