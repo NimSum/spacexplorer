@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryMenu should match component snapshot 1`] = `
+<div
+  className="menu-container"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <p>
+    Explore Space 
+  </p>
+</div>
+`;
