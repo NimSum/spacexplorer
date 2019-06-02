@@ -68,8 +68,9 @@ export class CategoryMenu extends Component {
       <div 
         className='menu-container'
         onMouseEnter={ () => this.showMenu(true) }
+        onMouseLeave={ () => this.showMenu(false) }
         >
-        <p>Explore Space </p>
+        <p className={ this.state.showMenu && 'hovered'}>Explore Space </p>
         { this.state.showMenu && this.generateMenu()}
       </div>
     )

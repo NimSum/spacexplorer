@@ -1,0 +1,26 @@
+aside {
+  h1 {
+    font-family: $font-orbitron;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 60px 0 20px 0;
+    background-color: $primary-dark;
+    // background-image: url('./images/sky-space.svg');
+    // background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: $secondary-light;
+    
+    span {
+      font-size: 3rem;
+    }
+  }
+
+  h3.aside-label {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    background-color: $primary-light;
+    color: $primary-dark;
+  }
+}
