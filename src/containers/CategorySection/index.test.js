@@ -8,6 +8,7 @@ Math.random = jest.fn().mockImplementation(() => 1);
 
 describe('CategorySection', () => {
   let mockAstronautsData = mockAstronauts;
+  let checkAndUpdateSpy;
   let mockCategory = 'astronauts';
   let mockSelectCategory = jest.fn();
   let mockLaunch_providers = {};
@@ -27,6 +28,11 @@ describe('CategorySection', () => {
         space_stations={ mockSpace_stations }
       />
     )
+    checkAndUpdateSpy = jest.spyOn(wrapper.instance(), 'checkAndUpdate');
+  })
+
+  afterEach(() => {
+    checkAndUpdateSpy.mockClear();
   })
 
   it('should match component snapshot', () => {
@@ -34,8 +40,19 @@ describe('CategorySection', () => {
   })
 
   it('should set state "random" item, rendered cards from props on mounting', () => {
-    wrapper.instance().checkAndUpdate();
+    wrapper.instance().componentDidMount();
     expect(wrapper.state().cardInfoToRender).toEqual(mockAstronauts[1]);
     expect(wrapper.state().cardsToRender).toHaveLength(4)
+  })
+
+  describe('component DidMount & Update', () => {
+    it('should trigger checkAndUpdate spy on component mount', () => {
+      wrapper.instance().componentDidMount();
+      expect(checkAndUpdateSpy).toHaveBeenCalledTimes(1)
+    })
+    it('should trigger checkAndUpdate spy on component update', () => {
+      wrapper.setProps({ category: 'rockets' })
+      expect(checkAndUpdateSpy).toHaveBeenCalledTimes(1)
+    })
   })
 })
