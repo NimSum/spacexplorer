@@ -7,8 +7,14 @@ global.Date.getTime = jest.fn().mockImplementation(() => 10);
 global.Date.now = jest.fn().mockImplementation(() => 1);
 
 describe('CountDownTimer', () => {
-  const mockDate = '20120-06-15T00:00:00Z';
-
+  const mockDate = '2021-06-15T00:00:00Z';
+  const stateAfterMount = { 
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+    totalTime: 1623715199999, 
+  }
   let spyCalcDifference;
   let wrapper;
   beforeEach(() => {
@@ -23,6 +29,10 @@ describe('CountDownTimer', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should have default state', () => {
+    expect(wrapper.state()).toEqual(stateAfterMount);
+  })
+
   it('should should set state calculated difference on mount', () => {
     wrapper.instance().componentDidMount();
     expect(typeof wrapper.state().totalTime).toEqual('number');
@@ -30,7 +40,7 @@ describe('CountDownTimer', () => {
   })
 
   it('should re-calculate difference with updated date prop', () => {
-    const date = '2021-06-15T00:00:00Z';
+    const date = '2022-06-15T00:00:00Z';
     wrapper.setProps({ date });
     expect(spyCalcDifference).toHaveBeenCalledTimes(1);
     expect(typeof wrapper.state().totalTime).toEqual('number');
