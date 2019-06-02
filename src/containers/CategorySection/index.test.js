@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import categoryManager from '../../thunks/categoryManager';
 import { CategorySection, mapDispatchToProps, mapStateToProps } from './index';
 import { mockAstronauts } from '../../utils/mockData';
+import AstronautCard from '../../components/AstronautCard';
 
 Math.random = jest.fn().mockImplementation(() => 1);
 
@@ -45,6 +46,24 @@ describe('CategorySection', () => {
     expect(wrapper.state().cardsToRender).toHaveLength(4)
   })
 
+  it('should set state info card based on props sent in', () => {
+    const expected = mockAstronauts.results[0];
+    wrapper.instance().showInfo(mockAstronauts.results[0], true);
+    expect(wrapper.state().cardInfoToRender).toEqual(expected);
+    expect(wrapper.state().showInfo).toEqual(true);
+  })
+
+  it('cardSelector should return specifc card based on category', () => {
+    const astronautSelected = mockAstronauts.results[2];
+    const mockShowInfo = wrapper.instance().showInfo;
+    const expected = < AstronautCard 
+        astronaut={ astronautSelected }
+        showInfo={ mockShowInfo }
+        key={ astronautSelected.id} />
+    const result = wrapper.instance().cardSelector(astronautSelected);
+    expect(result).toEqual(expected);
+  })
+
   describe('component DidMount & Update', () => {
     it('should trigger checkAndUpdate spy on component mount', () => {
       wrapper.instance().componentDidMount();
@@ -55,4 +74,5 @@ describe('CategorySection', () => {
       expect(checkAndUpdateSpy).toHaveBeenCalledTimes(1)
     })
   })
+
 })
