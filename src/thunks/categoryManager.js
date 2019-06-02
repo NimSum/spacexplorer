@@ -18,7 +18,7 @@ const categoryManager = category => {
           console.log('yolo')
       }
     } catch(error) {
-      console.log(error);
+        return error;
     }
    
   }
