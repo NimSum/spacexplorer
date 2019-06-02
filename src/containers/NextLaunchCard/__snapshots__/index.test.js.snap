@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NextLaunchCard should match component snapshot 1`] = `
+<article
+  className="next-launch-card"
+>
+  <div
+    className="image-side"
+  >
+    <h3>
+      Long March 11
+    </h3>
+    <img
+      alt="rocket"
+      src="https://daszojo4xmsc6.cloudfront.net/media/launcher_images/long2520march252011_image_20190222031217.jpeg"
+    />
+  </div>
+  <div
+    className="info-side"
+  >
+    <h3>
+      Jun 04 10:00 PM
+    </h3>
+    <p>
+      Mission: 
+      Jilin-1
+    </p>
+    <p>
+      Orbit: 
+      Sun-Synchronous Orbit
+    </p>
+    <p>
+      Status: 
+      Go
+    </p>
+    <p>
+      Location: 
+      Sea Launch
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      More
+    </button>
+  </div>
+</article>
+`;

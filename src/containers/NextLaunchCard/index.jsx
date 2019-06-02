@@ -5,7 +5,7 @@ import moment from 'moment';
 import defaultRocketImage from '../../images/default-rocket-img.svg';
 import PropTypes from 'prop-types';
 
-const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaunch }) => {
+export const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaunch }) => {
   const { pad, status, mission, rocket } = launch;
   const readableDate = moment(launch.net).format('MMM DD LT');
 
@@ -44,6 +44,7 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 NextLaunchCard.propTypes = {
+  launch: PropTypes.object,
   showInfo: PropTypes.bool,
   toggleLaunchInfo: PropTypes.func,
   updateSelectedLaunch: PropTypes.func
