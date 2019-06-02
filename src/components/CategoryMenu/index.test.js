@@ -27,9 +27,18 @@ describe('CategoryMenu', () => {
 
   it('should set state showMenu based on param', () => {
     wrapper.instance().showMenu(true);
-    expect(wrapper.state().showMenu).toEqual(true);
+    expect(wrapper.state().showMenu).toBe(true);
     wrapper.instance().showMenu(false);
-    expect(wrapper.state().showMenu).toEqual(false);
+    expect(wrapper.state().showMenu).toBe(false);
   })
 
+  it('should set state showMenu to true on mouseEnter', () => {
+    wrapper.find('div.menu-container').simulate('mouseEnter');
+    expect(wrapper.state().showMenu).toBe(true);
+  })
+
+  it('should set state showMenu to false on mouseLeave', () => {
+    wrapper.find('div.menu-container').simulate('mouseLeave');
+    expect(wrapper.state().showMenu).toBe(false);
+  })
 })
