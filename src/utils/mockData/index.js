@@ -1107,7 +1107,7 @@ export const mockRockets = {
   ]
 }
 
-export const spaceStations = {
+export const mockSpaceStations = {
   "count": 12,
   "next": null,
   "previous": null,

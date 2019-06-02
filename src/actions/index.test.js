@@ -58,6 +58,16 @@ describe('Actions', () => {
     })
   })
 
+  describe('ADD_SPACE_STATIONS', () => {
+    it('should return object with valid action type and payload', () => {
+      const result = action.addSpaceStations(mockData.mockSpaceStations);
+      const expected = {
+        type: 'ADD_SPACE_STATIONS',
+        spaceStations: mockData.mockSpaceStations
+      };
+      expect(result).toEqual(expected);
+    })
+  })
   
 
 })
