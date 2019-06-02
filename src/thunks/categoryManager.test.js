@@ -18,5 +18,18 @@ describe('categoryManager thunk', () => {
     expect(result).toEqual('Failed to fetch');
   })
 
+  describe('CASE: rockets', () => {
+    it('should fetch rockets and dispatch action with correct params', async () => {
+      fetchAnything.mockImplementation(() => mockData.mockRockets);
+      const expectedAction = action.addRockets(mockData.mockRockets);
+
+      thunk = categoryManager('rockets');
+      await thunk(mockDispatch);
+
+      expect(fetchAnything).toHaveBeenCalledWith(apiUrls.rockets);
+      expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
+    })
+  })
+
 
 })
