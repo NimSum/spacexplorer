@@ -17,7 +17,11 @@ describe('AstronautCard', () => {
   it('should match component snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   })
-
+  
+  it('should invoke showInfo on click using correct params', () => {
+    wrapper.find('button').simulate('click');
+    expect(mockShowInfo).toHaveBeenCalledWith(mockAstronaut, true);
+  })
 
 })
 
