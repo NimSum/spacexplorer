@@ -38,4 +38,13 @@ describe('NextLaunch', () => {
     expect(mockToggleLaunchInfo).toHaveBeenCalledWith(true);
   })
 
+  describe('mapDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    it('should dispatch action with the correct params', () => {
+      const propToDispatch = toggleLaunchInfo(true);
+      mappedProps.toggleLaunchInfo(true);
+      expect(mockDispatch).toHaveBeenCalledWith(propToDispatch);
+    })
+  })
 })
