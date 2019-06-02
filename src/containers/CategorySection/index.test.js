@@ -131,4 +131,14 @@ describe('CategorySection', () => {
     expect(mappedProps).toEqual(expected)
   })
 
+  describe('mapDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    it('should dispatch thunk with the correct params', () => {
+      const thunkToDispatch = categoryManager('astronauts');
+      mappedProps.selectCategory('astronauts');
+      expect(mockDispatch).toHaveBeenCalledWith(thunkToDispatch);
+    })
+  })
+
 })
