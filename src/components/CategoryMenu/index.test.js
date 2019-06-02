@@ -16,6 +16,11 @@ describe('CategoryMenu', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should match snapshot with menu shown', () => {
+    wrapper.setState({ showMenu: true });
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should have default state', () => {
     expect(wrapper.state()).toEqual(defaultState);
   })
@@ -26,4 +31,5 @@ describe('CategoryMenu', () => {
     wrapper.instance().showMenu(false);
     expect(wrapper.state().showMenu).toEqual(false);
   })
+
 })
