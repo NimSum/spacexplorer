@@ -47,14 +47,5 @@ describe('Actions', () => {
     })
   })  
 
-  // describe('ADD_ROCKETS', () => {
-  //   it('should return object with valid action type and payload', () => {
-  //     const result = action.addRockets(mockR)
-  //     const expected = {
-        
-  //     };
-  //     expect(result).toEqual(expected);
-  //   })
-  // })
-
+ 
 })
