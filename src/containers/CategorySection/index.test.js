@@ -112,4 +112,23 @@ describe('CategorySection', () => {
     })
   })
 
+  describe('mapStateToProps', () => {
+    const mockState = {
+      rockets: {},
+      spaceStations: {},
+      orbiters: {},
+      astronauts: {},
+      launchProviders: {}
+    };
+    const expected = {
+      rockets: {},
+      space_stations: {},
+      orbiters: {},
+      astronauts: {},
+      launch_providers: {}
+    }
+    const mappedProps = mapStateToProps(mockState);
+    expect(mappedProps).toEqual(expected)
+  })
+
 })
