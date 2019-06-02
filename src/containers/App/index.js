@@ -8,6 +8,7 @@ import NextLaunchesContainer from '../NextLaunchesContainer';
 import Page404 from '../../components/Page404';
 import CategorySection from '../CategorySection';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
+import apiUrls from '../../utils/apiFetches/apiUrls';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 
 export class App extends Component {
@@ -22,8 +23,7 @@ export class App extends Component {
   async componentDidMount() {
     this.setState({ loading: true })
     try {
-      const url = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
-      const upcomingLaunches = await fetchAnything(url);
+      const upcomingLaunches = await fetchAnything(apiUrls.upcomingLaunches);
       this.props.addUpcomingLaunches(upcomingLaunches);
       this.props.addSelectedLaunch(upcomingLaunches.results[0])
       this.setState({ loading: false })

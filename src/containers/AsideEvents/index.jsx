@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
+import apiUrls from '../../utils/apiFetches/apiUrls';
 import { addSpaceEvents } from '../../actions';
 import { connect } from 'react-redux';
 import EventCard from '../../components/EventCard';
@@ -17,8 +18,7 @@ export class AsideEvents extends Component {
 
   async componentDidMount() {
     try {
-      const url = 'https://spacelaunchnow.me/api/3.3.1/event/upcoming'
-      const events = await fetchAnything(url);
+      const events = await fetchAnything(apiUrls.upcomingEvents);
       this.props.addUpcomingEvents(events);
       this.setState({ events: events.results })
     } catch(error) {

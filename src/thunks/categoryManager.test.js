@@ -5,5 +5,5 @@ import categoryManager from './categoryManager';
 jest.mock('../utils/apiFetches/fetchAnything');
 
 describe('categoryManagerThunk', () => {
-
+  
 })
