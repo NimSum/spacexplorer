@@ -32,5 +32,22 @@ describe('AsideEvents', () => {
     expect(wrapper.state()).toEqual(stateAfterMounted);
   })
 
+  describe('componentDidMount', () => {
+    it('should call fetchAnything using correct params', () => {
+      const url = 'https://spacelaunchnow.me/api/3.3.1/event/upcoming'
+      expect(fetchAnything).toHaveBeenCalledWith(url);
+    })
+
+    it('should invoke addUpcomingEvents prop with the correct params', () => {
+      expect(mockAddUpcomingEvents).toHaveBeenCalledWith(mockEvents)
+    })
+
+    it('should set state error when fetch fails', async () => {
+      fetchAnything.mockImplementation(() => Promise.reject('Failed to fetch'));
+      await wrapper.instance().componentDidMount();
+      expect(wrapper.state().error).toEqual('Failed to fetch');
+    })
+  })
+
 
 })

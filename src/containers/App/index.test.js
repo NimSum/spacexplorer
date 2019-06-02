@@ -39,11 +39,10 @@ describe('App', () => {
       expect(fetchAnything).toHaveBeenCalledWith(expected);
     })
   
-    it('should set state error when fetch fails', () => {
-      const expected = new Error('Failed to Fetch');
-      fetchAnything.mockImplementation(() => { throw expected });
-      wrapper.instance().componentDidMount();
-      expect(wrapper.state().error).toEqual(expected)
+    it('should set state error when fetch fails', async () => {
+      fetchAnything.mockImplementation(() => Promise.reject('Failed to fetch'));
+      await wrapper.instance().componentDidMount();
+      expect(wrapper.state().error).toEqual('Failed to fetch')
     })
 
     it('should pass data fetched to props', () => {
