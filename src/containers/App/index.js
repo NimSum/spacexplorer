@@ -4,11 +4,11 @@ import AsideEvents from '../AsideEvents';
 import CategoryMenu from '../CategoryMenu'
 import NextLaunchesContainer from '../NextLaunchesContainer';
 import Page404 from '../../components/Page404';
-import NextLaunch from '../NextLaunch';
 import { connect } from 'react-redux';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import CategorySection from '../CategorySection';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
   constructor() {
@@ -57,6 +57,11 @@ const mapDispatchToProps = dispatch => ({
   addUpcomingLaunches: launches => dispatch(addUpcomingLaunches(launches)),
   addSelectedLaunch: event => dispatch(addSelectedLaunch(event)),
 })
+
+App.propTypes = {
+  addSelectedLaunch: PropTypes.func,
+  addUpcomingLaunches: PropTypes.func
+}
 
 export default connect(null, mapDispatchToProps)(App);
 
