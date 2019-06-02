@@ -955,7 +955,7 @@ export const mockLaunches = {
   ]
 }
 
-const mockRockets = {
+export const mockRockets = {
   "count": 194,
   "next": "https://spacelaunchnow.me/api/3.3.1/config/launcher/?limit=20&mode=detailed&offset=20",
   "previous": null,

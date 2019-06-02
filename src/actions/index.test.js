@@ -47,5 +47,17 @@ describe('Actions', () => {
     })
   })  
 
- 
+  describe('ADD_ROCKETS', () => {
+    it('should return object with valid action type and payload', () => {
+      const result = action.addRockets(mockData.mockRockets)
+      const expected = {
+        type: 'ADD_ROCKETS',
+        rockets: mockData.mockRockets
+      };
+      expect(result).toEqual(expected);
+    })
+  })
+
+  
+
 })
