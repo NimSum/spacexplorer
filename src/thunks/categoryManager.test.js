@@ -31,5 +31,18 @@ describe('categoryManager thunk', () => {
     })
   })
 
+  describe('CASE: astronauts', () => {
+    it('should fetch rockets and dispatch action with correct params', async () => {
+      fetchAnything.mockImplementation(() => mockData.mockAstronauts);
+      const expectedAction = action.addAstronauts(mockData.mockAstronauts);
+
+      thunk = categoryManager('astronauts');
+      await thunk(mockDispatch);
+
+      expect(fetchAnything).toHaveBeenCalledWith(apiUrls.astronauts);
+      expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
+    })
+  })
+
 
 })
