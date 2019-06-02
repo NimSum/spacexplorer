@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { shallow, mount } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme';
 import categoryManager from '../../thunks/categoryManager';
 import { CategorySection, mapDispatchToProps, mapStateToProps } from './index';
 import { mockAstronauts } from '../../utils/mockData';
@@ -127,8 +127,10 @@ describe('CategorySection', () => {
       astronauts: {},
       launch_providers: {}
     }
-    const mappedProps = mapStateToProps(mockState);
-    expect(mappedProps).toEqual(expected)
+    it('should map state from mock state', () => {
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected)
+    })
   })
 
   describe('mapDispatchToProps', () => {
