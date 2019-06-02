@@ -27,5 +27,21 @@ describe('Reducers', () => {
     })
   })
 
+  describe('astronautsReducer', () => {
+
+    it('should return a default state', () => {
+      const result = astronautsReducer(undefined, {});
+      const expected = {};
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return the action payload if action type is valid', () => {
+      const mockValidAction = action.addAstronauts(mockData.mockAstronauts);
+      const result = astronautsReducer(undefined, mockValidAction);
+      const expected = mockData.mockAstronauts;
+      expect(result).toEqual(expected);
+    })
+  })
+
   
 })
