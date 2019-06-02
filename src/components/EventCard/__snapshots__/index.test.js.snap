@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventCard should match component snapshot 1`] = `
+<article
+  className="event-card"
+>
+  <h3>
+    SpaceX Cargo Dragon (CRS-17) Unberthing and Reentry
+  </h3>
+  <p>
+    Event Type: 
+    <span>
+      Undocking
+    </span>
+     
+  </p>
+  <p>
+    When: 
+    <span>
+      Jun 03 9:45 AM
+    </span>
+  </p>
+  <p>
+    Where: 
+    <span>
+      International Space Station
+    </span>
+  </p>
+  <a
+    href="https://www.nasa.gov/press-release/nasa-tv-set-to-air-us-cargo-ship-departure-from-space-station"
+  >
+    News Link
+  </a>
+</article>
+`;
