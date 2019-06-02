@@ -19,6 +19,11 @@ describe('NextLaunchesContainer', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should match snapshot test with no rocket launches to render', () => {
+    wrapper.setProps({ rocketLaunches: {} });
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should have default state', () => {
     expect(wrapper.state()).toEqual(defaultState);
   })
@@ -42,4 +47,5 @@ describe('NextLaunchesContainer', () => {
     wrapper.instance().toggleInfo();
     expect(wrapper.state().showInfo).toBe(false);
   })
+
 })

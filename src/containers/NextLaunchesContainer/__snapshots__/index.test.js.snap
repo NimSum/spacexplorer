@@ -323,3 +323,19 @@ exports[`NextLaunchesContainer should match component snapshot 1`] = `
   </div>
 </section>
 `;
+
+exports[`NextLaunchesContainer should match snapshot test with no rocket launches to render 1`] = `
+<section
+  className="next-launches-container"
+>
+  <Connect(NextLaunch) />
+  <h3
+    className="next-launches-title"
+  >
+    Upcoming Launches
+  </h3>
+  <div
+    className="card-container"
+  />
+</section>
+`;
