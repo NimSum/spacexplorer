@@ -50,7 +50,7 @@ export class AsideEvents extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   addUpcomingEvents: events => dispatch(addSpaceEvents(events))
 })
 

@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsideEvents should match component snapshot 1`] = `
+<aside>
+  <h1>
+    SPACE
+    <span>
+      X
+    </span>
+    PLORER
+  </h1>
+  <h3
+    className="aside-label"
+  >
+    Space Related Events:
+  </h3>
+  <EventCard
+    event={
+      Object {
+        "date": "2019-06-03T15:45:00Z",
+        "description": "Filled with more than 4,200 pounds of valuable scientific experiments and other cargo, a SpaceX Dragon cargo spacecraft is set to return to Earth from the International Space Station Monday, June 3. NASA Television and the agency’s website will provide live coverage of the craft’s release scheduled for 12:05 p.m. EDT (16:05 p.m UTC).",
+        "expeditions": Array [],
+        "feature_image": "https://daszojo4xmsc6.cloudfront.net/media/event_images/spacex2520cargo2520dragon25202528crs-172529_image_20190530165550.jpeg",
+        "id": 18,
+        "launches": Array [
+          Object {
+            "id": "de607493-4c2d-458e-9797-097732027ece",
+            "image": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/falcon25209_image_20190224025007.jpeg",
+            "landing": "OCISLY",
+            "landing_success": 1,
+            "launch_library_id": 1501,
+            "launcher": "B1056",
+            "location": "Cape Canaveral, FL, USA",
+            "mission": "SpX CRS-17",
+            "mission_type": "Resupply",
+            "name": "Falcon 9 Block 5 | SpX CRS-17",
+            "net": "2019-05-04T06:48:58Z",
+            "orbit": "LEO",
+            "pad": "Space Launch Complex 40, Cape Canaveral, FL",
+            "slug": "https://spacelaunchnow.me/launch/falcon-9-block-5-spx-crs-17-1501",
+            "status": Object {
+              "id": 3,
+              "name": "Success",
+            },
+            "url": "https://spacelaunchnow.me/api/3.3.1/launch/de607493-4c2d-458e-9797-097732027ece/",
+            "window_end": "2019-05-04T06:48:58Z",
+            "window_start": "2019-05-04T06:48:58Z",
+          },
+        ],
+        "location": "International Space Station",
+        "name": "SpaceX Cargo Dragon (CRS-17) Unberthing and Reentry",
+        "news_url": "https://www.nasa.gov/press-release/nasa-tv-set-to-air-us-cargo-ship-departure-from-space-station",
+        "spacestations": Array [
+          Object {
+            "description": "The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. Its first component was launched into orbit in 1998, with the first long-term residents arriving in November 2000. It has been inhabited continuously since that date. The last pressurised module was fitted in 2011, and an experimental inflatable space habitat was added in 2016. The station is expected to operate until 2030. Development and assembly of the station continues, with several new elements scheduled for launch in 2019. The ISS is the largest human-made body in low Earth orbit and can often be seen with the naked eye from Earth. The ISS consists of pressurised habitation modules, structural trusses, solar arrays, radiators, docking ports, experiment bays and robotic arms. ISS components have been launched by Russian Proton and Soyuz rockets, and American Space Shuttles.",
+            "founded": "1998-11-20",
+            "id": 4,
+            "image_url": "https://daszojo4xmsc6.cloudfront.net/media/spacestation_images/international2520space2520station_image_20190220215716.jpeg",
+            "name": "International Space Station",
+            "orbit": "Low Earth Orbit",
+            "status": Object {
+              "id": 1,
+              "name": "Active",
+            },
+            "url": "https://spacelaunchnow.me/api/3.3.1/spacestation/4/",
+          },
+        ],
+        "type": Object {
+          "id": 8,
+          "name": "Undocking",
+        },
+        "url": "https://spacelaunchnow.me/api/3.3.1/event/18/",
+        "video_url": "https://www.youtube.com/watch?v=21X5lGlDOfg",
+      }
+    }
+    key="18"
+  />
+  <EventCard
+    event={
+      Object {
+        "date": "2019-06-04T00:00:00Z",
+        "description": "The Progress MS-10 spacecraft will undock from the 'Zvezda aft' port on the International Space Station.
+
+It will then de-orbit and burn up in the atmosphere.
+
+(current date is NET)",
+        "expeditions": Array [],
+        "feature_image": "https://daszojo4xmsc6.cloudfront.net/media/event_images/progress2520ms-102520undocking_image_20190506111616.jpeg",
+        "id": 16,
+        "launches": Array [
+          Object {
+            "id": "d9ee0da9-b380-4e50-9f50-2a62a8e740e3",
+            "image": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/soyuz_image_20190224025009.jpeg",
+            "landing": null,
+            "landing_success": null,
+            "launch_library_id": 1592,
+            "launcher": null,
+            "location": "Baikonur Cosmodrome, Republic of Kazakhstan",
+            "mission": "Progress MS-10 (71P)",
+            "mission_type": "Resupply",
+            "name": "Soyuz-FG | Progress MS-10 (71P)",
+            "net": "2018-11-16T18:14:08Z",
+            "orbit": "LEO",
+            "pad": "1/5, Baikonur Cosmodrome, Kazakhstan",
+            "slug": "https://spacelaunchnow.me/launch/soyuz-fg-progress-ms-10-71p-1592",
+            "status": Object {
+              "id": 3,
+              "name": "Success",
+            },
+            "url": "https://spacelaunchnow.me/api/3.3.1/launch/d9ee0da9-b380-4e50-9f50-2a62a8e740e3/",
+            "window_end": "2018-11-16T18:14:08Z",
+            "window_start": "2018-11-16T18:14:08Z",
+          },
+        ],
+        "location": "International Space Station",
+        "name": "Progress MS-10 Undocking",
+        "news_url": "https://en.wikipedia.org/wiki/Progress_MS-10",
+        "spacestations": Array [
+          Object {
+            "description": "The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. Its first component was launched into orbit in 1998, with the first long-term residents arriving in November 2000. It has been inhabited continuously since that date. The last pressurised module was fitted in 2011, and an experimental inflatable space habitat was added in 2016. The station is expected to operate until 2030. Development and assembly of the station continues, with several new elements scheduled for launch in 2019. The ISS is the largest human-made body in low Earth orbit and can often be seen with the naked eye from Earth. The ISS consists of pressurised habitation modules, structural trusses, solar arrays, radiators, docking ports, experiment bays and robotic arms. ISS components have been launched by Russian Proton and Soyuz rockets, and American Space Shuttles.",
+            "founded": "1998-11-20",
+            "id": 4,
+            "image_url": "https://daszojo4xmsc6.cloudfront.net/media/spacestation_images/international2520space2520station_image_20190220215716.jpeg",
+            "name": "International Space Station",
+            "orbit": "Low Earth Orbit",
+            "status": Object {
+              "id": 1,
+              "name": "Active",
+            },
+            "url": "https://spacelaunchnow.me/api/3.3.1/spacestation/4/",
+          },
+        ],
+        "type": Object {
+          "id": 8,
+          "name": "Undocking",
+        },
+        "url": "https://spacelaunchnow.me/api/3.3.1/event/16/",
+        "video_url": "https://www.youtube.com/watch?v=21X5lGlDOfg",
+      }
+    }
+    key="16"
+  />
+  <footer>
+    <p>
+      Copyright 2019 SPACEXPLORER
+    </p>
+    <a
+      href="https://spacelaunchnow.me/api/3.3.0/"
+    >
+      Space Launch Now Api
+    </a>
+  </footer>
+</aside>
+`;

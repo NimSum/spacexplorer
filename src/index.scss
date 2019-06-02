@@ -2,12 +2,12 @@
 @import './utils/styles/variables';
 @import './containers/App/App';
 @import './containers/AsideEvents/AsideEvents';
-@import './containers/CategoryMenu/CategoryMenu';
 @import './containers/CategorySection/CategorySection';
 @import './containers/NextLaunch/NextLaunch';
 @import './containers/NextLaunchCard/NextLaunchCard';
 @import './containers/NextLaunchesContainer/NextLaunchesContainer';
 @import './containers/NextLaunchInfo/NextLaunchInfo';
+@import './components/CategoryMenu/CategoryMenu';
 @import './components/AstronautCard/AstronautCard';
 @import './components/CategoryItemInfo/CategoryItemInfo';
 @import './components/CountDownTimer/CountDownTimer';

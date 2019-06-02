@@ -10,7 +10,11 @@ fetchAnything.mockImplementation(() => mockEvents);
 
 describe('AsideEvents', () => {
   let mockAddUpcomingEvents = jest.fn();
-
+  let stateAfterMounted = {
+    loading: false,
+    error: '',
+    events: mockEvents.results
+  }
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(
@@ -19,4 +23,14 @@ describe('AsideEvents', () => {
       />
     )
   })
+
+  it('should match component snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should have state', () => {
+    expect(wrapper.state()).toEqual(stateAfterMounted);
+  })
+
+
 })
