@@ -50,4 +50,17 @@ describe('NextLaunchInfo', () => {
       expect(mockDispatch).toHaveBeenCalledWith(propToDispatch);
     })
   })
+
+  describe('mapStateToProps', () => {
+    const mockState = {
+      selectedLaunch: mockLaunches.results[2],
+    };
+    const expected = {
+      launchInfo: mockLaunches.results[2],
+    }
+    it('should map state from mock state', () => {
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected)
+    })
+  })
 })
