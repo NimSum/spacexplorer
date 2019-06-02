@@ -23,4 +23,18 @@ describe('NextLaunchCard', () => {
   it('should match component snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   })
+
+  it('should trigger toggleLaunchInfo on click using correct params', () => {
+    wrapper.find('button').simulate('click');
+    expect(mockToggleLaunchInfo).toHaveBeenCalledWith(true);
+    wrapper.setProps({ showInfo: true });
+    wrapper.find('button').simulate('click');
+    expect(mockToggleLaunchInfo).toHaveBeenCalledWith(false);
+  })
+
+  it('should trigger updateSelectedLaunch on click using correct params', () => {
+    wrapper.find('button').simulate('click');
+    expect(mockUpdateSelectedLaunch).toHaveBeenCalledWith(mockLaunch);
+  })
+
 })
