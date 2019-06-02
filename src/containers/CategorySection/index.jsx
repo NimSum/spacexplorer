@@ -18,7 +18,9 @@ export class CategorySection extends Component {
     this.setState({ showInfo: false })
     const categorySelected = this.props[this.props.category];
     if (categorySelected.next) {
+      const randomItem = Math.floor(Math.random() * 19);
       this.generateCards(categorySelected)
+      this.setState({ cardInfoToRender: categorySelected.results[randomItem] })
     } else this.props.selectCategory(this.props.category);
   }
 
@@ -58,21 +60,13 @@ export class CategorySection extends Component {
     if(prevProps !== this.props) this.checkAndUpdate();
   }
 
-  generateCardInfo() {
-    console.log('hi')
-    return (
-      < CategoryItemInfo 
-        item={ this.state.cardInfoToRender }
-        category={ this.props.category }
-        showInfo={ this.showInfo } />
-    )
-  }
-
   render() {
     return (
       <section className='category-section'>
-        { this.state.showInfo && this.generateCardInfo() }
-        { this.props.category }
+        < CategoryItemInfo 
+          item={ this.state.cardInfoToRender }
+          category={ this.props.category }
+          showInfo={ this.showInfo } />
         <div className="card-container">
           { this.state.cardsToRender }
         </div>

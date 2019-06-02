@@ -1,6 +1,22 @@
 import React from 'react'
+import defaultAstronautImg from '../../images/default-astronaut.svg';
 
 export const CategoryItemInfo = ({ item, category, showInfo }) => {
+
+  const astronautInfo = () => {
+    const { name, bio, flights, landings, profile_image, type, wiki, agency } = item;
+    return (
+      <section className="astronaut-info">
+        <div className="image-side">
+        <img src={ profile_image || defaultAstronautImg } alt=""/>
+        </div>
+        <div className="details-side">
+          <h2>{ name }</h2>
+          <p>{ bio }</p>   
+        </div>
+      </section>)
+  }
+
   let renderThis;
   switch (category) {
     case 'rockets':
@@ -13,15 +29,15 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
       renderThis = (<div>leobiters</div>)
     break;
     case 'astronauts':
-      renderThis = (<div>astrosss</div>)
+      renderThis = astronautInfo();
     break;
     default:
       renderThis = (<div>launchhhhss</div>)
     break;
   }
+  
   return (
-    <article>
-      <h2>Category</h2>
+    <article className="category-info-container">
       { renderThis }
       <button onClick={() => showInfo({}, false)}>
         x

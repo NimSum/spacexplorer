@@ -1,0 +1,22 @@
+article.category-info-container {
+  height: 60vh;
+  padding: 20px;
+
+  section.astronaut-info {
+    display: flex;
+    width: 100%;
+    
+    div.image-side {
+      flex: 1;
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    div.details-side {
+      flex: 2;
+    }
+  }
+}
