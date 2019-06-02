@@ -4,6 +4,7 @@ import CountDownTimer from '../../components/CountDownTimer';
 import NextLaunchInfo from '../NextLaunchInfo';
 import { toggleLaunchInfo } from '../../actions'
 import defaulRocketImg from '../../images/default-rocket-img.svg';
+import PropTypes from 'prop-types';
 
 export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
   const { name, status, pad, mission, rocket } = rocketLaunch;
@@ -42,5 +43,11 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   toggleLaunchInfo: (bool) => dispatch(toggleLaunchInfo(bool))
 })
+
+NextLaunch.propTypes = {
+  rocketLaunch: PropTypes.object,
+  showInfo: PropTypes.bool,
+  toggleLaunchInfo: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(NextLaunch);
