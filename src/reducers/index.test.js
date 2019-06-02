@@ -19,7 +19,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return launch providers if action type is valid', () => {
       const mockValidAction = action.addLaunchProviders(mockData.mockLaunchProviders);
       const result = launchProvidersReducer(undefined, mockValidAction);
       const expected = mockData.mockLaunchProviders;
@@ -35,7 +35,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return astronauts if action type is valid', () => {
       const mockValidAction = action.addAstronauts(mockData.mockAstronauts);
       const result = astronautsReducer(undefined, mockValidAction);
       const expected = mockData.mockAstronauts;
@@ -51,7 +51,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return orbiters if action type is valid', () => {
       const mockValidAction = action.addOrbiters(mockData.mockOrbiters);
       const result = orbitersReducer(undefined, mockValidAction);
       const expected = mockData.mockOrbiters;
@@ -67,7 +67,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return rockets if action type is valid', () => {
       const mockValidAction = action.addRockets(mockData.mockRockets);
       const result = rocketsReducer(undefined, mockValidAction)
       const expected = mockData.mockRockets;
@@ -83,7 +83,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return selected launch if action type is valid', () => {
       const mockSingleLaunch = mockData.mockLaunches.results[1];
       const mockValidAction = action.addSelectedLaunch(mockSingleLaunch);
       const result = selectedLaunchReducer(undefined, mockValidAction);
@@ -100,7 +100,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return space events if action type is valid', () => {
       const mockValidAction = action.addSpaceEvents(mockData.mockEvents);
       const result = spaceRelatedEventsReducer(undefined, mockValidAction);
       const expected = mockData.mockEvents;
@@ -116,7 +116,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return space stations if action type is valid', () => {
       const mockValidAction = action.addSpaceStations(mockData.mockSpaceStations);
       const result = spaceStationsReducer(undefined ,mockValidAction)
       const expected = mockData.mockSpaceStations;
@@ -132,7 +132,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return boolean if action type is valid', () => {
       const mockValidAction = action.toggleLaunchInfo(true);
       const result = toggleLaunchInfoReducer(undefined, mockValidAction)
       const expected = true;
@@ -148,7 +148,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return the action payload if action type is valid', () => {
+    it('should return upcoming launches if action type is valid', () => {
       const mockValidAction = action.addUpcomingLaunches(mockData.mockEvents)
       const result = upcomingLaunchesReducer(undefined ,mockValidAction)
       const expected = mockData.mockEvents;
