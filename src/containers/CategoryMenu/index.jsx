@@ -22,37 +22,36 @@ export class CategoryMenu extends Component {
         < NavLink 
           style={ linkStyling } 
           to='/about/rockets'
-          activeStyle='is-active'>
+          activeClassName='is-active'>
           Rockets
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/space_stations'
-          activeStyle='is-active'>
+          activeClassName='is-active'>
           Space Stations
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/orbiters'
-          activeStyle='is-active'>
+          activeClassName='is-active'>
           Orbiters
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/astronauts'
-          activeStyle='is-active'>
+          activeClassName='is-active'>
           Astronauts
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/launch_providers'
-          activeStyle='is-active'>
+          activeClassName='is-active'>
           Launch Providers
         </NavLink>
         < Link 
           style={ linkStyling } 
-          to='/'
-          activeStyle='is-active'>
+          to='/'>
           HOME
         </Link>
       </nav>
@@ -70,7 +69,7 @@ export class CategoryMenu extends Component {
         onMouseEnter={ () => this.showMenu(true) }
         onMouseLeave={ () => this.showMenu(false) }
         >
-        <p className={ this.state.showMenu && 'hovered'}>Explore Space </p>
+        <p className={ this.state.showMenu ? 'hovered' : undefined }>Explore Space </p>
         { this.state.showMenu && this.generateMenu()}
       </div>
     )
