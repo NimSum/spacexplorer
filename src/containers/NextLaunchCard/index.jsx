@@ -7,11 +7,13 @@ import PropTypes from 'prop-types';
 
 const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaunch }) => {
   const { pad, status, mission, rocket } = launch;
+  const readableDate = moment(launch.net).format('MMM DD LT');
+
   const showSelectedLaunch = () => {
     showInfo ? toggleLaunchInfo(false) : toggleLaunchInfo(true);
     updateSelectedLaunch(launch);
   }
-  const readableDate = moment(launch.net).format('MMM DD LT');
+
   return (
     <article className='next-launch-card'>
       <div className="image-side">

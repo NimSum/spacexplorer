@@ -11,7 +11,7 @@ export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
   const generateLaunchCard = () => {
     return (
       <article className="upcoming-launch-card">
-        <h3>Next Rocket Launch:</h3>
+        <h3>Upcoming Rocket Launch:</h3>
         <h2>{ name }</h2>
         <p><span>Status: </span> { status.name }</p>
         <p><span>Mission Type: </span> { mission ? mission.type : 'Unknown' }</p>
