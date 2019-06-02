@@ -35,14 +35,14 @@ export class CategorySection extends Component {
     switch (this.props.category) {
       case 'rockets':
         return (< RocketCard 
-          rocket={item} showInfo={ this.showInfo } />);
+          rocket={item} showInfo={ this.showInfo } key={item.id} />);
       case 'space_stations':
           return <p>space stations</p>
       case 'orbiters':
         return <p>orbiters</p>
       case 'astronauts':
         return (< AstronautCard 
-          astronaut={item} showInfo={ this.showInfo } />);
+          astronaut={item} showInfo={ this.showInfo } key={item.id} />);
       default:
         return <p>NADA</p>
     }
