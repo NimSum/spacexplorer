@@ -5,11 +5,12 @@ const EventCard = ({ event }) => {
   const { name, location, news_url } = event;
   const date = moment(event.date).format('MMM DD LT');
   return (
-    <article>
+    <article className='event-card'>
       <h3>{ name }</h3>
-      <p>When: { date }</p>
-      <p>Where: { location }</p>
-      <a href={ news_url }>News</a>
+      <p>Event Type: <span>{ event.type.name }</span> </p>
+      <p>When: <span>{ date }</span></p>
+      <p>Where: <span>{ location }</span></p>
+      <a href={ news_url }>News Link</a>
     </article>
   )
 }

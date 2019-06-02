@@ -1,4 +1,13 @@
 aside {
+  background-color: $secondary-light;
+  position: relative;
+
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
   h1 {
     font-family: $font-orbitron;
     font-size: 1.3rem;
@@ -22,5 +31,19 @@ aside {
     text-align: center;
     background-color: $primary-light;
     color: $primary-dark;
+  }
+
+  footer {
+    background-color: $primary-dark;
+    color: $secondary-light;
+    text-align: center;
+    height: 20%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    a {
+      color: $secondary-light;
+    }
   }
 }
