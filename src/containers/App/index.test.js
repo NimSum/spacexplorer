@@ -50,4 +50,21 @@ describe('App', () => {
     })
   })
 
+  describe('mapDispatchToProps', () => {
+      const mockDispatch = jest.fn();
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      it('should should dispatch launches using correct params', () => {
+        const mappedAddUpcomingLaunches = addUpcomingLaunches(mockLaunches);
+        mappedProps.addUpcomingLaunches(mockLaunches);
+        expect(mockDispatch).toHaveBeenCalledWith(mappedAddUpcomingLaunches);
+      })
+
+      it('should should dispatch selected launch using correct params', () => {
+        const mappedAddSelectedLaunch = addSelectedLaunch(mockLaunches.results[0])
+        mappedProps.addSelectedLaunch(mockLaunches.results[0]);
+        expect(mockDispatch).toHaveBeenCalledWith(mappedAddSelectedLaunch);
+      })
+  })
+
 })
