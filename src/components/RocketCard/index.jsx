@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const RocketCard = ({ rocket, showInfo }) => {
   const { name } = rocket;
@@ -10,6 +11,11 @@ const RocketCard = ({ rocket, showInfo }) => {
       </button>
     </article>
   )
+}
+
+RocketCard.propTypes = {
+  rocket: PropTypes.object,
+  showInfo: PropTypes.func
 }
 
 export default RocketCard;

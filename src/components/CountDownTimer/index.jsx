@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { setInterval } from 'timers';
+import PropTypes from 'prop-types';
 
 export class CountDownTimer extends Component {
 
@@ -80,6 +81,10 @@ export class CountDownTimer extends Component {
       </section>
     )
   }
+}
+
+CountDownTimer.propTypes = {
+  date: PropTypes.string
 }
 
 export default CountDownTimer

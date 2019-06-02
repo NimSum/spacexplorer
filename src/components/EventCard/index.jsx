@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
 const EventCard = ({ event }) => {
   const { name, location, news_url } = event;
@@ -13,6 +14,10 @@ const EventCard = ({ event }) => {
       <a href={ news_url }>News Link</a>
     </article>
   )
+}
+
+EventCard.propTypes = {
+  event: PropTypes.object
 }
 
 export default EventCard;
