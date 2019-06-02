@@ -1,30 +1,43 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleLaunchInfo, addSelectedLaunch } from '../../actions';
+import moment from 'moment';
+import defaultRocketImage from '../../images/default-rocket-img.svg';
 
-const NextLaunchCard = ({ launch, toggleLaunchInfo, updateSelectedLaunch }) => {
-  const { name, pad, status, mission, rocket } = launch;
-  console.log(rocket.configuration.image_url)
+const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaunch }) => {
+  const { pad, status, mission, rocket } = launch;
   const showSelectedLaunch = () => {
-    toggleLaunchInfo(true);
+    showInfo ? toggleLaunchInfo(false) : toggleLaunchInfo(true);
     updateSelectedLaunch(launch);
   }
+  const readableDate = moment(launch.net).format('MMM DD LT');
   return (
     <article className='next-launch-card'>
-      <h3>{ name }</h3>
-      <p>Orbit: { mission ? mission.orbit : 'Uknown' }</p>
-      <p>Status: { status.name }</p>
-      <p>Location: { pad.location.name }</p>
-      <button onClick={ showSelectedLaunch }>
-        More
-      </button>
+      <div className="image-side">
+        <h3>{ rocket.configuration.name }</h3>
+        <img src={ rocket.configuration.image_url || defaultRocketImage } alt="rocket" />
+      </div>
+      <div className="info-side">    
+        <h3>{ readableDate }</h3>
+        <p>Mission: { mission ? mission.name : 'Unknown' }</p>  
+        <p>Orbit: { mission ? mission.orbit : 'Uknown' }</p>
+        <p>Status: { status.name }</p>
+        <p>Location: { pad.location.name }</p>
+        <button onClick={ showSelectedLaunch }>
+          More
+        </button>
+      </div>
     </article>
   )
 }
+
+export const mapStateToProps = state => ({
+  showInfo: state.showLaunchInfo
+})
 
 export const mapDispatchToProps = dispatch => ({
   toggleLaunchInfo: (bool) => dispatch(toggleLaunchInfo(bool)),
   updateSelectedLaunch: (launch) => dispatch(addSelectedLaunch(launch))
 })
 
-export default connect(null, mapDispatchToProps)(NextLaunchCard);
+export default connect(mapStateToProps, mapDispatchToProps)(NextLaunchCard);

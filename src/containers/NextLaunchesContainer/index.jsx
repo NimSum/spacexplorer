@@ -7,19 +7,12 @@ export class NextLaunchesContainer extends Component {
   constructor() {
     super();
     this.state = {
-      launches: [],
       showInfo: false
-    }
-  }
-  
-  componentDidUpdate(prevProps) {
-    if (this.props.rocketLaunches !== prevProps.rocketLaunches) {
-      this.setState({ launches: this.props.rocketLaunches.results })
     }
   }
 
   generateCards = () => {
-    return this.state.launches.map(launch => (
+    return this.props.rocketLaunches.results.map(launch => (
       < NextLaunchCard 
         launch={ launch }
         key={ launch.id }
@@ -34,10 +27,10 @@ export class NextLaunchesContainer extends Component {
   render() {
     return (
       <section className="next-launches-container">
-        <h1>HIIIIII</h1>
         < NextLaunch />
-        <div>
-          { this.state.launches.length && this.generateCards() }
+        <h3 className="next-launches-title">Upcoming Launches</h3>
+        <div className="card-container">
+          { this.props.rocketLaunches.results && this.generateCards() }
         </div>
       </section>
     )

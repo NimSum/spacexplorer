@@ -1,0 +1,54 @@
+article.next-launch-card {
+  min-width: 310px;
+  white-space: normal;
+  margin: 0 5px;
+  display: flex;
+  background-color: $secondary-light;
+  border-radius: 5px;
+  padding: 10px;
+
+  h3 {
+    margin: 5px 0;
+    padding: 0 5px;
+    color: $primary-dark;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  div.image-side {
+    flex: 1.5;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    img {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  div.info-side {
+    flex: 2;
+    position: relative;
+    
+    p {
+      margin: 10px;
+    }
+
+    h3 {
+      margin: 14px 0;
+    }
+
+    button {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      @include more-info-btn;
+    }
+  }
+}

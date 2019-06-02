@@ -1,4 +1,4 @@
-const spaceStationsReducer = (state = [], action) => {
+const spaceStationsReducer = (state = {}, action) => {
   if (action.type === 'ADD_SPACE_STATIONS') return action.spaceStations;
   return state;
 }

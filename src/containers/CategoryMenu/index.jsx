@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 export class CategoryMenu extends Component {
@@ -11,23 +11,50 @@ export class CategoryMenu extends Component {
   }
 
   generateMenu() {
+    const linkStyling = { 
+      textDecoration: 'none',
+      color: '#FFEAFE',
+      padding: '5px',
+      borderBottom: '1px solid #9EA9F0'
+    }
     return (
       <nav>
-        < NavLink to='/rockets'>
+        < NavLink 
+          style={ linkStyling } 
+          to='/about/rockets'
+          activeClassName='is-active'>
           Rockets
         </NavLink>
-        < NavLink to='/space-stations'>
+        < NavLink 
+          style={ linkStyling } 
+          to='/about/space_stations'
+          activeClassName='is-active'>
           Space Stations
         </NavLink>
-        < NavLink to='/orbiters'>
+        < NavLink 
+          style={ linkStyling } 
+          to='/about/orbiters'
+          activeClassName='is-active'>
           Orbiters
         </NavLink>
-        < NavLink to='/astronauts'>
+        < NavLink 
+          style={ linkStyling } 
+          to='/about/astronauts'
+          activeClassName='is-active'>
           Astronauts
         </NavLink>
-        < NavLink to='/launch-providers'>
+        < NavLink 
+          style={ linkStyling } 
+          to='/about/launch_providers'
+          activeClassName='is-active'>
           Launch Providers
         </NavLink>
+        < Link 
+          style={ linkStyling } 
+          to='/'
+          activeClassName='is-active'>
+          HOME
+        </Link>
       </nav>
     )
   }
@@ -41,11 +68,10 @@ export class CategoryMenu extends Component {
       <div 
         className='menu-container'
         onMouseEnter={ () => this.showMenu(true) }
-        onMouseLeave={ () => this.showMenu(false) }>
-        { this.state.showMenu 
-            ? this.generateMenu()
-            : <p>Xplore Space</p>
-        }
+        onMouseLeave={ () => this.showMenu(false) }
+        >
+        <p className={ this.state.showMenu && 'hovered'}>Explore Space </p>
+        { this.state.showMenu && this.generateMenu()}
       </div>
     )
   }

@@ -38,9 +38,20 @@ export class CountDownTimer extends Component {
   }
   
   componentDidMount() {
-    const nextDate = new Date(this.props.date);
-    const totalTime = (nextDate.getTime() - Date.now());
+    const totalTime = this.calculateDateDifference();
     this.setState({ totalTime }, () => this.updateTime());
+  }
+
+  calculateDateDifference() {
+    const nextDate = new Date(this.props.date);
+    return (nextDate.getTime() - Date.now());
+  }
+
+  componentDidUpdate(prevProps) {
+    if(this.props.date !== prevProps.date) {
+      const totalTime = this.calculateDateDifference();
+      this.setState({ totalTime })
+    }
   }
 
   render() {
@@ -49,15 +60,22 @@ export class CountDownTimer extends Component {
       <section className="countdown-timer">
         <div>
           <p>{ days < 10 ? `0${days}` : days }</p>
+          <span>Days</span>
         </div>
+        <span className="colon">:</span>
         <div>
           <p>{ hours < 10 ? `0${hours}` : hours }</p>
+          <span>Hours</span>
         </div>
+        <span className="colon">:</span>
         <div>
           <p>{ minutes < 10 ? `0${minutes}`: minutes }</p>
+          <span>Minutes</span>
         </div>
+        <span className="colon">:</span>
         <div>
           <p>{ seconds < 10 ? `0${seconds}` : seconds }</p>
+          <span>Seconds</span>
         </div>
       </section>
     )

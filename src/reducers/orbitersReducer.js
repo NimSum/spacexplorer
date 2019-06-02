@@ -1,4 +1,4 @@
-const orbitersReducer = (state = [], action) => {
+const orbitersReducer = (state = {}, action) => {
   if (action.type === 'ADD_ORBITERS') return action.orbiters;
   return state;
 }

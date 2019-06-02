@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+$font-source-sans: 'Source Sans Pro', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-rajdani: 'Rajdhani', sans-serif;
+$font-orbitron: 'Orbitron', sans-serif;
+
+$primary-dark: hsl(259, 40%, 39%);
+$secondary-dark: hsl(232, 73%, 78%);
+$primary-light: hsl(251, 100%, 88%);
+$secondary-light: hsl(303, 100%, 96%);
+
+@mixin more-info-btn {
+  border-radius: 20px;
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  color: #fff;
+  border: none;
+  background-color: $primary-light;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: $primary-light;
+    background-color: #fff;
+  }
+}

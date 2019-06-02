@@ -1,0 +1,21 @@
+article.event-card {
+  padding: 10px;
+  border-bottom: 2px solid $primary-light;
+
+  h3 {
+    margin: 5px 0;
+    color: $primary-dark;
+  }
+
+  p {
+    margin: 5px;
+
+    span {
+      background-color: #fff;
+      color: $secondary-dark;
+      padding: 0 5px;
+      border-radius: 5px;
+    }
+  }
+  
+}

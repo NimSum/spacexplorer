@@ -2,6 +2,35 @@ div.menu-container {
   nav {
     display: flex;
     flex-direction: column;
+    color: $secondary-light;
+    padding-bottom: 10px;
+
+    .is-active {
+      background-color: $secondary-dark;
+      color: $primary-dark;
+    }
+
   }
 
+  p {
+    color: $secondary-light
+  }
+
+  p.hovered {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #9EA9F0;
+    color: $secondary-dark;
+  }
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin: 10px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  background-color: hsla(259, 40%, 39%, .8);
+  padding: 5px 10px;
+  text-align: center;
+  min-width: 160px;
 }

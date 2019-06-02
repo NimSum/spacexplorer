@@ -1,54 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import CountDownTimer from '../../components/CountDownTimer';
 import NextLaunchInfo from '../NextLaunchInfo';
 import { toggleLaunchInfo } from '../../actions'
+import defaulRocketImg from '../../images/default-rocket-img.svg';
 
-export class NextLaunch extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      rocketLaunch: {},
-      error: ''
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    const oldId = prevProps.rocketLaunch.id;
-    const newId = this.props.rocketLaunch.id;
-    if (newId !== oldId) {
-      this.setState({ ...this.props })
-    }
-  }
-
-  generateLaunchCard() {
-    const { name, status, pad, mission } = this.state.rocketLaunch;
+export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
+  const { name, status, pad, mission, rocket } = rocketLaunch;
+  const generateLaunchCard = () => {
     return (
-      <article>
-        <p>{ name }</p>
-        <p>{ status.name }</p>
-        <p>{ mission ? mission.orbit : 'Unknown' }</p>
-        <p>{ pad.location.name }</p>
+      <article className="upcoming-launch-card">
+        <h3>Next Rocket Launch:</h3>
+        <h2>{ name }</h2>
+        <p><span>Status: </span> { status.name }</p>
+        <p><span>Mission Type: </span> { mission ? mission.type : 'Unknown' }</p>
+        <p><span>Location: </span> { pad.location.name }</p>
         <button onClick={ () => 
-          this.props.toggleLaunchInfo(true) }>
+          toggleLaunchInfo(true) }>
             More
         </button>
       </article>
     )
   }
 
-  render() {
-    return this.state.rocketLaunch.id 
-    ? (<section className='launch-card'>
-        { this.generateLaunchCard() }
-        { this.props.showInfo && < NextLaunchInfo /> }
-        < CountDownTimer 
-          date={ this.state.rocketLaunch.net }/>
-        <img src={ this.state.rocketLaunch.rocket.configuration.image_url } alt="rocket" />
-      </section>)
-    : <div>HI</div>
-  }
+  return rocketLaunch.id 
+  ? (<section className='next-launch-container'>
+      { !showInfo && generateLaunchCard() }
+      { showInfo && < NextLaunchInfo /> }
+      < CountDownTimer 
+        date={ rocketLaunch.net }/>
+      <img src={ rocket.configuration.image_url || defaulRocketImg } alt="rocket" />
+    </section>)
+  : <div>LOOOOOOOODINGGGG</div>
 }
 
 export const mapStateToProps = state => ({
