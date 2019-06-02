@@ -37,4 +37,23 @@ describe('NextLaunchCard', () => {
     expect(mockUpdateSelectedLaunch).toHaveBeenCalledWith(mockLaunch);
   })
 
+  describe('mapDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mappedProps = mapDispatchToProps(mockDispatch);
+
+    it('should dispatch toggleLaunchInfo action with the correct params', () => {
+      const actionToDispatch = toggleLaunchInfo(true);
+      mappedProps.toggleLaunchInfo(true);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    })
+    
+    it('should dispatch addSelectedLaunch action with the correct params', () => {
+      const actionToDispatch = addSelectedLaunch(mockLaunch);
+      mappedProps.updateSelectedLaunch(mockLaunch);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    })
+  })
+
+
+
 })
