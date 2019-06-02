@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { NavLink, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 export class CategoryMenu extends Component {
   constructor() {
@@ -51,8 +50,7 @@ export class CategoryMenu extends Component {
         </NavLink>
         < Link 
           style={ linkStyling } 
-          to='/'
-          activeClassName='is-active'>
+          to='/'>
           HOME
         </Link>
       </nav>
@@ -70,14 +68,11 @@ export class CategoryMenu extends Component {
         onMouseEnter={ () => this.showMenu(true) }
         onMouseLeave={ () => this.showMenu(false) }
         >
-        <p className={ this.state.showMenu && 'hovered'}>Explore Space </p>
+        <p className={ this.state.showMenu ? 'hovered' : undefined }>Explore Space </p>
         { this.state.showMenu && this.generateMenu()}
       </div>
     )
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-})
-
-export default connect(null, mapDispatchToProps)(CategoryMenu);
+export default CategoryMenu;

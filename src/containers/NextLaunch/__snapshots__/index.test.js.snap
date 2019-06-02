@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NextLaunch should match component snapshot 1`] = `
+<section
+  className="next-launch-container"
+>
+  <article
+    className="upcoming-launch-card"
+  >
+    <h3>
+      Next Rocket Launch:
+    </h3>
+    <h2>
+      Long March 11 | Jilin-1
+    </h2>
+    <p>
+      <span>
+        Status: 
+      </span>
+       
+      Go
+    </p>
+    <p>
+      <span>
+        Mission Type: 
+      </span>
+       
+      Earth Science
+    </p>
+    <p>
+      <span>
+        Location: 
+      </span>
+       
+      Sea Launch
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      More
+    </button>
+  </article>
+  <CountDownTimer
+    date="2019-06-05T04:00:00Z"
+  />
+  <img
+    alt="rocket"
+    src="https://daszojo4xmsc6.cloudfront.net/media/launcher_images/long2520march252011_image_20190222031217.jpeg"
+  />
+</section>
+`;
+
+exports[`NextLaunch should match snapshot if there is no rocketLaunch prop 1`] = `
+<div>
+  LOOOOOOOODINGGGG
+</div>
+`;
+
+exports[`NextLaunch should match snapshot with showInfo set to true 1`] = `
+<section
+  className="next-launch-container"
+>
+  <Connect(NextLaunchInfo) />
+  <CountDownTimer
+    date="2019-06-05T04:00:00Z"
+  />
+  <img
+    alt="rocket"
+    src="https://daszojo4xmsc6.cloudfront.net/media/launcher_images/long2520march252011_image_20190222031217.jpeg"
+  />
+</section>
+`;

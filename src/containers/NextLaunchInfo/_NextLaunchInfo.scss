@@ -5,8 +5,7 @@ article.next-launch-info-card {
   min-width: 450px;
   display: flex;
   padding: 15px;
-  background-color: hsla(303, 100%, 96%, .85);
-  border-radius: 20px;
+  @include transparent-light-bg;
 
   h2, button {
     position: absolute;

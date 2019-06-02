@@ -3,6 +3,7 @@ import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import { addSpaceEvents } from '../../actions';
 import { connect } from 'react-redux';
 import EventCard from '../../components/EventCard';
+import PropTypes from 'prop-types';
 
 export class AsideEvents extends Component {
   constructor() {
@@ -49,8 +50,12 @@ export class AsideEvents extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   addUpcomingEvents: events => dispatch(addSpaceEvents(events))
 })
+
+AsideEvents.propTypes = {
+  addUpcomingEvents: PropTypes.func
+}
 
 export default connect(null, mapDispatchToProps) (AsideEvents);

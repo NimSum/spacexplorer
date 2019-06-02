@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import NextLaunchCard from '../NextLaunchCard';
 import NextLaunch from '../NextLaunch';
+import PropTypes from 'prop-types';
 
 export class NextLaunchesContainer extends Component {
   constructor() {
@@ -38,7 +39,11 @@ export class NextLaunchesContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  rocketLaunches: state.upcomingLaunches || []
+  rocketLaunches: state.upcomingLaunches || {}
 })
+
+NextLaunchesContainer.propTypes = {
+  rocketLaunches: PropTypes.object
+}
 
 export default connect(mapStateToProps)(NextLaunchesContainer);

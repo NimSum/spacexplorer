@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { toggleLaunchInfo, addSelectedLaunch } from '../../actions';
 import moment from 'moment';
 import defaultRocketImage from '../../images/default-rocket-img.svg';
+import PropTypes from 'prop-types';
 
 const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelectedLaunch }) => {
   const { pad, status, mission, rocket } = launch;
@@ -39,5 +40,11 @@ export const mapDispatchToProps = dispatch => ({
   toggleLaunchInfo: (bool) => dispatch(toggleLaunchInfo(bool)),
   updateSelectedLaunch: (launch) => dispatch(addSelectedLaunch(launch))
 })
+
+NextLaunchCard.propTypes = {
+  showInfo: PropTypes.bool,
+  toggleLaunchInfo: PropTypes.func,
+  updateSelectedLaunch: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(NextLaunchCard);

@@ -4,6 +4,8 @@ import categoryManager from '../../thunks/categoryManager';
 import RocketCard from '../../components/RocketCard';
 import AstronautCard from '../../components/AstronautCard';
 import CategoryItemInfo from '../../components/CategoryItemInfo';
+import PropTypes from 'prop-types';
+
 export class CategorySection extends Component {
   constructor() {
     super();
@@ -18,7 +20,9 @@ export class CategorySection extends Component {
     this.setState({ showInfo: false })
     const categorySelected = this.props[this.props.category];
     if (categorySelected.next) {
+      const randomItem = Math.floor(Math.random() * 19);
       this.generateCards(categorySelected)
+      this.setState({ cardInfoToRender: categorySelected.results[randomItem] })
     } else this.props.selectCategory(this.props.category);
   }
 
@@ -33,14 +37,14 @@ export class CategorySection extends Component {
     switch (this.props.category) {
       case 'rockets':
         return (< RocketCard 
-          rocket={item} showInfo={ this.showInfo } />);
+          rocket={item} showInfo={ this.showInfo } key={item.id} />);
       case 'space_stations':
           return <p>space stations</p>
       case 'orbiters':
         return <p>orbiters</p>
       case 'astronauts':
         return (< AstronautCard 
-          astronaut={item} showInfo={ this.showInfo } />);
+          astronaut={item} showInfo={ this.showInfo } key={item.id} />);
       default:
         return <p>NADA</p>
     }
@@ -58,28 +62,22 @@ export class CategorySection extends Component {
     if(prevProps !== this.props) this.checkAndUpdate();
   }
 
-  generateCardInfo() {
-    console.log('hi')
-    return (
-      < CategoryItemInfo 
-        item={ this.state.cardInfoToRender }
-        category={ this.props.category }
-        showInfo={ this.showInfo } />
-    )
-  }
-
   render() {
     return (
       <section className='category-section'>
-        { this.state.showInfo && this.generateCardInfo() }
-        { this.props.category }
-        { this.state.cardsToRender }
+        < CategoryItemInfo 
+          item={ this.state.cardInfoToRender }
+          category={ this.props.category }
+          showInfo={ this.showInfo } />
+        <div className="card-container">
+          { this.state.cardsToRender }
+        </div>
       </section>
     )
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   rockets: state.rockets,
   space_stations: state.spaceStations,
   orbiters: state.orbiters,
@@ -87,8 +85,18 @@ const mapStateToProps = state => ({
   launch_providers: state.launchProviders
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   selectCategory: category => dispatch(categoryManager(category))
 })
+
+CategorySection.propTypes = {
+  astronauts: PropTypes.object,
+  category: PropTypes.string,
+  launch_providers: PropTypes.object,
+  orbiters: PropTypes.object,
+  rockets: PropTypes.object,
+  selectCategory: PropTypes.func,
+  space_stations: PropTypes.object
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategorySection)

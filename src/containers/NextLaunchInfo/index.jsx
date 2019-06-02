@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { toggleLaunchInfo } from '../../actions'
+import PropTypes from 'prop-types';
 
 const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
   const { name, rocket, mission, pad } = launchInfo;
-  console.log(rocket)
     return (
       <article 
         className='next-launch-info-card'
@@ -42,6 +42,11 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   hideInfo: (bool) => dispatch(toggleLaunchInfo(bool))
 })
+
+NextLaunchInfo.propTypes = {
+  launchInfo: PropTypes.object,
+  hideInfo: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(NextLaunchInfo);
 

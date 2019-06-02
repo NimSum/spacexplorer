@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryMenu should match component snapshot 1`] = `
+<div
+  className="menu-container"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <p>
+    Explore Space 
+  </p>
+</div>
+`;
+
+exports[`CategoryMenu should match snapshot with menu shown 1`] = `
+<div
+  className="menu-container"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <p
+    className="hovered"
+  >
+    Explore Space 
+  </p>
+  <nav>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/about/rockets"
+    >
+      Rockets
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/about/space_stations"
+    >
+      Space Stations
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/about/orbiters"
+    >
+      Orbiters
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/about/astronauts"
+    >
+      Astronauts
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/about/launch_providers"
+    >
+      Launch Providers
+    </NavLink>
+    <Link
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/"
+    >
+      HOME
+    </Link>
+  </nav>
+</div>
+`;

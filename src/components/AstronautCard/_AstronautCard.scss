@@ -1,0 +1,37 @@
+article.astronaut-card {
+  @include transparent-light-bg;
+  min-width: 300px;
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding: 20px;
+  
+  div.image-side {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      @include category-info-btn;
+    }
+  }
+
+  div.details-side {
+    padding: 5px 20px;
+    color: $primary-dark;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  img {
+    width: 100px;
+    border-radius: 50%;
+  }
+}

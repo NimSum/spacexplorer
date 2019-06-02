@@ -26,3 +26,29 @@ $secondary-light: hsl(303, 100%, 96%);
     background-color: #fff;
   }
 }
+
+@mixin category-info-btn {
+  width: 50px;
+  margin: 10px auto;
+  border-radius: 10px;
+  color: $secondary-light;
+  background-color: $primary-light;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $secondary-dark;
+    color: #fff;
+  }
+}
+
+@mixin transparent-light-bg {
+  background-color: hsla(303, 100%, 96%, .85);
+  border-radius: 10px;
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}

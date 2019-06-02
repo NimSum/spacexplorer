@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AstronautCard should match component snapshot 1`] = `
+<article
+  className="astronaut-card"
+>
+  <div
+    className="image-side"
+  >
+    <img
+      alt="Astronaut"
+      src="default-astronaut.svg"
+    />
+    <button
+      onClick={[Function]}
+    >
+      BIO
+    </button>
+  </div>
+  <div
+    className="details-side"
+  >
+    <h3>
+      Gregory Olsen
+    </h3>
+    <p>
+      DOB: 
+      <span>
+        1945-04-20
+      </span>
+    </p>
+    <p>
+      Status: 
+      <span>
+        Retired
+      </span>
+    </p>
+    <p>
+      Nationality: 
+      <span>
+        American
+      </span>
+    </p>
+  </div>
+</article>
+`;

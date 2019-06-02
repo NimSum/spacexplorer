@@ -1,0 +1,10 @@
+section.category-section {
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    height: 40vh;
+  }
+
+}
