@@ -33,4 +33,9 @@ describe('NextLaunch', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should toggleLaunchInfo on click', () => {
+    wrapper.find('button').simulate('click');
+    expect(mockToggleLaunchInfo).toHaveBeenCalledWith(true);
+  })
+
 })
