@@ -96,14 +96,30 @@ describe('Reducers', () => {
 
     it('should return a default state', () => {
       const result = spaceRelatedEventsReducer(undefined, {})
+      const expected = []
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return the action payload if action type is valid', () => {
+      const mockValidAction = action.addSpaceEvents(mockData.mockEvents);
+      const result = spaceRelatedEventsReducer(undefined, mockValidAction);
+      const expected = mockData.mockEvents;
+      expect(result).toEqual(expected);
+    })
+  })
+
+  describe('spaceStationsReducer', () => {
+
+    it('should return a default state', () => {
+      const result = spaceStationsReducer(undefined, {})
       const expected = {}
       expect(result).toEqual(expected);      
     })
 
     it('should return the action payload if action type is valid', () => {
-      const mockValidAction = action.spaceRelatedEventsReducer(mockData.mockEvents);
-      const result = spaceRelatedEventsReducer(undefined, mockValidAction);
-      const expected = mockData.mockEvents;
+      const mockValidAction = action.addSpaceStations(mockData.mockSpaceStations);
+      const result = spaceStationsReducer(undefined ,mockValidAction)
+      const expected = mockData.mockSpaceStations;
       expect(result).toEqual(expected);
     })
   })
