@@ -32,6 +32,12 @@ describe('AsideEvents', () => {
     expect(wrapper.state()).toEqual(stateAfterMounted);
   })
 
+  it('should generate cards on mount/update', () => {
+    const spy = jest.spyOn(wrapper.instance(), 'cardGenerator');
+    wrapper.setState({ events: mockEvents.results.slice(0, 2) });
+    expect(spy).toHaveBeenCalledTimes(1);
+  })
+
   describe('componentDidMount', () => {
     it('should call fetchAnything using correct params', () => {
       const url = 'https://spacelaunchnow.me/api/3.3.1/event/upcoming'
