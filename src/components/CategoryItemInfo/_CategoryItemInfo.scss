@@ -2,22 +2,46 @@ article.category-info-container {
   height: 60vh;
   padding: 20px;
 
-  section.astronaut-info {
+  section {
     display: flex;
     width: 100%;
-    
-    div.image-side {
-      width: 40%;
-      @include flex-center;
+    height: 100%;
+  }
 
-      img {
-        width: 100%;
-        border-radius: 20px;
-      }
+  div {
+    background-color: $secondary-light;
+    padding: 20px;
+  }
+
+  div.image-side {
+    width: 40%;
+    text-align: center;
+    @include flex-center;
+
+    h2 {
+      margin: 15px 0 0 0;
+      background-color: $primary-light;
+      border-radius: 10px;
+      color: $primary-dark;
+      padding: 5px 0;
     }
 
-    div.details-side {
-      flex: 2;
+    img {
+      width: 100%;
+      max-height: 60vh;
+      border-radius: 20px;
+    }
+  }
+
+  div.details-side {
+    width: 60%;
+  }
+
+  section.astronaut-info {
+    p.bio {
+      text-indent: 40px;
+      margin: 10px;
+      font-size: 1.1rem;
     }
   }
 }

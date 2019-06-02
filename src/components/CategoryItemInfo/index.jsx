@@ -8,11 +8,11 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
     return (
       <section className="astronaut-info">
         <div className="image-side">
-        <img src={ profile_image || defaultAstronautImg } alt=""/>
+          <img src={ profile_image || defaultAstronautImg } alt=""/>
+          <h2>{ name }</h2>
         </div>
         <div className="details-side">
-          <h2>{ name }</h2>
-          <p>{ bio }</p>   
+          <p className="bio">{ bio }</p>   
         </div>
       </section>)
   }
@@ -39,9 +39,9 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
   return (
     <article className="category-info-container">
       { renderThis }
-      <button onClick={() => showInfo({}, false)}>
+      {/* <button onClick={() => showInfo({}, false)}>
         x
-      </button>
+      </button> */}
     </article>
   )
 }
