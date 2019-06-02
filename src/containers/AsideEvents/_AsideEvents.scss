@@ -1,6 +1,7 @@
 aside {
   background-color: $secondary-light;
   position: relative;
+  height: 100vh;
 
   a {
     display: block;
@@ -37,10 +38,11 @@ aside {
     background-color: $primary-dark;
     color: $secondary-light;
     text-align: center;
-    height: 20%;
+    height: 15%;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 5px;
+    padding: 10px 0;
 
     a {
       color: $secondary-light;
