@@ -11,5 +11,21 @@ import * as mockData from '../utils/mockData';
 import * as action from '../actions';
 
 describe('Reducers', () => {
+
+  describe('launchProvidersReducer', () => {
+    it('should return a default state', () => {
+      const result = launchProvidersReducer(undefined, {});
+      const expected = {};
+      expect(result).toEqual(expected);
+    })
+
+    it('should return the action payload if action type is valid', () => {
+      const mockValidAction = action.addLaunchProviders(mockData.mockLaunchProviders);
+      const result = launchProvidersReducer(undefined, mockValidAction);
+      const expected = mockData.mockLaunchProviders;
+      expect(result).toEqual(expected);
+    })
+  })
+
   
 })
