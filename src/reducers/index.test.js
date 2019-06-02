@@ -74,4 +74,21 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);
     })
   })
+
+  describe('selectedLaunchReducer', () => {
+
+    it('should return a default state', () => {
+      const result = selectedLaunchReducer(undefined, {})
+      const expected = {}
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return the action payload if action type is valid', () => {
+      const mockSingleLaunch = mockData.mockLaunches.results[1];
+      const mockValidAction = action.addSelectedLaunch(mockSingleLaunch);
+      const result = selectedLaunchReducer(undefined, mockValidAction);
+      const expected = mockSingleLaunch
+      expect(result).toEqual(expected);
+    })
+  })
 })
