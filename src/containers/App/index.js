@@ -53,7 +53,7 @@ export class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   addUpcomingLaunches: launches => dispatch(addUpcomingLaunches(launches)),
   addSelectedLaunch: event => dispatch(addSelectedLaunch(event)),
 })
