@@ -43,5 +43,19 @@ describe('Reducers', () => {
     })
   })
 
-  
+  describe('orbitersReducer', () => {
+
+    it('should return a default state', () => {
+      const result = orbitersReducer(undefined, {})
+      const expected = {}
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return the action payload if action type is valid', () => {
+      const mockValidAction = action.addOrbiters(mockData.mockOrbiters);
+      const result = orbitersReducer(undefined, mockValidAction);
+      const expected = mockData.mockOrbiters;
+      expect(result).toEqual(expected);
+    })
+  })
 })
