@@ -123,4 +123,20 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);
     })
   })
+
+  describe('toggleLaunchInfoReducer', () => {
+
+    it('should return a default state', () => {
+      const result = toggleLaunchInfoReducer(undefined, {});
+      const expected = false;
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return the action payload if action type is valid', () => {
+      const mockValidAction = action.toggleLaunchInfo(true);
+      const result = toggleLaunchInfoReducer(undefined, mockValidAction)
+      const expected = true;
+      expect(result).toEqual(expected);
+    })
+  })
 })
