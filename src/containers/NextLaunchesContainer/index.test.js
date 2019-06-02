@@ -5,6 +5,7 @@ import { mockLaunches } from '../../utils/mockData';
 import NextLaunchCard from '../NextLaunchCard';
 
 describe('NextLaunchesContainer', () => {
+  const defaultState = { showInfo: false }
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(
@@ -18,6 +19,10 @@ describe('NextLaunchesContainer', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should have default state', () => {
+    expect(wrapper.state()).toEqual(defaultState);
+  })
+
   it('should generate launch cards', () => {
     const modifiedData = { ...mockLaunches };
     modifiedData.results = [mockLaunches.results[0]];
@@ -29,5 +34,12 @@ describe('NextLaunchesContainer', () => {
     wrapper.setProps({ rocketLaunches: modifiedData });
     const result = wrapper.instance().generateCards();
     expect(result).toEqual(expected);
+  })
+
+  it('should be able to toggle showInfo state', () => {
+    wrapper.instance().toggleInfo();
+    expect(wrapper.state().showInfo).toBe(true);
+    wrapper.instance().toggleInfo();
+    expect(wrapper.state().showInfo).toBe(false);
   })
 })
