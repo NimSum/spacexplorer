@@ -1,5 +1,6 @@
 import React from 'react'
 import defaultAstronautImg  from '../../images/default-astronaut.svg';
+import PropTypes from 'prop-types';
 
 const AstronautCard = ({ astronaut, showInfo }) => {
   const { name, status, nationality, profile_image_thumbnail, date_of_birth } = astronaut;
@@ -19,6 +20,11 @@ const AstronautCard = ({ astronaut, showInfo }) => {
       </div>
     </article>
   )
+}
+
+AstronautCard.propTypes = {
+  astronaut: PropTypes.object,
+  showInfo: PropTypes.func
 }
 
 export default AstronautCard;
