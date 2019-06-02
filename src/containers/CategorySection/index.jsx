@@ -4,6 +4,8 @@ import categoryManager from '../../thunks/categoryManager';
 import RocketCard from '../../components/RocketCard';
 import AstronautCard from '../../components/AstronautCard';
 import CategoryItemInfo from '../../components/CategoryItemInfo';
+import PropTypes from 'prop-types';
+
 export class CategorySection extends Component {
   constructor() {
     super();
@@ -86,5 +88,15 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   selectCategory: category => dispatch(categoryManager(category))
 })
+
+CategorySection.propTypes = {
+  astronauts: PropTypes.object,
+  category: PropTypes.string,
+  launch_providers: PropTypes.object,
+  orbiters: PropTypes.object,
+  rockets: PropTypes.object,
+  selectCategory: PropTypes.func,
+  space_stations: PropTypes.object
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategorySection)
