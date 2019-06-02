@@ -33,4 +33,21 @@ describe('App', () => {
     expect(wrapper.state()).toEqual(defaultState);
   })
 
+  describe('componentDidMount', () => {
+    it('should fetch data using correct params', () => {
+      const expected = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
+      expect(fetchAnything).toHaveBeenCalledWith(expected);
+    })
+  
+    it('should fetch data using correct params', () => {
+      const expected = 'https://spacelaunchnow.me/api/3.3.1/launch/upcoming?mode=detailed';
+      expect(fetchAnything).toHaveBeenCalledWith(expected);
+    })
+
+    it('should pass data fetched to props', () => {
+      expect(mockAddUpcomingLaunches).toHaveBeenCalledWith(mockLaunches);
+      expect(mockAddSelectedLaunch).toHaveBeenCalledWith(mockLaunches.results[0]);
+    })
+  })
+
 })
