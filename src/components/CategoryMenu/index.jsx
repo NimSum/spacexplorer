@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { NavLink, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 export class CategoryMenu extends Component {
   constructor() {
@@ -76,7 +75,4 @@ export class CategoryMenu extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-})
-
-export default connect(null, mapDispatchToProps)(CategoryMenu);
+export default CategoryMenu;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import AsideEvents from '../AsideEvents';
-import CategoryMenu from '../CategoryMenu'
+import CategoryMenu from '../../components/CategoryMenu'
 import NextLaunchesContainer from '../NextLaunchesContainer';
 import Page404 from '../../components/Page404';
 import { connect } from 'react-redux';
