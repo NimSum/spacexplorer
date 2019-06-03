@@ -40,7 +40,7 @@ export class App extends Component {
         < Switch >
           < Route exact path='/'
             component={ NextLaunchesContainer}/>
-          < Route path='/about/:category' render={({ match }) => {
+          < Route exact path='/about/:category' render={({ match }) => {
               return (
                 < CategorySection 
                   category={ match.params.category }/>
