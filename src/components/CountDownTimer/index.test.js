@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import CountDownTimer from './index';
 
 
-Date.getTime = jest.fn().mockImplementation(() => 10);
 Date.now = jest.fn().mockImplementation(() => 1);
 jest.useFakeTimers();
 
@@ -51,9 +50,9 @@ describe('CountDownTimer', () => {
     expect(typeof wrapper.state().totalTime).toEqual('number');
   })
 
-  it.skip('should calculate date difference', () => {
+  it('should calculate date difference', () => {
     const result = wrapper.instance().calculateDateDifference();
-    const expected = 9;
+    const expected = 1623715199999;
     expect(result).toEqual(expected);
   })
 
