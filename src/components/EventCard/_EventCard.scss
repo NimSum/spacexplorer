@@ -23,13 +23,14 @@ article.event-card {
     position: absolute;
     width: 100%;
     padding: 10px;
-    background-color: #fff;
+    background-color: $secondary-dark;
     z-index: 10;
     right: -100%;
     top: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     @include opacity-animation;
+    color: #fff;
   }
 
   div.news-details {
@@ -39,4 +40,7 @@ article.event-card {
     z-index: 10;
   }
   
+  &:hover {
+    background-color: #fff;
+  }
 }

@@ -39,11 +39,13 @@ export class AsideEvents extends Component {
     return (
       <aside>
         <h1>SPACE<span>X</span>PLORER</h1>
-        <h3 className="aside-label">Space Related Events:</h3>
-        { this.cardGenerator() }
+        <h3 className='aside-label'>Space Related Events:</h3>
+        <div className='card-container'>
+          { this.cardGenerator() }
+        </div>
         <footer>
           <p>Copyright 2019 SPACEXPLORER</p>
-          <a href="https://spacelaunchnow.me/api/3.3.0/">Space Launch Now Api</a>
+          <a href='https://spacelaunchnow.me/api/3.3.0/'>Space Launch Now Api</a>
         </footer>
       </aside>
     )

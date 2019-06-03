@@ -26,6 +26,11 @@ aside {
     }
   }
 
+  div.card-container {
+    height: 65%;
+    overflow: scroll;
+  }
+
   h3.aside-label {
     padding: 10px;
     margin: 0;

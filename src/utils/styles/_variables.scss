@@ -54,7 +54,7 @@ $secondary-light: hsl(303, 100%, 96%);
 }
 
 @mixin opacity-animation {
-  animation: transition-opacity 300ms linear;
+  animation: transition-opacity 500ms linear;
 }
 
 @keyframes transition-opacity {
