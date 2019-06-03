@@ -8,7 +8,7 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
     return (
       <section className="astronaut-info">
         <div className="image-side">
-          <img src={ profile_image || defaultAstronautImg } alt=""/>
+          <img src={ profile_image || defaultAstronautImg } alt="astronaut"/>
           <h2>{ name }</h2>
         </div>
         <div className="details-side">
@@ -16,6 +16,10 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
         </div>
       </section>)
   }
+
+  // const { full_name, launch_service_provider, leo_capacity, 
+  //   gto_capacity, length, diameter, info_url,
+  //   wiki_url, image_url } = rocket;
 
   let renderThis;
   switch (category) {

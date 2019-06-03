@@ -1,0 +1,20 @@
+article.rocket-card {
+  display: flex;
+  // flex-basis: 0px;
+  width: 32%;
+  flex-grow: 1;
+
+  div.image-side {
+    width: 70%;
+    @include flex-center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  div.details-side {
+    width: 30%;
+    
+  }
+}

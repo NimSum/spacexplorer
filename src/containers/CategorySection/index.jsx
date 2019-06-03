@@ -69,12 +69,12 @@ export class CategorySection extends Component {
           item={ this.state.cardInfoToRender }
           category={ this.props.category }
           showInfo={ this.showInfo } />
-        <div className="card-container">
           <h3 className="sticky-title">
             { this.props.category
               .toUpperCase()
               .replace(/_/g, " ") }
           </h3>
+        <div className="card-container">
           { this.state.cardsToRender }
         </div>
       </section>
