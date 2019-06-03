@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { setInterval } from 'timers';
 import PropTypes from 'prop-types';
 
 export class CountDownTimer extends Component {
@@ -12,18 +11,14 @@ export class CountDownTimer extends Component {
       minutes: 0,
       seconds: 0,
       totalTime: 0
-    }
-  }
-
-  updateTime() {
-    setInterval(
-      () => {
+    };
+    this.timer  = setInterval(() => {
         this.setState({ 
           totalTime: this.state.totalTime - 1000
           }, () => this.calculateCountdown(this.state.totalTime));
       },
       1000
-  );
+    );
   }
 
   calculateCountdown() {
@@ -40,7 +35,7 @@ export class CountDownTimer extends Component {
   
   componentDidMount() {
     const totalTime = this.calculateDateDifference();
-    this.setState({ totalTime }, () => this.updateTime());
+    this.setState({ totalTime });
   }
 
   calculateDateDifference() {
@@ -53,6 +48,10 @@ export class CountDownTimer extends Component {
       const totalTime = this.calculateDateDifference();
       this.setState({ totalTime })
     }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {
