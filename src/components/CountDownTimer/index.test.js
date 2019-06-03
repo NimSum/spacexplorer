@@ -3,8 +3,9 @@ import { shallow } from 'enzyme';
 import CountDownTimer from './index';
 
 
-global.Date.getTime = jest.fn().mockImplementation(() => 10);
-global.Date.now = jest.fn().mockImplementation(() => 1);
+Date.getTime = jest.fn().mockImplementation(() => 10);
+Date.now = jest.fn().mockImplementation(() => 1);
+jest.useFakeTimers();
 
 describe('CountDownTimer', () => {
   const mockDate = '2021-06-15T00:00:00Z';
@@ -23,6 +24,10 @@ describe('CountDownTimer', () => {
         date={ mockDate } 
       />)
     spyCalcDifference = jest.spyOn(wrapper.instance(), 'calculateDateDifference')
+  })
+
+  afterEach(() => {
+    setInterval.mockClear();
   })
 
   it('should match component snapshot', () => {
@@ -66,10 +71,13 @@ describe('CountDownTimer', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
-  it.skip('should update timer every second', () => {
-    jest.useFakeTimers();
-    wrapper.instance().updateTime();
-    jest.runAllTimers();
+  it('should reset interval on unmounting', () => {
+    wrapper.instance().componentWillUnmount();
+    expect(clearInterval).toHaveBeenCalledTimes(1);
+  })
+
+  it('should update timer every second', () => {
+    wrapper.instance().componentDidMount();
     expect(setInterval).toHaveBeenCalledTimes(1);
     expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 1000);
   })  
