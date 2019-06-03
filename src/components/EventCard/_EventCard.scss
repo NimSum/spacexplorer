@@ -19,11 +19,24 @@ article.event-card {
     }
   }
 
-  div.news-details {
+  div.news-detailed {
     position: absolute;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
     z-index: 10;
     right: -100%;
     top: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include opacity-animation;
+  }
+
+  div.news-details {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 10;
   }
   
 }

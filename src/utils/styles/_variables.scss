@@ -52,3 +52,15 @@ $secondary-light: hsl(303, 100%, 96%);
   justify-content: center;
   align-content: center;
 }
+
+@mixin opacity-animation {
+  animation: transition-opacity 300ms linear;
+}
+
+@keyframes transition-opacity {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
