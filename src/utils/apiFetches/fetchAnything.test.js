@@ -15,4 +15,18 @@ describe('fetchAnything fetch', () => {
     const expected = `https://cors-anywhere.herokuapp.com/${apiUrls.upcomingLaunches}`;
     expect(window.fetch).toHaveBeenCalledWith(expected);
   })
+
+  it('should return fetched data if response is good', async () => {
+    const result = await fetchAnything(apiUrls.upcomingLaunches);
+    const expected = mockUpcomingLaunches;
+    expect(result).toEqual(expected);
+  })
+
+  it('should throw error if fetch fails', async () => {
+    window.fetch = () => Promise.resolve({ ok: false
+    })
+    const result = fetchAnything(apiUrls.upcomingLaunches);
+    const expected = Error('Failed to get space stuff :(');
+    await expect(result).rejects.toThrow(expected);
+  })
 })
