@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const EventCard = ({ event }) => {
 
   const [ show, showInfo ] = useState(false);
-  const { name, location, news_url } = event;
+  const { name, location, news_url, description, video_url, feature_image } = event;
   const date = moment(event.date).format('MMM DD LT');
   
   return (
@@ -24,11 +24,10 @@ const EventCard = ({ event }) => {
         <div className='news-detailed'
           onMouseEnter={() => showInfo(true)}
           onMouseLeave={() => showInfo(false)}>
-          <h3>DETAILSSSSSSSSSSSSS</h3>
-          <p>Event Type: <span>{ event.type.name }</span> </p>
-          <p>When: <span>{ date }</span></p>
-          <p>Where: <span>{ location }</span></p>
+          <p>{ description }</p>
+          <img src={ feature_image } alt="Fetaured Event"/>
           <a href={ news_url }>News Link</a>
+          <a href={ video_url }>Video Link</a>
       </div>)
       }
     </article> 

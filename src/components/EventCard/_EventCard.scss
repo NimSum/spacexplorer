@@ -23,14 +23,31 @@ article.event-card {
     position: absolute;
     width: 100%;
     padding: 10px;
-    background-color: $secondary-dark;
+    background-color: $secondary-light;
+    border: 2px solid #fff;
     z-index: 10;
     right: -100%;
     top: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    color: $primary-dark;
     @include opacity-animation;
-    color: #fff;
+
+    p {
+      color: $primary-dark;
+      text-indent: 30px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+      background-color: $secondary-dark;
+      margin: 2px;
+      padding: 4px;
+    }
   }
 
   div.news-details {
