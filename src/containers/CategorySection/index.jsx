@@ -70,6 +70,9 @@ export class CategorySection extends Component {
           category={ this.props.category }
           showInfo={ this.showInfo } />
         <div className="card-container">
+          <h3 className="sticky-title">
+            { this.props.category.toUpperCase() }
+          </h3>
           { this.state.cardsToRender }
         </div>
       </section>

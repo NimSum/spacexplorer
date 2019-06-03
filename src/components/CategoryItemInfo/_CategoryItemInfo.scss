@@ -1,6 +1,6 @@
 article.category-info-container {
   height: 60vh;
-  padding: 20px;
+  padding: 20px 20px 0 20px ;
 
   section {
     display: flex;
@@ -19,7 +19,6 @@ article.category-info-container {
     @include flex-center;
 
     h2 {
-      margin: 15px 0 0 0;
       background-color: $primary-light;
       border-radius: 10px;
       color: $primary-dark;
@@ -27,9 +26,8 @@ article.category-info-container {
     }
 
     img {
-      width: 100%;
-      max-height: 60vh;
-      border-radius: 20px;
+      height: 90%;
+      object-fit: contain;
     }
   }
 

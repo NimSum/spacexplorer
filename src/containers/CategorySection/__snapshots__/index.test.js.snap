@@ -11,6 +11,11 @@ exports[`CategorySection should match component snapshot 1`] = `
   <div
     className="card-container"
   >
+    <h3
+      className="sticky-title"
+    >
+      ASTRONAUTS
+    </h3>
     <AstronautCard
       astronaut={
         Object {
