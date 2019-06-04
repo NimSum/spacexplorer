@@ -12,10 +12,11 @@ describe('categoryManager thunk', () => {
   let thunk;
 
   it('should catch errors if any of the fetches fail', async () => {
-    fetchAnything.mockImplementation(() => Promise.reject('Failed to fetch')); 
+    fetchAnything.mockImplementation(() => Promise.reject({ message: 'Failed to fetch' })); 
+    const expectedAction = action.hasErrored('Failed to fetch');
     thunk = categoryManager('astronauts');
-    const result = await thunk(mockDispatch);
-    expect(result).toEqual('Failed to fetch');
+   await thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
   })
 
   it('should dispatch loading action when invoked', () => {
