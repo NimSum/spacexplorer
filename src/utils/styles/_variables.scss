@@ -64,3 +64,12 @@ $secondary-light: hsl(188, 100%, 93%);
     opacity: 1;
   }
 }
+
+@keyframes transition-height {
+  from {
+    transform: scaleY(.3);
+    opacity: .4;
+  } to {
+    transform: scaleY(1)
+  }
+}

@@ -10,7 +10,7 @@ div.menu-container {
   padding: 5px 10px;
   text-align: center;
   min-width: 170px;
-  
+  transform-origin: top;
 
   nav {
     display: flex;
@@ -35,7 +35,7 @@ div.menu-container {
   }
 
   p {
-    color: $secondary-light
+    color: $secondary-light;
   }
 
   p.hovered {
@@ -44,4 +44,8 @@ div.menu-container {
     color: $primary-light;
   }
 
+  &:hover {
+  animation: transition-height 250ms linear;
+    
+  }
 }
