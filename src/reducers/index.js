@@ -7,7 +7,7 @@ import rocketsReducer from './rocketsReducer';
 import spaceStationsReducer from './spaceStationsReducer';
 import orbitersReducer from './orbitersReducer';
 import astronautsReducer from './astronautsReducer';
-import launchProvidersReducer from './launchProvidersReducer'
+import launchProvidersReducer from './launchProvidersReducer';
 
 const rootReducer = combineReducers({
   upcomingLaunches: upcomingLaunchesReducer,
