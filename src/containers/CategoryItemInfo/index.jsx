@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import defaultAstronautImg from '../../images/default-astronaut.svg';
 import defaultRocketImage from '../../images/default-rocket-img.svg';
 
-export const CategoryItemInfo = ({ item, category, showInfo, isLoading, hasErrored }) => {
+export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
 
   const astronautInfo = () => {
     const { name, bio, flights, landings, profile_image, type, wiki, agency } = item;
@@ -59,9 +59,6 @@ export const CategoryItemInfo = ({ item, category, showInfo, isLoading, hasError
   return (
     <article className="category-info-container">
       { renderThis }
-      {/* <button onClick={() => showInfo({}, false)}>
-        x
-      </button> */}
     </article>
   )
 }
