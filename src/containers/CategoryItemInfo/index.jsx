@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import defaultAstronautImg from '../../images/default-astronaut.svg';
 import defaultRocketImage from '../../images/default-rocket-img.svg';
+import PropTypes from 'prop-types';
 
 export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
 
@@ -66,5 +67,12 @@ export const mapStateToProps = state => ({
   isLoading: state.isLoading,
   hasErrored: state.hasErrored
 })
+
+CategoryItemInfo.propTypes = {
+  item: PropTypes.object, 
+  category: PropTypes.string, 
+  isLoading: PropTypes.bool, 
+  hasErrored: PropTypes.string
+}
 
 export default connect(mapStateToProps)(CategoryItemInfo);
