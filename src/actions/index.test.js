@@ -113,4 +113,15 @@ describe('Actions', () => {
     })
   })
 
+  describe('HAS_ERRORED', () => {
+    it('should return object with valid action type and payload', () => {
+      const result = action.hasErrored('Failed to fetch space stuff :(')
+      const expected = {
+        type: 'HAS_ERRORED',
+        error: 'Failed to fetch space stuff :('
+      };
+      expect(result).toEqual(expected);
+    })
+  })
+
 })
