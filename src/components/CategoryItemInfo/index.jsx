@@ -1,5 +1,6 @@
 import React from 'react'
 import defaultAstronautImg from '../../images/default-astronaut.svg';
+import defaultRocketImage from '../../images/default-rocket-img.svg';
 
 export const CategoryItemInfo = ({ item, category, showInfo }) => {
 
@@ -17,14 +18,28 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
       </section>)
   }
 
-  // const { full_name, launch_service_provider, leo_capacity, 
-  //   gto_capacity, length, diameter, info_url,
-  //   wiki_url, image_url } = rocket;
+  const rocketInfo = () => {
+    const { full_name, launch_service_provider, leo_capacity, 
+    gto_capacity, length, diameter, info_url,
+    wiki_url, image_url, description } = item;
+    return (
+      <section className="rocket-info">
+        <div className="image-side">
+          <img src={ image_url || defaultRocketImage } alt="astronaut"/>
+          <h2>{ full_name }</h2>
+        </div>
+        <div className="details-side">
+          <p className="bio">{ description }</p>   
+        </div>
+      </section>)
+  }
+
+
 
   let renderThis;
   switch (category) {
     case 'rockets':
-      renderThis = (<div>lerocket</div>)
+      renderThis = rocketInfo();
     break;
     case 'space_stations':
       renderThis = (<div>lestations</div>)

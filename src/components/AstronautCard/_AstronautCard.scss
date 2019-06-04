@@ -1,7 +1,5 @@
 article.astronaut-card {
   @include transparent-light-bg;
-  min-width: 300px;
-  width: 32%;
   display: flex;
   justify-content: center;
   margin: 5px;

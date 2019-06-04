@@ -1,20 +1,49 @@
 article.rocket-card {
   display: flex;
-  // flex-basis: 0px;
-  width: 32%;
-  flex-grow: 1;
+  margin: 5px;
+  background-color: $secondary-light;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 100%;
+  height: 35vh;
 
   div.image-side {
-    width: 70%;
-    @include flex-center;
+    width: 60%;
+    text-align: center;
 
     img {
-      width: 100%;
+      width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    h3 {
+      color: $primary-dark;
+      padding: 5px;
     }
   }
 
-  div.details-side {
-    width: 30%;
-    
+  div {
+    @include flex-center;
   }
+
+  div.details-side {
+    width: 40%;
+    
+    p span {
+      color: $primary-dark;
+    }
+
+    p {
+      color: $secondary-dark;
+      margin: 5px;
+    }
+
+
+  button {
+    @include category-info-btn;
+    width: 60px;
+  }
+  }
+
 }

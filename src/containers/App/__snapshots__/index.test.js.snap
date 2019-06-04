@@ -19,6 +19,7 @@ exports[`App should match component snapshot 1`] = `
       path="/"
     />
     <Route
+      exact={true}
       path="/about/:category"
       render={[Function]}
     />

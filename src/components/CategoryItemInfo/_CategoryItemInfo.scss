@@ -14,7 +14,6 @@ article.category-info-container {
   }
 
   div.image-side {
-    width: 40%;
     text-align: center;
     @include flex-center;
 
@@ -31,15 +30,31 @@ article.category-info-container {
     }
   }
 
-  div.details-side {
-    width: 60%;
-  }
+  
 
   section.astronaut-info {
     p.bio {
       text-indent: 40px;
       margin: 10px;
       font-size: 1.1rem;
+    }
+
+    div.image-side {
+      width: 40%;
+    }
+
+    div.details-side {
+      width: 60%;
+    }
+  }
+
+  section.rocket-info {
+    div.image-side {
+      width: 55%;
+    }
+
+    div.details-side {
+      width: 45%;
     }
   }
 }
