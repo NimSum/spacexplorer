@@ -1,8 +1,9 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import defaultAstronautImg from '../../images/default-astronaut.svg';
 import defaultRocketImage from '../../images/default-rocket-img.svg';
 
-export const CategoryItemInfo = ({ item, category, showInfo }) => {
+export const CategoryItemInfo = ({ item, category, showInfo, isLoading, hasErrored }) => {
 
   const astronautInfo = () => {
     const { name, bio, flights, landings, profile_image, type, wiki, agency } = item;
@@ -10,7 +11,7 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
       <section className="astronaut-info">
         <div className="image-side">
           <img src={ profile_image || defaultAstronautImg } alt="astronaut"/>
-          <h2>{ item.id ? name : 'Loading...' }</h2>
+          <h2>{ isLoading ? 'Loading...' : name }</h2>
         </div>
         <div className="details-side">
           <p className="bio">{ bio }</p>   
@@ -26,7 +27,7 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
       <section className="rocket-info">
         <div className="image-side">
           <img src={ image_url || defaultRocketImage } alt="astronaut"/>
-          <h2>{ item.id ? full_name : 'Loading...' }</h2>
+          <h2>{ isLoading ? 'Loading...' : full_name }</h2>
         </div>
         <div className="details-side">
           <p className="bio">{ description }</p>   
@@ -64,5 +65,9 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
     </article>
   )
 }
+export const mapStateToProps = state => ({
+  isLoading: state.isLoading,
+  hasErrored: state.hasErrored
+})
 
-export default CategoryItemInfo;
+export default connect(mapStateToProps)(CategoryItemInfo);
