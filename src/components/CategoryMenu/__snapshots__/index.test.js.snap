@@ -36,7 +36,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/rockets"
     >
-      Rockets
+      <span>
+        Rockets
+      </span>
     </NavLink>
     <NavLink
       activeClassName="is-active"
@@ -50,7 +52,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/space_stations"
     >
-      Space Stations
+      <span>
+        Space Stations
+      </span>
     </NavLink>
     <NavLink
       activeClassName="is-active"
@@ -64,7 +68,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/orbiters"
     >
-      Orbiters
+      <span>
+        Orbiters
+      </span>
     </NavLink>
     <NavLink
       activeClassName="is-active"
@@ -78,7 +84,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/astronauts"
     >
-      Astronauts
+      <span>
+        Astronauts
+      </span>
     </NavLink>
     <NavLink
       activeClassName="is-active"
@@ -92,7 +100,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/launch_providers"
     >
-      Launch Providers
+      <span>
+        Launch Providers
+      </span>
     </NavLink>
     <Link
       style={
@@ -105,7 +115,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/"
     >
-      HOME
+      <span>
+        HOME
+      </span>
     </Link>
   </nav>
 </div>

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RocketCard should match component snapshot 1`] = `
+<article
+  className="rocket-card"
+>
+  <div
+    className="image-side"
+  >
+    <h3>
+      Angara 1.2pp
+    </h3>
+    <img
+      alt="Rocket"
+      src="https://daszojo4xmsc6.cloudfront.net/media/launcher_images/angara-1.2pp_image_20190222030759.jpeg"
+    />
+  </div>
+  <div
+    className="details-side"
+  >
+    <p>
+      Length: 
+      <span>
+        40.4
+      </span>
+    </p>
+    <p>
+      Diameter: 
+      <span>
+        2.9
+      </span>
+    </p>
+    <p>
+      To LEO: 
+      <span>
+        Unknown
+         kg
+      </span>
+    </p>
+    <p>
+      To GTO: 
+      <span>
+        Unknown
+         kg
+      </span>
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Details
+    </button>
+  </div>
+</article>
+`;

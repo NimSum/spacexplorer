@@ -40,7 +40,7 @@ export class App extends Component {
         ? <h2 className='errored'>{ this.state.error }</h2> 
         : (<article>
             <img src={ rocketLaunchGif } alt="loading gif"/>
-            (<h2>Loading...</h2>)
+            <h2>Loading...</h2>
           </article>) }
       </section>
     )

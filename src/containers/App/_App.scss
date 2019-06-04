@@ -31,10 +31,12 @@ section.app-loading {
   width: 100vw;
   background-color: $primary-dark;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 200px;
-    margin-top: 35%;
   }
 
   h2 {

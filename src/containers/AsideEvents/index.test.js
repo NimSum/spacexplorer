@@ -49,7 +49,7 @@ describe('AsideEvents', () => {
     })
 
     it('should set state error when fetch fails', async () => {
-      fetchAnything.mockImplementation(() => Promise.reject('Failed to fetch'));
+      fetchAnything.mockImplementation(() => Promise.reject({ message: 'Failed to fetch'}));
       await wrapper.instance().componentDidMount();
       expect(wrapper.state().error).toEqual('Failed to fetch');
     })

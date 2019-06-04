@@ -1,4 +1,17 @@
 div.menu-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin: 10px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  background-color: $primary-dark;
+  padding: 5px 10px;
+  text-align: center;
+  min-width: 170px;
+  transform-origin: top;
+
   nav {
     display: flex;
     flex-direction: column;
@@ -7,30 +20,32 @@ div.menu-container {
 
     .is-active {
       background-color: $secondary-dark;
-      color: $primary-dark;
+      color: $secondary-dark;
     }
+    
+    span {
+      display: block;
+      transition: all 100ms ease-in-out;
 
+      &:hover {
+        color: $primary-light;
+        transform: scale(1.2);        
+      }
+    }
   }
 
   p {
-    color: $secondary-light
+    color: $secondary-light;
   }
 
   p.hovered {
     padding-bottom: 5px;
-    border-bottom: 1px solid #9EA9F0;
-    color: $secondary-dark;
+    border-bottom: 1px solid $primary-light;
+    color: $primary-light;
   }
 
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  margin: 10px;
-  font-size: 1.2rem;
-  border-radius: 15px;
-  background-color: hsla(259, 40%, 39%, .8);
-  padding: 5px 10px;
-  text-align: center;
-  min-width: 160px;
+  &:hover {
+  animation: transition-height 160ms linear;
+    
+  }
 }

@@ -22,36 +22,36 @@ export class CategoryMenu extends Component {
           style={ linkStyling } 
           to='/about/rockets'
           activeClassName='is-active'>
-          Rockets
+            <span>Rockets</span>
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/space_stations'
           activeClassName='is-active'>
-          Space Stations
+            <span>Space Stations</span>
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/orbiters'
           activeClassName='is-active'>
-          Orbiters
+            <span>Orbiters</span>
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/astronauts'
           activeClassName='is-active'>
-          Astronauts
+            <span>Astronauts</span>
         </NavLink>
         < NavLink 
           style={ linkStyling } 
           to='/about/launch_providers'
           activeClassName='is-active'>
-          Launch Providers
+            <span>Launch Providers</span>
         </NavLink>
         < Link 
           style={ linkStyling } 
           to='/'>
-          HOME
+          <span>HOME</span>
         </Link>
       </nav>
     )
