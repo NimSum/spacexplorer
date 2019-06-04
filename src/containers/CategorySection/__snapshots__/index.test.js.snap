@@ -4,9 +4,8 @@ exports[`CategorySection should match component snapshot 1`] = `
 <section
   className="category-section"
 >
-  <CategoryItemInfo
+  <Connect(CategoryItemInfo)
     category="astronauts"
-    showInfo={[Function]}
   />
   <h3
     className="sticky-title"

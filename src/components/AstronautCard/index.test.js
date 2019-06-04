@@ -21,7 +21,7 @@ describe('AstronautCard', () => {
   
   it('should invoke showInfo on click using correct params', () => {
     wrapper.find('button').simulate('click');
-    expect(mockShowInfo).toHaveBeenCalledWith(mockAstronaut, true);
+    expect(mockShowInfo).toHaveBeenCalledWith(mockAstronaut);
   })
 
 })
