@@ -18,6 +18,12 @@ describe('categoryManager thunk', () => {
     expect(result).toEqual('Failed to fetch');
   })
 
+  it('should dispatch loading action when invoked', () => {
+    const expectedAction = action.isLoading(true);
+    thunk = categoryManager(mockDispatch)();
+    expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
+  })
+
   describe('CASE: rockets', () => {
     it('should fetch rockets and dispatch action with correct params', async () => {
       fetchAnything.mockImplementation(() => mockData.mockRockets);
