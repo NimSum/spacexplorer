@@ -35,4 +35,19 @@ describe('CategoryItemInfo', () => {
     wrapper.setProps({ item: mockAstronauts.results[1], category: 'astronauts' })
     expect(wrapper).toMatchSnapshot();
   })
+
+  describe('mapStateToProps', () => {
+    const mockState = {
+      isLoading: true,
+      hasErrored: 'Failed to get space stuff :( '
+    };
+    const expected = {
+      isLoading: true,
+      hasErrored: 'Failed to get space stuff :( '
+    }
+    it('should map state from mock state', () => {
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected)
+    })
+  })
 })
