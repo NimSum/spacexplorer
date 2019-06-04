@@ -12,8 +12,7 @@ export class CategorySection extends Component {
     super();
     this.state = {
       cardsToRender: [],
-      cardInfoToRender: {},
-      showInfo: false
+      cardInfoToRender: {}
     }
   }
 

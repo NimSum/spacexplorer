@@ -11,7 +11,7 @@ fetchAnything.mockImplementation(() => mockLaunches);
 describe('App', () => {
   let defaultState = {
     error: '',
-    loading: false
+    isLoading: false
   }
   let wrapper;
   let mockAddUpcomingLaunches = jest.fn();
@@ -40,7 +40,7 @@ describe('App', () => {
     })
   
     it('should set state error when fetch fails', async () => {
-      fetchAnything.mockImplementation(() => Promise.reject('Failed to fetch'));
+      fetchAnything.mockImplementation(() => Promise.reject({ message: 'Failed to fetch' }));
       await wrapper.instance().componentDidMount();
       expect(wrapper.state().error).toEqual('Failed to fetch')
     })

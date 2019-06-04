@@ -52,9 +52,8 @@ describe('CategorySection', () => {
 
   it('should set state info card passed to showInfo method', () => {
     const expected = mockAstronauts.results[0];
-    wrapper.instance().showInfo(mockAstronauts.results[0], true);
+    wrapper.instance().showInfo(mockAstronauts.results[0]);
     expect(wrapper.state().cardInfoToRender).toEqual(expected);
-    expect(wrapper.state().showInfo).toEqual(true);
   })
 
   it('should generateCards based results of categorySelected object', () => {
