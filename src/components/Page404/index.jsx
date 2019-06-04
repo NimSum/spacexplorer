@@ -3,7 +3,13 @@ import explodingRocket from '../../images/exploding-rocket.gif';
 import { Link } from 'react-router-dom';
 
 const Page404 = () =>  {
+  const [ isShown, showMessage ] = useState(false);
 
+  const startTimeout = () => {
+    setTimeout(() => showMessage(true), 4000);
+  }
+
+  useEffect(() => startTimeout(), [])
 
   return (
     <section className='page-404'>
