@@ -51,9 +51,8 @@ export class CategorySection extends Component {
     }
   }
 
-  showInfo = (card, bool) => {
-    this.setState({ cardInfoToRender: {} })    
-    this.setState({ cardInfoToRender: card, showInfo: bool })
+  showInfo = (card) => {
+    this.setState({ cardInfoToRender: card })
   }
 
   componentDidMount() {
@@ -69,8 +68,7 @@ export class CategorySection extends Component {
       <section className='category-section'>
         < CategoryItemInfo 
           item={ this.state.cardInfoToRender }
-          category={ this.props.category }
-          showInfo={ this.showInfo } />
+          category={ this.props.category } />
           <h3 className="sticky-title">
             { this.props.category
               .toUpperCase()

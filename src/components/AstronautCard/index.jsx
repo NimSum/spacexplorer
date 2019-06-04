@@ -8,7 +8,7 @@ const AstronautCard = ({ astronaut, showInfo }) => {
     <article className="astronaut-card">
       <div className="image-side">
         <img src={ profile_image_thumbnail || defaultAstronautImg } alt="Astronaut"/>
-        <button onClick={() => showInfo(astronaut, true)}>
+        <button onClick={() => showInfo(astronaut)}>
           BIO
         </button>
       </div>

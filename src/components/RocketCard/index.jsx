@@ -17,7 +17,7 @@ const RocketCard = ({ rocket, showInfo }) => {
         <p>Diameter: <span>{ diameter }</span></p>
         <p>To LEO: <span>{ leo_capacity ? leo_capacity : 'Unknown' } kg</span></p>
         <p>To GTO: <span>{ leo_capacity ? leo_capacity : 'Unknown' } kg</span></p>
-        <button onClick={() => showInfo(rocket, true)}>
+        <button onClick={() => showInfo(rocket)}>
           Details
         </button>
       </div>
