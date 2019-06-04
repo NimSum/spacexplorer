@@ -23,7 +23,7 @@ export class AsideEvents extends Component {
       this.props.addUpcomingEvents(events);
       this.setState({ events: events.results })
     } catch(error) {
-      this.setState(error.message);
+      this.setState({ error: error.message });
     }
   }
 
