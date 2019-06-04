@@ -5,30 +5,11 @@ import PropTypes from 'prop-types';
 import AstronautCard from '../../components/AstronautCard';
 
 export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
-  console.log(item)
-
-  const rocketInfo = () => {
-    const { full_name, launch_service_provider, leo_capacity, 
-    gto_capacity, length, diameter, info_url,
-    wiki_url, image_url, description } = item;
-    return (
-      <section className="rocket-info">
-        <div className="image-side">
-          <img src={ image_url || defaultRocketImage } alt="rocket"/>
-          <h2>{ isLoading ? 'Loading...' : full_name }</h2>
-        </div>
-        <div className="details-side">
-          <p className="bio">{ description }</p>   
-        </div>
-      </section>)
-  }
-
-
 
   const infoToRender = () => {
     switch (category) {
       case 'rockets':
-        return rocketInfo();
+        return (<div>leobiters</div>)
       case 'space_stations':
         return (<div>lestations</div>)
       case 'orbiters':

@@ -18,7 +18,7 @@ const AstronautCard = ({ astronaut, showInfo, detailed }) => {
             <h3>Missions:</h3>
             { flights
               ? flights.map(flight => (
-                  <div>
+                  <div key={ flight.id }>
                     <h3>{ flight.name }</h3>
                     <p>For: { flight.mission.type || 'Unknown' }</p>
                     <p>Orbit: { flight.orbit }</p>
