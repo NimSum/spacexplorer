@@ -10,7 +10,7 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
       <section className="astronaut-info">
         <div className="image-side">
           <img src={ profile_image || defaultAstronautImg } alt="astronaut"/>
-          <h2>{ name }</h2>
+          <h2>{ item.id ? name : 'Loading...' }</h2>
         </div>
         <div className="details-side">
           <p className="bio">{ bio }</p>   
@@ -26,7 +26,7 @@ export const CategoryItemInfo = ({ item, category, showInfo }) => {
       <section className="rocket-info">
         <div className="image-side">
           <img src={ image_url || defaultRocketImage } alt="astronaut"/>
-          <h2>{ full_name }</h2>
+          <h2>{ item.id ? full_name : 'Loading...' }</h2>
         </div>
         <div className="details-side">
           <p className="bio">{ description }</p>   

@@ -51,6 +51,7 @@ export class CategorySection extends Component {
   }
 
   showInfo = (card, bool) => {
+    this.setState({ cardInfoToRender: {} })    
     this.setState({ cardInfoToRender: card, showInfo: bool })
   }
 

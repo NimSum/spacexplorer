@@ -18,6 +18,11 @@ export const toggleLaunchInfo = (bool) => ({
   bool: bool
 })
 
+export const isLoading = (bool) => ({
+  type: 'IS_LOADING',
+  bool: bool
+})
+
 export const addRockets = rockets => ({
   type: 'ADD_ROCKETS',
   rockets
