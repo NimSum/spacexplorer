@@ -102,4 +102,15 @@ describe('Actions', () => {
     })
   })
 
+  describe('IS_LOADING', () => {
+    it('should return object with valid action type and payload', () => {
+      const result = action.isLoading(true)
+      const expected = {
+        type: 'IS_LOADING',
+        bool: true
+      };
+      expect(result).toEqual(expected);
+    })
+  })
+
 })
