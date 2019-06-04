@@ -10,5 +10,27 @@ section.page-404 {
   background-color: $primary-dark;
   color: $secondary-light;
 
-  
+  h1 {
+    font-size: 5rem;
+    margin: 0;
+  }
+
+  div {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      position: absolute;
+      font-size: 3rem;
+    }
+  }
 }
