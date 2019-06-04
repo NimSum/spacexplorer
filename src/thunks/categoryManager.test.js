@@ -11,17 +11,24 @@ describe('categoryManager thunk', () => {
   const mockDispatch = jest.fn();
   let thunk;
 
+  it('should dispatch loading action when invoked', () => {
+    const expectedAction = action.isLoading(true);
+    thunk = categoryManager('astronauts')(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
+  })
+
+  it('should dispatch loading action after successful fetch', async () => {
+    const expectedAction = action.isLoading(false);
+    thunk = categoryManager('rockets');
+    await thunk(mockDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
+  })
+
   it('should catch errors if any of the fetches fail', async () => {
     fetchAnything.mockImplementation(() => Promise.reject({ message: 'Failed to fetch' })); 
     const expectedAction = action.hasErrored('Failed to fetch');
     thunk = categoryManager('astronauts');
    await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
-  })
-
-  it('should dispatch loading action when invoked', () => {
-    const expectedAction = action.isLoading(true);
-    thunk = categoryManager(mockDispatch)();
     expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
   })
 
