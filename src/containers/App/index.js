@@ -12,7 +12,6 @@ import apiUrls from '../../utils/apiFetches/apiUrls';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
 import rocketLaunchGif from '../../images/rocket-launch.gif';
 
-
 export class App extends Component {
   constructor() {
     super();
@@ -28,27 +27,39 @@ export class App extends Component {
       const upcomingLaunches = await fetchAnything(apiUrls.upcomingLaunches);
       this.props.addUpcomingLaunches(upcomingLaunches);
       this.props.addSelectedLaunch(upcomingLaunches.results[0])
-      // this.setState({ isLoading: false })
+      this.setState({ isLoading: false })
     } catch(error) {
-      this.setState({ error })
+      this.setState({ error: error.message })
     }
   }
 
+  loadingAndErrorPage() {
+    return (
+      <section className='app-loading'>
+        { this.state.error 
+        ? <h2 className='errored'>{ this.state.error }</h2> 
+        : (<article>
+            <img src={ rocketLaunchGif } alt="loading gif"/>
+            (<h2>Loading...</h2>)
+          </article>) }
+      </section>
+    )
+  }
+
   render() {
-    if (this.state.isLoading) {
-      return (
-        <div className='app-loading'>
-          <img src={ rocketLaunchGif } alt="loading gif"/>
-          <h2>Loading...</h2>
-        </div>)
-    } else return (
+    
+    if (this.state.isLoading) return this.loadingAndErrorPage();
+    
+    return (
       <main>
         < CategoryMenu />
         < AsideEvents />
         < Switch >
           < Route exact path='/'
             component={ NextLaunchesContainer}/>
-          < Route exact path='/about/:category' render={({ match }) => {
+          < Route 
+            exact path='/about/:category' 
+            render={({ match }) => {
               return (
                 < CategorySection 
                   category={ match.params.category }/>

@@ -26,16 +26,22 @@ main {
 }
 
 
-div.app-loading {
+section.app-loading {
   height: 100vh;
   width: 100vw;
+  background-color: $primary-dark;
   text-align: center;
 
   img {
     width: 200px;
-
+    margin-top: 35%;
   }
+
   h2 {
-    color: $secondary-dark;
+    color: $secondary-light;
+  }
+
+  h2.errored {
+    padding-top: 45%;
   }
 }
