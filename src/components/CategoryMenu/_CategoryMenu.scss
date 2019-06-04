@@ -7,7 +7,7 @@ div.menu-container {
 
     .is-active {
       background-color: $secondary-dark;
-      color: $primary-dark;
+      color: $secondary-dark;
     }
 
   }
@@ -18,8 +18,8 @@ div.menu-container {
 
   p.hovered {
     padding-bottom: 5px;
-    border-bottom: 1px solid #9EA9F0;
-    color: $secondary-dark;
+    border-bottom: 1px solid $primary-light;
+    color: $primary-light;
   }
 
   position: absolute;
@@ -29,7 +29,7 @@ div.menu-container {
   margin: 10px;
   font-size: 1.2rem;
   border-radius: 15px;
-  background-color: hsla(259, 40%, 39%, .8);
+  background-color: $primary-dark;
   padding: 5px 10px;
   text-align: center;
   min-width: 160px;
