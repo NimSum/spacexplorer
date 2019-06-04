@@ -5,22 +5,23 @@ import apiUrls from '../utils/apiFetches/apiUrls';
 const categoryManager = category => {
   return async (dispatch) => {
     try {
+      dispatch(action.isLoading(true))
       switch (category) {
         case 'rockets':
           const rockets = await fetchAnything(apiUrls.rockets);
           dispatch(action.addRockets(rockets));
           break;
         case 'astronauts':
-            const astronauts = await fetchAnything(apiUrls.astronauts);
-            dispatch(action.addAstronauts(astronauts));
+          const astronauts = await fetchAnything(apiUrls.astronauts);
+          dispatch(action.addAstronauts(astronauts));
           break;
         default:
           console.log('yolo')
       }
+      dispatch(action.isLoading(false))    
     } catch(error) {
-        return error;
+        dispatch(action.hasErrored(error.message))
     }
-   
   }
 }
 
