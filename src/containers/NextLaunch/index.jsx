@@ -24,15 +24,15 @@ export const NextLaunch = ({ rocketLaunch, showInfo, toggleLaunchInfo }) => {
     )
   }
 
-  return rocketLaunch.id 
-  ? (<section className='next-launch-container'>
+  return rocketLaunch.id  
+    ? (<section className='next-launch-container'>
       { !showInfo && generateLaunchCard() }
       { showInfo && < NextLaunchInfo /> }
       < CountDownTimer 
         date={ rocketLaunch.net }/>
       <img src={ rocket.configuration.image_url || defaulRocketImg } alt="rocket" />
     </section>)
-  : <div>LOOOOOOOODINGGGG</div>
+    : <div>Loading...</div>;
 }
 
 export const mapStateToProps = state => ({

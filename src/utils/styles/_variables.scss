@@ -9,7 +9,7 @@ $font-orbitron: 'Orbitron', sans-serif;
 $primary-dark: hsl(214, 100%, 15%);
 $secondary-dark: hsl(204, 100%, 29%);
 $primary-light: hsl(193, 100%, 47%);
-$secondary-light: hsl(188, 100%, 93%);
+$secondary-light: rgb(219, 250, 255);
 
 @mixin more-info-btn {
   border-radius: 20px;

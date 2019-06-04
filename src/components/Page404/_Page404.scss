@@ -10,6 +10,11 @@ section.page-404 {
   background-color: $primary-dark;
   color: $secondary-light;
 
+  span {
+    padding: 10px;
+    @include more-info-btn;
+  }
+
   h1 {
     font-size: 5rem;
     margin: 0;

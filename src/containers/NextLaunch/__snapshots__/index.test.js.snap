@@ -52,7 +52,7 @@ exports[`NextLaunch should match component snapshot 1`] = `
 
 exports[`NextLaunch should match snapshot if there is no rocketLaunch prop 1`] = `
 <div>
-  LOOOOOOOODINGGGG
+  Loading...
 </div>
 `;
 

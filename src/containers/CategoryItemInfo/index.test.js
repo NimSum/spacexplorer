@@ -8,7 +8,7 @@ describe('CategoryItemInfo', () => {
   let item = mockRockets.results[2];
   let category = 'rockets';
   let isLoading = false;
-  let hasErrored = true;
+  let hasErrored = '';
 
   let wrapper;
   beforeEach(() => {

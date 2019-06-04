@@ -6,7 +6,6 @@ import AstronautCard from '../../components/AstronautCard';
 import CategoryItemInfo from '../CategoryItemInfo';
 import PropTypes from 'prop-types';
 
-
 export class CategorySection extends Component {
   constructor() {
     super();

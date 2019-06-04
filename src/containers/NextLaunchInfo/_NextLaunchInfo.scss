@@ -3,6 +3,7 @@ article.next-launch-info-card {
   z-index: 1;
   max-width: 82%;
   min-width: 450px;
+  overflow: auto;
   display: flex;
   padding: 15px;
   @include transparent-light-bg;

@@ -21,7 +21,7 @@ const Page404 = () =>  {
         <img src={ explodingRocket } alt='exploding rocket'/>
       </div>
       <Link to='/'>
-        <span>HOME</span>
+        <span>Take Me Home</span>
       </Link>
     </section>
 )}

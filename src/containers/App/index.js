@@ -60,10 +60,17 @@ export class App extends Component {
           < Route 
             exact path='/about/:category' 
             render={({ match }) => {
-              return (
-                < CategorySection 
-                  category={ match.params.category }/>
-              )
+              const paths=[
+                'rockets',
+                'astronauts',
+                'space_stations',
+                'orbiters',
+                'launch_providers'
+              ]
+              return paths.includes(match.params.category)
+                ? (< CategorySection 
+                    category={ match.params.category }/>)
+                : ( <Page404 />)
           }}/>
           < Route component={ Page404 } />
         </Switch>

@@ -50,6 +50,22 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
           "textDecoration": "none",
         }
       }
+      to="/about/astronauts"
+    >
+      <span>
+        Astronauts
+      </span>
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
       to="/about/space_stations"
     >
       <span>
@@ -70,22 +86,6 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
     >
       <span>
         Orbiters
-      </span>
-    </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      style={
-        Object {
-          "borderBottom": "1px solid #9EA9F0",
-          "color": "#FFEAFE",
-          "padding": "5px",
-          "textDecoration": "none",
-        }
-      }
-      to="/about/astronauts"
-    >
-      <span>
-        Astronauts
       </span>
     </NavLink>
     <NavLink
