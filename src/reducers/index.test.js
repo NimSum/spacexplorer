@@ -173,4 +173,20 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);
     })
   })
+
+  describe('isLoadingReducer', () => {
+
+    it('should return a default state', () => {
+      const result = isLoadingReducer(undefined, {})
+      const expected = false
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return error message if action type is valid', () => {
+      const mockValidAction = action.isLoading(true)
+      const result = isLoadingReducer(undefined, mockValidAction)
+      const expected = true;
+      expect(result).toEqual(expected);
+    })
+  })
 })
