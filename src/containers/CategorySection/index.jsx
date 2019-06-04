@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 import categoryManager from '../../thunks/categoryManager';
 import RocketCard from '../../components/RocketCard';
 import AstronautCard from '../../components/AstronautCard';
-import CategoryItemInfo from '../../components/CategoryItemInfo';
+import CategoryItemInfo from '../CategoryItemInfo';
 import PropTypes from 'prop-types';
+
 
 export class CategorySection extends Component {
   constructor() {

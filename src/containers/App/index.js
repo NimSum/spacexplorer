@@ -10,30 +10,38 @@ import CategorySection from '../CategorySection';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import apiUrls from '../../utils/apiFetches/apiUrls';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
+import rocketLaunchGif from '../../images/rocket-launch.gif';
+
 
 export class App extends Component {
   constructor() {
     super();
     this.state = {
       error: '',
-      loading: false
+      isLoading: false
     }
   }
 
   async componentDidMount() {
-    this.setState({ loading: true })
+    this.setState({ isLoading: true })
     try {
       const upcomingLaunches = await fetchAnything(apiUrls.upcomingLaunches);
       this.props.addUpcomingLaunches(upcomingLaunches);
       this.props.addSelectedLaunch(upcomingLaunches.results[0])
-      this.setState({ loading: false })
+      // this.setState({ isLoading: false })
     } catch(error) {
       this.setState({ error })
     }
   }
 
   render() {
-    return (
+    if (this.state.isLoading) {
+      return (
+        <div className='app-loading'>
+          <img src={ rocketLaunchGif } alt="loading gif"/>
+          <h2>Loading...</h2>
+        </div>)
+    } else return (
       <main>
         < CategoryMenu />
         < AsideEvents />

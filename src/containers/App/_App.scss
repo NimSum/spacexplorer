@@ -24,3 +24,18 @@ main {
   }
 
 }
+
+
+div.app-loading {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+
+  img {
+    width: 200px;
+
+  }
+  h2 {
+    color: $secondary-dark;
+  }
+}
