@@ -7,6 +7,8 @@ import spaceStationsReducer from './spaceStationsReducer';
 import orbitersReducer from './orbitersReducer';
 import astronautsReducer from './astronautsReducer';
 import launchProvidersReducer from './launchProvidersReducer';
+import isLoadingReducer from './isLoadingReducer';
+import hasErroredReducer from './hasErroredReducer';
 import * as mockData from '../utils/mockData';
 import * as action from '../actions';
 
@@ -118,7 +120,7 @@ describe('Reducers', () => {
 
     it('should return space stations if action type is valid', () => {
       const mockValidAction = action.addSpaceStations(mockData.mockSpaceStations);
-      const result = spaceStationsReducer(undefined ,mockValidAction)
+      const result = spaceStationsReducer(undefined, mockValidAction)
       const expected = mockData.mockSpaceStations;
       expect(result).toEqual(expected);
     })
@@ -150,8 +152,24 @@ describe('Reducers', () => {
 
     it('should return upcoming launches if action type is valid', () => {
       const mockValidAction = action.addUpcomingLaunches(mockData.mockEvents)
-      const result = upcomingLaunchesReducer(undefined ,mockValidAction)
+      const result = upcomingLaunchesReducer(undefined, mockValidAction)
       const expected = mockData.mockEvents;
+      expect(result).toEqual(expected);
+    })
+  })
+
+  describe('hasErroredReducer', () => {
+
+    it('should return a default state', () => {
+      const result = hasErroredReducer(undefined, {})
+      const expected = ''
+      expect(result).toEqual(expected);      
+    })
+
+    it('should return error message if action type is valid', () => {
+      const mockValidAction = action.hasErrored('Failed to Fetch Space Stuff :(')
+      const result = hasErroredReducer(undefined, mockValidAction)
+      const expected = 'Failed to Fetch Space Stuff :(';
       expect(result).toEqual(expected);
     })
   })
