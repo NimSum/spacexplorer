@@ -23,6 +23,11 @@ export const isLoading = (bool) => ({
   bool: bool
 })
 
+export const hasErrored = (error) => ({
+  type: 'HAS_ERRORED',
+  error
+})
+
 export const addRockets = rockets => ({
   type: 'ADD_ROCKETS',
   rockets

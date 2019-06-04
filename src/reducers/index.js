@@ -8,6 +8,7 @@ import spaceStationsReducer from './spaceStationsReducer';
 import orbitersReducer from './orbitersReducer';
 import astronautsReducer from './astronautsReducer';
 import launchProvidersReducer from './launchProvidersReducer';
+import isLoadingReducer from './isLoadingReducer';
 
 const rootReducer = combineReducers({
   upcomingLaunches: upcomingLaunchesReducer,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   spaceStations: spaceStationsReducer,
   orbiters: orbitersReducer,
   astronauts: astronautsReducer,
-  launchProviders: launchProvidersReducer
+  launchProviders: launchProvidersReducer,
+  isLoading: isLoadingReducer
 });
 
 export default rootReducer;
