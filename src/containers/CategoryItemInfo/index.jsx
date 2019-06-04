@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import AstronautCard from '../../components/AstronautCard';
 
 export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
-  
+  console.log(item)
 
   const rocketInfo = () => {
     const { full_name, launch_service_provider, leo_capacity, 
@@ -14,7 +14,7 @@ export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
     return (
       <section className="rocket-info">
         <div className="image-side">
-          <img src={ image_url || defaultRocketImage } alt="astronaut"/>
+          <img src={ image_url || defaultRocketImage } alt="rocket"/>
           <h2>{ isLoading ? 'Loading...' : full_name }</h2>
         </div>
         <div className="details-side">
@@ -44,7 +44,7 @@ export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
   
   return (
     <article className="category-info-container">
-      { infoToRender() }
+      { item.id && infoToRender() }
     </article>
   )
 }
