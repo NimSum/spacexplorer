@@ -1,15 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import defaultRocketImage from '../../images/default-rocket-img.svg';
 import PropTypes from 'prop-types';
 import AstronautCard from '../../components/AstronautCard';
+import RocketCard from '../../components/RocketCard';
 
 export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
 
   const infoToRender = () => {
     switch (category) {
       case 'rockets':
-        return (<div>leobiters</div>)
+        return < RocketCard 
+          rocket={ item } 
+          detailed={ true } />;
       case 'space_stations':
         return (<div>lestations</div>)
       case 'orbiters':

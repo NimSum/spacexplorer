@@ -29,7 +29,7 @@ const RocketCard = ({ rocket, showInfo, detailed}) => {
   )
 
   
-  return (
+  const normalDetails = (
     <article className='rocket-card'>
       <div className='image-side'>
         <h3>{ full_name }</h3>
@@ -46,6 +46,8 @@ const RocketCard = ({ rocket, showInfo, detailed}) => {
       </div>
     </article>
   )
+
+  return detailed ? detailedInfo : normalDetails;
 }
 
 RocketCard.propTypes = {
