@@ -1,4 +1,17 @@
 div.menu-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin: 10px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  background-color: $primary-dark;
+  padding: 5px 10px;
+  text-align: center;
+  min-width: 170px;
+  
+
   nav {
     display: flex;
     flex-direction: column;
@@ -9,7 +22,16 @@ div.menu-container {
       background-color: $secondary-dark;
       color: $secondary-dark;
     }
+    
+    span {
+      display: block;
+      transition: all 100ms ease-in-out;
 
+      &:hover {
+        color: $primary-light;
+        transform: scale(1.2);        
+      }
+    }
   }
 
   p {
@@ -22,15 +44,4 @@ div.menu-container {
     color: $primary-light;
   }
 
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  margin: 10px;
-  font-size: 1.2rem;
-  border-radius: 15px;
-  background-color: $primary-dark;
-  padding: 5px 10px;
-  text-align: center;
-  min-width: 160px;
 }
