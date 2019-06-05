@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { App, mapDispatchToProps } from './index';
 import { shallow } from 'enzyme';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';

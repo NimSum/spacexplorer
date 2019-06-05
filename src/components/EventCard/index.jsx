@@ -11,7 +11,9 @@ const EventCard = ({ event }) => {
   return (
     <article className='event-card'
       onMouseEnter={() => showInfo(true)}
-      onMouseLeave={() => showInfo(false)}>
+      onMouseLeave={() => showInfo(false)}
+      data-shown={ show }
+      data-testid='container'>
       <div 
         className='news-details'>
         <h3>{ name }</h3>
