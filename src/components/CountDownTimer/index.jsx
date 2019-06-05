@@ -54,12 +54,19 @@ export class CountDownTimer extends Component {
     clearInterval(this.timer);
   }
 
+  addZero(num) {
+    if(num < 10) {
+      return '0' + num.toString()
+    }
+    else return num;
+  }
+
   render() {
     const { days, hours, minutes, seconds } = this.state;
     return (
       <section className="countdown-timer">
         <div>
-          <p>{ days < 10 ? `0${days}` : days }</p>
+          <p>{ this.addZero(days) }</p>
           <span>Days</span>
         </div>
         <span className="colon">:</span>
