@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/spacexplorer/static/css/main.138081f9.chunk.css",
+    "main.js": "/spacexplorer/static/js/main.bdce7256.chunk.js",
+    "main.js.map": "/spacexplorer/static/js/main.bdce7256.chunk.js.map",
+    "runtime~main.js": "/spacexplorer/static/js/runtime~main.22adbefc.js",
+    "runtime~main.js.map": "/spacexplorer/static/js/runtime~main.22adbefc.js.map",
+    "static/js/2.9972d91b.chunk.js": "/spacexplorer/static/js/2.9972d91b.chunk.js",
+    "static/js/2.9972d91b.chunk.js.map": "/spacexplorer/static/js/2.9972d91b.chunk.js.map",
+    "index.html": "/spacexplorer/index.html",
+    "precache-manifest.da326fca36334c97f9727b0a4d2166cd.js": "/spacexplorer/precache-manifest.da326fca36334c97f9727b0a4d2166cd.js",
+    "service-worker.js": "/spacexplorer/service-worker.js",
+    "static/css/main.138081f9.chunk.css.map": "/spacexplorer/static/css/main.138081f9.chunk.css.map",
+    "static/media/default-astronaut.svg": "/spacexplorer/static/media/default-astronaut.368f55f0.svg",
+    "static/media/default-rocket-img.svg": "/spacexplorer/static/media/default-rocket-img.91e4969e.svg",
+    "static/media/exploding-rocket.gif": "/spacexplorer/static/media/exploding-rocket.cbc75405.gif",
+    "static/media/rocket-launch.gif": "/spacexplorer/static/media/rocket-launch.c2897a59.gif"
+  }
+}
