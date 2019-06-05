@@ -43,7 +43,7 @@ const AstronautCard = ({ astronaut, showInfo, detailed }) => {
       <div className="details-side">
         <h3>{ name }</h3>
         <p>DOB: <span>{ date_of_birth }</span></p>
-        <p>Status: <span>{ status.name }</span></p>
+        <p>Status: <span>{ status ? status.name : 'Unknown' }</span></p>
         <p>Nationality: <span>{ nationality }</span></p>
       </div>
     </article>)

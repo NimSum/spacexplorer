@@ -30,6 +30,22 @@ article.category-info-container {
     }
   }
 
+  section.category-loading {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $primary-dark;
+    
+    img {
+      width: 50%;
+    }
+  }
+
   
 
   section.astronaut-info {

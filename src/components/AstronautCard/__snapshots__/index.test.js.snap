@@ -44,3 +44,63 @@ exports[`AstronautCard should match component snapshot 1`] = `
   </div>
 </article>
 `;
+
+exports[`AstronautCard should match component snapshot for detailed card 1`] = `
+<section
+  className="astronaut-info"
+>
+  <div
+    className="image-side"
+  >
+    <img
+      alt="astronaut"
+      src="default-astronaut.svg"
+    />
+    <h2>
+      Gregory Olsen
+    </h2>
+  </div>
+  <div
+    className="details-side"
+  >
+    <p
+      className="bio"
+    >
+      Gregory Olsen (born April 20, 1945) is an American entrepreneur, engineer and scientist who, in October 2005, became the third private citizen to make a self-funded trip to the International Space Station with the company Space Adventures.
+    </p>
+    <article>
+      <h3>
+        Missions:
+      </h3>
+      <div
+        key="0e886a0d-2e51-445b-bb5e-93b1f7083733"
+      >
+        <h3>
+          Soyuz-FG | Soyuz TMA-7
+        </h3>
+        <p>
+          For: 
+          Human Exploration
+        </p>
+        <p>
+          Orbit: 
+          LEO
+        </p>
+        <p>
+          When: 
+          Sep 30 9:55 PM
+        </p>
+        <p>
+          Where: 
+          Baikonur Cosmodrome, Republic of Kazakhstan
+        </p>
+      </div>
+      <a
+        href="https://en.wikipedia.org/wiki/Gregory_Olsen"
+      >
+        Wiki Link
+      </a>
+    </article>
+  </div>
+</section>
+`;
