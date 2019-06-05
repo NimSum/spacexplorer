@@ -27,7 +27,7 @@ export const NextLaunchCard = ({ showInfo, launch, toggleLaunchInfo, updateSelec
         <p>Status: { status.name }</p>
         <p>Location: { pad.location.name }</p>
         <button onClick={ showSelectedLaunch }>
-          More
+          Details
         </button>
       </div>
     </article>

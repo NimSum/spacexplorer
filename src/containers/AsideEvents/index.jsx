@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import fetchAnything from '../../utils/apiFetches/fetchAnything';
 import apiUrls from '../../utils/apiFetches/apiUrls';
 import { addSpaceEvents } from '../../actions';
@@ -22,7 +23,7 @@ export class AsideEvents extends Component {
       this.props.addUpcomingEvents(events);
       this.setState({ events: events.results })
     } catch(error) {
-      this.setState({ error });
+      this.setState({ error: error.message });
     }
   }
 
@@ -38,14 +39,16 @@ export class AsideEvents extends Component {
   render() {
     return (
       <aside>
-        <h1>SPACE<span>X</span>PLORER</h1>
+        <Link to='/'>
+          <h1>SPACE<span>X</span>PLORER</h1>
+        </Link>
         <h3 className='aside-label'>Space Related Events:</h3>
         <div className='card-container'>
           { this.cardGenerator() }
         </div>
         <footer>
           <p>Copyright 2019 SPACEXPLORER</p>
-          <a href='https://spacelaunchnow.me/api/3.3.0/'>Space Launch Now Api</a>
+          <a href='https://spacelaunchnow.me/api/3.3.0/'>API LINK</a>
         </footer>
       </aside>
     )

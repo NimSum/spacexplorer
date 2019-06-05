@@ -2,13 +2,17 @@
 
 exports[`AsideEvents should match component snapshot 1`] = `
 <aside>
-  <h1>
-    SPACE
-    <span>
-      X
-    </span>
-    PLORER
-  </h1>
+  <Link
+    to="/"
+  >
+    <h1>
+      SPACE
+      <span>
+        X
+      </span>
+      PLORER
+    </h1>
+  </Link>
   <h3
     className="aside-label"
   >
@@ -151,7 +155,7 @@ It will then de-orbit and burn up in the atmosphere.
     <a
       href="https://spacelaunchnow.me/api/3.3.0/"
     >
-      Space Launch Now Api
+      API LINK
     </a>
   </footer>
 </aside>

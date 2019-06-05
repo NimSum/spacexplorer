@@ -1,64 +1,42 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import defaultAstronautImg from '../../images/default-astronaut.svg';
-import defaultRocketImage from '../../images/default-rocket-img.svg';
+import PropTypes from 'prop-types';
+import AstronautCard from '../../components/AstronautCard';
+import RocketCard from '../../components/RocketCard';
+import rocketLaunchGif from '../../images/rocket-launch.gif';
 
 export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
 
-  const astronautInfo = () => {
-    const { name, bio, flights, landings, profile_image, type, wiki, agency } = item;
-    return (
-      <section className="astronaut-info">
-        <div className="image-side">
-          <img src={ profile_image || defaultAstronautImg } alt="astronaut"/>
-          <h2>{ isLoading ? 'Loading...' : name }</h2>
-        </div>
-        <div className="details-side">
-          <p className="bio">{ bio }</p>   
-        </div>
-      </section>)
-  }
-
-  const rocketInfo = () => {
-    const { full_name, launch_service_provider, leo_capacity, 
-    gto_capacity, length, diameter, info_url,
-    wiki_url, image_url, description } = item;
-    return (
-      <section className="rocket-info">
-        <div className="image-side">
-          <img src={ image_url || defaultRocketImage } alt="astronaut"/>
-          <h2>{ isLoading ? 'Loading...' : full_name }</h2>
-        </div>
-        <div className="details-side">
-          <p className="bio">{ description }</p>   
-        </div>
-      </section>)
-  }
-
-
-
-  let renderThis;
-  switch (category) {
-    case 'rockets':
-      renderThis = rocketInfo();
-    break;
-    case 'space_stations':
-      renderThis = (<div>lestations</div>)
-    break;
-    case 'orbiters':
-      renderThis = (<div>leobiters</div>)
-    break;
-    case 'astronauts':
-      renderThis = astronautInfo();
-    break;
-    default:
-      renderThis = (<div>launchhhhss</div>)
-    break;
+  const infoToRender = () => {
+    switch (category) {
+      case 'rockets':
+        return < RocketCard 
+          rocket={ item } 
+          detailed={ true } />;
+      case 'astronauts':
+        return < AstronautCard 
+          astronaut={ item } 
+          detailed={ true } />;
+      case 'space_stations':
+        return (<div>Space Stations.. In work</div>)
+      case 'orbiters':
+        return (<div>Orbiters... In work</div>)
+      default:
+        return (<div>Launch Providers... In work</div>)
+    }
   }
   
   return (
     <article className="category-info-container">
-      { renderThis }
+      { (item.id && !isLoading) && infoToRender() }
+      { isLoading && <section className='category-loading'>
+        { hasErrored.length
+        ? <h2 className='errored'>{ hasErrored }</h2> 
+        : (<article>
+            <img src={ rocketLaunchGif } alt="loading gif"/>
+            <h2>Loading {category.replace(/_/g, " ") } ...</h2>
+          </article>) }
+        </section> }
     </article>
   )
 }
@@ -66,5 +44,12 @@ export const mapStateToProps = state => ({
   isLoading: state.isLoading,
   hasErrored: state.hasErrored
 })
+
+CategoryItemInfo.propTypes = {
+  item: PropTypes.object, 
+  category: PropTypes.string, 
+  isLoading: PropTypes.bool, 
+  hasErrored: PropTypes.string
+}
 
 export default connect(mapStateToProps)(CategoryItemInfo);

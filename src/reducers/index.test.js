@@ -182,7 +182,7 @@ describe('Reducers', () => {
       expect(result).toEqual(expected);      
     })
 
-    it('should return error message if action type is valid', () => {
+    it('should return loading boolean if action type is valid', () => {
       const mockValidAction = action.isLoading(true)
       const result = isLoadingReducer(undefined, mockValidAction)
       const expected = true;

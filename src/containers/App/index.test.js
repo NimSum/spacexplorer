@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { App, mapDispatchToProps } from './index';
 import { shallow } from 'enzyme';
 import { addUpcomingLaunches, addSelectedLaunch } from '../../actions';
@@ -26,6 +26,16 @@ describe('App', () => {
   })
 
   it('should match component snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should render loading element', () => {
+    wrapper.setState({ isLoading: true });
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should render error element', () => {
+    wrapper.setState({ isLoading: true, error: 'Failed to Fetch' });
     expect(wrapper).toMatchSnapshot();
   })
 

@@ -6,10 +6,10 @@ $font-open-sans: 'Open Sans', sans-serif;
 $font-rajdani: 'Rajdhani', sans-serif;
 $font-orbitron: 'Orbitron', sans-serif;
 
-$primary-dark: hsl(259, 40%, 39%);
-$secondary-dark: hsl(232, 73%, 78%);
-$primary-light: hsl(251, 100%, 88%);
-$secondary-light: hsl(303, 100%, 96%);
+$primary-dark: hsl(214, 100%, 15%);
+$secondary-dark: hsl(204, 100%, 29%);
+$primary-light: #00bbef;
+$secondary-light: hsl(188, 100%, 93%);
 
 @mixin more-info-btn {
   border-radius: 20px;
@@ -25,6 +25,13 @@ $secondary-light: hsl(303, 100%, 96%);
     color: $primary-light;
     background-color: #fff;
   }
+}
+
+@mixin link-style {
+  background-color: $primary-dark;
+  color: $secondary-light;
+  margin: 2px;
+  padding: 4px;
 }
 
 @mixin category-info-btn {
@@ -50,7 +57,6 @@ $secondary-light: hsl(303, 100%, 96%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
 }
 
 @mixin opacity-animation {
@@ -62,5 +68,14 @@ $secondary-light: hsl(303, 100%, 96%);
     opacity: 0;
   } to {
     opacity: 1;
+  }
+}
+
+@keyframes transition-height {
+  from {
+    transform: scaleY(.3);
+    opacity: .4;
+  } to {
+    transform: scaleY(1)
   }
 }

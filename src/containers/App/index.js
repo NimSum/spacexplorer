@@ -40,7 +40,7 @@ export class App extends Component {
         ? <h2 className='errored'>{ this.state.error }</h2> 
         : (<article>
             <img src={ rocketLaunchGif } alt="loading gif"/>
-            (<h2>Loading...</h2>)
+            <h2>Loading...</h2>
           </article>) }
       </section>
     )
@@ -60,10 +60,17 @@ export class App extends Component {
           < Route 
             exact path='/about/:category' 
             render={({ match }) => {
-              return (
-                < CategorySection 
-                  category={ match.params.category }/>
-              )
+              const paths=[
+                'rockets',
+                'astronauts',
+                'space_stations',
+                'orbiters',
+                'launch_providers'
+              ]
+              return paths.includes(match.params.category)
+                ? (< CategorySection 
+                    category={ match.params.category }/>)
+                : ( <Page404 />)
           }}/>
           < Route component={ Page404 } />
         </Switch>

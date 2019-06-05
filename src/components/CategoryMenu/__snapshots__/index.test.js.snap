@@ -36,35 +36,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/rockets"
     >
-      Rockets
-    </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      style={
-        Object {
-          "borderBottom": "1px solid #9EA9F0",
-          "color": "#FFEAFE",
-          "padding": "5px",
-          "textDecoration": "none",
-        }
-      }
-      to="/about/space_stations"
-    >
-      Space Stations
-    </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      style={
-        Object {
-          "borderBottom": "1px solid #9EA9F0",
-          "color": "#FFEAFE",
-          "padding": "5px",
-          "textDecoration": "none",
-        }
-      }
-      to="/about/orbiters"
-    >
-      Orbiters
+      <span>
+        Rockets
+      </span>
     </NavLink>
     <NavLink
       activeClassName="is-active"
@@ -78,7 +52,41 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/astronauts"
     >
-      Astronauts
+      <span>
+        Astronauts
+      </span>
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/about/space_stations"
+    >
+      <span>
+        Space Stations
+      </span>
+    </NavLink>
+    <NavLink
+      activeClassName="is-active"
+      style={
+        Object {
+          "borderBottom": "1px solid #9EA9F0",
+          "color": "#FFEAFE",
+          "padding": "5px",
+          "textDecoration": "none",
+        }
+      }
+      to="/about/orbiters"
+    >
+      <span>
+        Orbiters
+      </span>
     </NavLink>
     <NavLink
       activeClassName="is-active"
@@ -92,7 +100,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/about/launch_providers"
     >
-      Launch Providers
+      <span>
+        Launch Providers
+      </span>
     </NavLink>
     <Link
       style={
@@ -105,7 +115,9 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
       }
       to="/"
     >
-      HOME
+      <span>
+        HOME
+      </span>
     </Link>
   </nav>
 </div>

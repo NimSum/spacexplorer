@@ -40,7 +40,7 @@ exports[`NextLaunchCard should match component snapshot 1`] = `
     <button
       onClick={[Function]}
     >
-      More
+      Details
     </button>
   </div>
 </article>

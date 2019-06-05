@@ -33,3 +33,14 @@ article.astronaut-card {
     border-radius: 50%;
   }
 }
+
+section.astronaut-info {
+  div.image-side {
+    width: 40%;
+  }
+
+  div.details-side {
+    width: 60%;
+    overflow: scroll;
+  }
+}

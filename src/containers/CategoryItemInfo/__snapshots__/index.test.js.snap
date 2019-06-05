@@ -4,29 +4,96 @@ exports[`CategoryItemInfo should match component snapshot 1`] = `
 <article
   className="category-info-container"
 >
+  <RocketCard
+    detailed={true}
+    rocket={
+      Object {
+        "alias": "",
+        "apogee": null,
+        "description": "Currently the largest rocket in the Angara family, Angara A5 utilizes five Universal Rocket Modules as the first stage, and is designed to phase out Proton.",
+        "diameter": 8.86,
+        "family": "Angara",
+        "full_name": "Angara A5",
+        "gto_capacity": 5200,
+        "id": 73,
+        "image_url": null,
+        "info_url": null,
+        "launch_library_id": 87,
+        "launch_mass": 773,
+        "launch_service_provider": Object {
+          "abbrev": "KhSC",
+          "administrator": "Director: Andrey Vladimirovich Kalinovskiy",
+          "country_code": "RUS",
+          "description": "Khrunichev State Research and Production Space Center is a Moscow-based producer of spacecraft and space-launch systems, including the Proton and Rokot rockets and is currently developing the Angara rocket family. The Proton launch vehicle launches from Baikonur and Rokot launches from Baikonur and Plesetsk. Angara will launch from Plesetsk and Vostochny.",
+          "failed_launches": 21,
+          "featured": true,
+          "founding_year": "1916",
+          "id": 96,
+          "image_url": "https://daszojo4xmsc6.cloudfront.net/media/agency_images/khrunichev2520state2520research2520and2520production2520space2520center_image_20190207032444.jpeg",
+          "info_url": "http://www.khrunichev.ru/main.php?lang=en",
+          "launch_library_url": "https://launchlibrary.net/1.4/agency/96",
+          "launchers": "Proton | Rokot",
+          "logo_url": "https://daszojo4xmsc6.cloudfront.net/media/logo/khrunichev2520state2520research2520and2520production2520space2520center_logo_20190207032444.png",
+          "name": "Khrunichev State Research and Production Space Center",
+          "nation_url": "https://daszojo4xmsc6.cloudfront.net/media/agency_nation/khrunichev2520state2520research2520and2520production2520space2520center_nation_20190207032444.png",
+          "pending_launches": 13,
+          "spacecraft": "",
+          "successful_launches": 84,
+          "type": "Government",
+          "url": "https://spacelaunchnow.me/api/3.3.1/agencies/96/",
+          "wiki_url": "http://en.wikipedia.org/wiki/Khrunichev_State_Research_and_Production_Space_Center",
+        },
+        "length": 55.4,
+        "leo_capacity": 24500,
+        "maiden_flight": null,
+        "max_stage": 3,
+        "min_stage": 2,
+        "name": "Angara A5",
+        "to_thrust": 9600,
+        "url": "https://spacelaunchnow.me/api/3.3.1/config/launcher/73/",
+        "variant": "Briz-M",
+        "vehicle_range": null,
+        "wiki_url": "https://en.wikipedia.org/wiki/Angara_(rocket_family)",
+      }
+    }
+  />
+</article>
+`;
+
+exports[`CategoryItemInfo should match component snapshot for error 1`] = `
+<article
+  className="category-info-container"
+>
   <section
-    className="rocket-info"
+    className="category-loading"
   >
-    <div
-      className="image-side"
+    <h2
+      className="errored"
     >
+      Failed to Fetch
+    </h2>
+  </section>
+</article>
+`;
+
+exports[`CategoryItemInfo should match component snapshot for loading 1`] = `
+<article
+  className="category-info-container"
+>
+  <section
+    className="category-loading"
+  >
+    <article>
       <img
-        alt="astronaut"
-        src="default-rocket-img.svg"
+        alt="loading gif"
+        src="rocket-launch.gif"
       />
       <h2>
-        Angara A5
+        Loading 
+        rockets
+         ...
       </h2>
-    </div>
-    <div
-      className="details-side"
-    >
-      <p
-        className="bio"
-      >
-        Currently the largest rocket in the Angara family, Angara A5 utilizes five Universal Rocket Modules as the first stage, and is designed to phase out Proton.
-      </p>
-    </div>
+    </article>
   </section>
 </article>
 `;
@@ -36,26 +103,19 @@ exports[`CategoryItemInfo should match component snapshot when data is loading 1
   className="category-info-container"
 >
   <section
-    className="rocket-info"
+    className="category-loading"
   >
-    <div
-      className="image-side"
-    >
+    <article>
       <img
-        alt="astronaut"
-        src="default-rocket-img.svg"
+        alt="loading gif"
+        src="rocket-launch.gif"
       />
       <h2>
-        Loading...
+        Loading 
+        rockets
+         ...
       </h2>
-    </div>
-    <div
-      className="details-side"
-    >
-      <p
-        className="bio"
-      />
-    </div>
+    </article>
   </section>
 </article>
 `;
@@ -64,29 +124,40 @@ exports[`CategoryItemInfo should render different item info based on category 1`
 <article
   className="category-info-container"
 >
-  <section
-    className="astronaut-info"
-  >
-    <div
-      className="image-side"
-    >
-      <img
-        alt="astronaut"
-        src="https://daszojo4xmsc6.cloudfront.net/media/astronaut_images/robert2520hines_image_20181129205955.jpg"
-      />
-      <h2>
-        Robert Hines
-      </h2>
-    </div>
-    <div
-      className="details-side"
-    >
-      <p
-        className="bio"
-      >
-        Robert "Bob" Thomas Hines, Jr. is an American fighter pilot and NASA astronaut candidate of the class of 2017.
-      </p>
-    </div>
-  </section>
+  <AstronautCard
+    astronaut={
+      Object {
+        "agency": Object {
+          "id": 44,
+          "name": "National Aeronautics and Space Administration",
+          "type": "Government",
+          "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+        },
+        "bio": "Robert \\"Bob\\" Thomas Hines, Jr. is an American fighter pilot and NASA astronaut candidate of the class of 2017.",
+        "date_of_birth": "1975-01-11",
+        "date_of_death": null,
+        "flights": Array [],
+        "id": 142,
+        "instagram": null,
+        "landings": Array [],
+        "name": "Robert Hines",
+        "nationality": "American",
+        "profile_image": "https://daszojo4xmsc6.cloudfront.net/media/astronaut_images/robert2520hines_image_20181129205955.jpg",
+        "profile_image_thumbnail": "https://daszojo4xmsc6.cloudfront.net/media/default/cache/21/f1/21f1222a77ab913fea2ef8b2f5ffd953.jpg",
+        "status": Object {
+          "id": 3,
+          "name": "In-Training",
+        },
+        "twitter": null,
+        "type": Object {
+          "id": 2,
+          "name": "Government",
+        },
+        "url": "https://spacelaunchnow.me/api/3.3.1/astronaut/142/",
+        "wiki": "https://en.wikipedia.org/wiki/Robert_Hines_(astronaut)",
+      }
+    }
+    detailed={true}
+  />
 </article>
 `;

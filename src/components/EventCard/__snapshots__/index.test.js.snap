@@ -3,6 +3,8 @@
 exports[`EventCard should match component snapshot 1`] = `
 <article
   className="event-card"
+  data-shown={false}
+  data-testid="container"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
