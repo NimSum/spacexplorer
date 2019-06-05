@@ -30,7 +30,12 @@ export class CountDownTimer extends Component {
     minutes = Math.floor(totalTime / 60000); 
     totalTime = totalTime % 60000;
     seconds = Math.floor(totalTime/1000);
-    this.setState({ days, hours, minutes, seconds })
+    this.setState({ 
+      days: days < 0 ? 0 : days, 
+      hours: hours < 0 ? 0 : hours, 
+      minutes: minutes < 0 ? 0 : minutes, 
+      seconds: seconds < 0 ? 0 :  seconds
+    })
   }
   
   componentDidMount() {
