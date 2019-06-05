@@ -13,16 +13,16 @@ export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
         return < RocketCard 
           rocket={ item } 
           detailed={ true } />;
-      case 'space_stations':
-        return (<div>Space Stations.. In work</div>)
-      case 'orbiters':
-        return (<div>Orbiters... In work</div>)
       case 'astronauts':
         return < AstronautCard 
           astronaut={ item } 
           detailed={ true } />;
+      case 'space_stations':
+        return (<div>Space Stations.. In work</div>)
+      case 'orbiters':
+        return (<div>Orbiters... In work</div>)
       default:
-        return (<div>Nothing Here Yet</div>)
+        return (<div>Launch Providers... In work</div>)
     }
   }
   

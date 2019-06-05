@@ -23,7 +23,10 @@ const RocketCard = ({ rocket, showInfo, detailed}) => {
         <h2>{ full_name }</h2>
       </div>
       <div className="details-side">
-        <p className="bio">{ description }</p>   
+        <p>{ description || 'No Description Provided...' }</p>
+        <p>Launch Service Provider: { launch_service_provider.name }</p>
+        <a href={ info_url }>Rocket Info Link</a>
+        <a href={ wiki_url }>Wiki Link</a>
       </div>
     </section>
   )
@@ -39,7 +42,7 @@ const RocketCard = ({ rocket, showInfo, detailed}) => {
         <p>Length: <span>{ length }</span></p>
         <p>Diameter: <span>{ diameter }</span></p>
         <p>To LEO: <span>{ leo_capacity ? leo_capacity : 'Unknown' } kg</span></p>
-        <p>To GTO: <span>{ leo_capacity ? leo_capacity : 'Unknown' } kg</span></p>
+        <p>To GTO: <span>{ gto_capacity ? gto_capacity : 'Unknown' } kg</span></p>
         <button onClick={() => showInfo(rocket)}>
           Details
         </button>
