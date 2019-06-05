@@ -36,6 +36,16 @@ describe('EventCard', () => {
       expect(showValue.dataset.shown).toBe('false')
     })
 
-  
+    it.skip('should toggle set state show on mouse enter true/false within detailed app', () => {
+      const { container } = render(< EventCard 
+        event={ singleEvent }
+      />)
+      const newsDetails = getByTestId(container, 'news-details');
+      const showValue = getByTestId(container, 'container');
+      fireEvent.mouseEnter(newsDetails);
+      expect(showValue.dataset.shown).toBe('true')
+      fireEvent.mouseLeave(newsDetails);
+      expect(showValue.dataset.shown).toBe('false')
+    })
   })
 })
