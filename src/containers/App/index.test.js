@@ -29,6 +29,16 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should render loading element', () => {
+    wrapper.setState({ isLoading: true });
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should render error element', () => {
+    wrapper.setState({ isLoading: true, error: 'Failed to Fetch' });
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should have default state', () => {
     expect(wrapper.state()).toEqual(defaultState);
   })

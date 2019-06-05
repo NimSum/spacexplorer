@@ -12,6 +12,7 @@ describe('AstronautCard', () => {
       < AstronautCard 
         astronaut={ mockAstronaut }
         showInfo={ mockShowInfo }
+        detailed={ false }
       />)
   })
 

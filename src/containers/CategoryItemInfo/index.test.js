@@ -26,6 +26,16 @@ describe('CategoryItemInfo', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should match component snapshot for loading', () => {
+    wrapper.setProps({ isLoading: true })
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should match component snapshot for error', () => {
+    wrapper.setProps({ isLoading: true, hasErrored: 'Failed to Fetch' })
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should match component snapshot when data is loading', () => {
     wrapper.setProps({ isLoading: true, item: {} })
     expect(wrapper).toMatchSnapshot();

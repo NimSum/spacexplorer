@@ -60,6 +60,44 @@ exports[`CategoryItemInfo should match component snapshot 1`] = `
 </article>
 `;
 
+exports[`CategoryItemInfo should match component snapshot for error 1`] = `
+<article
+  className="category-info-container"
+>
+  <section
+    className="category-loading"
+  >
+    <h2
+      className="errored"
+    >
+      Failed to Fetch
+    </h2>
+  </section>
+</article>
+`;
+
+exports[`CategoryItemInfo should match component snapshot for loading 1`] = `
+<article
+  className="category-info-container"
+>
+  <section
+    className="category-loading"
+  >
+    <article>
+      <img
+        alt="loading gif"
+        src="rocket-launch.gif"
+      />
+      <h2>
+        Loading 
+        rockets
+         ...
+      </h2>
+    </article>
+  </section>
+</article>
+`;
+
 exports[`CategoryItemInfo should match component snapshot when data is loading 1`] = `
 <article
   className="category-info-container"
