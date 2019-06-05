@@ -72,10 +72,26 @@ exports[`RocketCard should match component snapshot for detailed card 1`] = `
     className="details-side"
   >
     <p
-      className="bio"
+      className="description"
     >
       The Angara 1.2pp was a customized Angara 1.2 that was flown once for a sub-orbital test launch.
     </p>
+    <p>
+      Launch Service Provider: 
+      <span>
+        Khrunichev State Research and Production Space Center
+      </span>
+    </p>
+    <a
+      href="http://www.ilslaunch.com/node/4680"
+    >
+      Rocket Info Link
+    </a>
+    <a
+      href="https://en.wikipedia.org/wiki/Angara-1.2pp"
+    >
+      Wiki Link
+    </a>
   </div>
 </section>
 `;

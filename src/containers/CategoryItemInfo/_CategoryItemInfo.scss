@@ -13,6 +13,41 @@ article.category-info-container {
     padding: 20px;
   }
 
+  div.details-side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      margin: 10px;
+      color: $secondary-dark;
+      span {
+        font-weight: bold;
+        color: $primary-dark;
+      }
+    }
+
+    p.description {
+      text-indent: 40px;
+      margin: 10px;
+      font-size: 1.1rem;
+      color: $primary-dark;
+    }
+
+    h3 {
+      color: $secondary-dark;
+    }
+
+    a {
+      text-decoration: none;
+      @include link-style;
+      width: 50%;
+      margin: 2px auto;
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
+
   div.image-side {
     text-align: center;
     @include flex-center;
@@ -43,35 +78,6 @@ article.category-info-container {
     
     img {
       width: 50%;
-    }
-  }
-
-  
-
-  section.astronaut-info {
-    p.bio {
-      text-indent: 40px;
-      margin: 10px;
-      font-size: 1.1rem;
-    }
-
-    div.image-side {
-      width: 40%;
-    }
-
-    div.details-side {
-      width: 60%;
-      overflow: scroll;
-    }
-  }
-
-  section.rocket-info {
-    div.image-side {
-      width: 55%;
-    }
-
-    div.details-side {
-      width: 45%;
     }
   }
 }

@@ -13,23 +13,23 @@ const AstronautCard = ({ astronaut, showInfo, detailed }) => {
           <h2>{ name }</h2>
         </div>
         <div className='details-side'>
-          <p className='bio'>{ bio }</p>
+          <p className='description'>{ bio }</p>
           <article>
             <h3>Missions:</h3>
             { flights
               ? flights.map(flight => (
                   <div key={ flight.id }>
                     <h3>{ flight.name }</h3>
-                    <p>For: { flight.mission.type || 'Unknown' }</p>
-                    <p>Orbit: { flight.orbit }</p>
-                    <p>When: { moment(flight.net)
-                               .format('MMM DD LT') }</p>
-                    <p>Where: { flight.pad.location.name }</p>
+                    <p>For: <span>{ flight.mission.type || 'Unknown' }</span></p>
+                    <p>Orbit: <span>{ flight.orbit }</span></p>
+                    <p>When: <span>{ moment(flight.net)
+                               .format('MMM DD YYYY') }</span></p>
+                    <p>Where: <span>{ flight.pad.location.name }</span></p>
                   </div>))
               : <h2>No Missions</h2>
             }
-            <a href={ wiki }>Wiki Link</a>
           </article>
+          <a href={ wiki }>Wiki Link</a>
         </div>
       </section>
 

@@ -23,9 +23,9 @@ const RocketCard = ({ rocket, showInfo, detailed}) => {
         <h2>{ full_name }</h2>
       </div>
       <div className="details-side">
-        <p>{ description || 'No Description Provided...' }</p>
-        <p>Launch Service Provider: { launch_service_provider.name }</p>
-        <a href={ info_url }>Rocket Info Link</a>
+        <p className='description'>{ description || 'No Description Provided...' }</p>
+        <p>Launch Service Provider: <span>{ launch_service_provider && launch_service_provider.name }</span></p>
+        <a href={ info_url || wiki_url }>Rocket Info Link</a>
         <a href={ wiki_url }>Wiki Link</a>
       </div>
     </section>

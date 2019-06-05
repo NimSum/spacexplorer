@@ -7,7 +7,8 @@ article.next-launch-info-card {
   display: flex;
   padding: 15px;
   @include transparent-light-bg;
-
+  @include opacity-animation;
+  
   h2, button {
     position: absolute;
   }
@@ -38,8 +39,5 @@ article.next-launch-info-card {
   div {
     flex: 1;
     margin-top: 30px;
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
   }
 }

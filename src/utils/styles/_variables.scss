@@ -27,6 +27,13 @@ $secondary-light: hsl(188, 100%, 93%);
   }
 }
 
+@mixin link-style {
+  background-color: $primary-dark;
+  color: $secondary-light;
+  margin: 2px;
+  padding: 4px;
+}
+
 @mixin category-info-btn {
   width: 50px;
   margin: 10px auto;

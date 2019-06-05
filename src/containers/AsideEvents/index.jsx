@@ -48,7 +48,7 @@ export class AsideEvents extends Component {
         </div>
         <footer>
           <p>Copyright 2019 SPACEXPLORER</p>
-          <a href='https://spacelaunchnow.me/api/3.3.0/'>Space Launch Now Api</a>
+          <a href='https://spacelaunchnow.me/api/3.3.0/'>API LINK</a>
         </footer>
       </aside>
     )

@@ -38,11 +38,19 @@ article.rocket-card {
       margin: 5px;
     }
 
-
-  button {
-    @include category-info-btn;
-    width: 60px;
+    button {
+      @include category-info-btn;
+      width: 60px;
+    }
   }
+}
+
+section.rocket-info {
+  div.image-side {
+    width: 55%;
   }
 
+  div.details-side {
+    width: 45%;
+  }
 }
