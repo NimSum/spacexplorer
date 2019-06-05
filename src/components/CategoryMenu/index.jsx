@@ -26,6 +26,12 @@ export class CategoryMenu extends Component {
         </NavLink>
         < NavLink 
           style={ linkStyling } 
+          to='/about/astronauts'
+          activeClassName='is-active'>
+            <span>Astronauts</span>
+        </NavLink>
+        < NavLink 
+          style={ linkStyling } 
           to='/about/space_stations'
           activeClassName='is-active'>
             <span>Space Stations</span>
@@ -35,12 +41,6 @@ export class CategoryMenu extends Component {
           to='/about/orbiters'
           activeClassName='is-active'>
             <span>Orbiters</span>
-        </NavLink>
-        < NavLink 
-          style={ linkStyling } 
-          to='/about/astronauts'
-          activeClassName='is-active'>
-            <span>Astronauts</span>
         </NavLink>
         < NavLink 
           style={ linkStyling } 

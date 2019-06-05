@@ -16,19 +16,19 @@ section.countdown-timer {
 
     p {
       font-size: 4.5rem;
-      color: $primary-dark;
+      color: $secondary-dark;
       height: 75px;
     }
 
     span {
       font-weight: bold;
-      color: $secondary-dark;
+      color: $primary-light;
     }
   }
 
   span.colon {
     flex: 1;
     font-size: 4rem;
-    color: $secondary-dark;
+    color: $primary-light;
   }
 }

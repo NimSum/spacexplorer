@@ -11,7 +11,9 @@ const EventCard = ({ event }) => {
   return (
     <article className='event-card'
       onMouseEnter={() => showInfo(true)}
-      onMouseLeave={() => showInfo(false)}>
+      onMouseLeave={() => showInfo(false)}
+      data-shown={ show }
+      data-testid='container'>
       <div 
         className='news-details'>
         <h3>{ name }</h3>
@@ -23,7 +25,8 @@ const EventCard = ({ event }) => {
         show && (
         <div className='news-detailed'
           onMouseEnter={() => showInfo(true)}
-          onMouseLeave={() => showInfo(false)}>
+          onMouseLeave={() => showInfo(false)}
+          data-testid='news-details'>
           <p>{ description }</p>
           <img src={ feature_image } alt="Fetaured Event"/>
           <a href={ news_url }>News Link</a>

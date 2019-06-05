@@ -6,7 +6,6 @@ import AstronautCard from '../../components/AstronautCard';
 import CategoryItemInfo from '../CategoryItemInfo';
 import PropTypes from 'prop-types';
 
-
 export class CategorySection extends Component {
   constructor() {
     super();
@@ -39,14 +38,14 @@ export class CategorySection extends Component {
         return (< RocketCard 
           rocket={item} showInfo={ this.showInfo } key={item.id} />);
       case 'space_stations':
-          return <p>space stations</p>
+          return <p>In work...</p>
       case 'orbiters':
-        return <p>orbiters</p>
+        return <p>In work...</p>
       case 'astronauts':
         return (< AstronautCard 
           astronaut={item} showInfo={ this.showInfo } key={item.id} />);
       default:
-        return <p>NADA</p>
+        return <p>In work...</p>
     }
   }
 

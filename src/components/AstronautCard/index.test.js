@@ -12,10 +12,16 @@ describe('AstronautCard', () => {
       < AstronautCard 
         astronaut={ mockAstronaut }
         showInfo={ mockShowInfo }
+        detailed={ false }
       />)
   })
 
   it('should match component snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should match component snapshot for detailed card', () => {
+    wrapper.setProps({ detailed: true });
     expect(wrapper).toMatchSnapshot();
   })
   

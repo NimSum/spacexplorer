@@ -29,3 +29,31 @@ exports[`App should match component snapshot 1`] = `
   </Switch>
 </main>
 `;
+
+exports[`App should render error element 1`] = `
+<section
+  className="app-loading"
+>
+  <h2
+    className="errored"
+  >
+    Failed to Fetch
+  </h2>
+</section>
+`;
+
+exports[`App should render loading element 1`] = `
+<section
+  className="app-loading"
+>
+  <article>
+    <img
+      alt="loading gif"
+      src="rocket-launch.gif"
+    />
+    <h2>
+      Loading...
+    </h2>
+  </article>
+</section>
+`;

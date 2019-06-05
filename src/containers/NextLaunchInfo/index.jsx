@@ -4,7 +4,7 @@ import { toggleLaunchInfo } from '../../actions'
 import PropTypes from 'prop-types';
 
 export const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
-  const { name, rocket, mission, pad } = launchInfo;
+  const { name, rocket, mission } = launchInfo;
     return (
       <article 
         className='next-launch-info-card'
@@ -14,17 +14,17 @@ export const NextLaunchInfo  = ({ launchInfo, hideInfo }) => {
         <h2>{ name }</h2>
         <div className="mission">
           <h3>Mission Description:</h3>
-          <p>Type: { mission ? mission.type : 'Unknown' }</p>
-          <p>{ mission ? mission.description : 'Unknown' }</p>
+          <p>Type: <span>{ mission ? mission.type : 'Unknown' }</span></p>
+          <p><span>{ mission ? mission.description : 'Unknown' }</span></p>
           <a href={ launchInfo.slug }>Space Launch Now Info</a>
         </div>
         <div className="rocket-provider">
-          <h3>Rocket: { rocket.configuration.name }</h3>
-          <p>Thrust: { rocket.configuration.to_thrust }kN</p>
-          <p>Height:  { rocket.configuration.length }M Width: { rocket.configuration.diameter }M</p>
+          <h3>Rocket: <span>{ rocket.configuration.name }</span></h3>
+          <p>Thrust: <span>{ rocket.configuration.to_thrust }kN</span></p>
+          <p>Height:  <span>{ rocket.configuration.length }M</span> Width: <span>{ rocket.configuration.diameter }M</span></p>
           <a href={ rocket.configuration.wiki_url }>Rocket Wiki</a>
-          <h3>Launch Provider: { rocket.configuration.launch_service_provider.name } </h3>
-          <p>{ rocket.configuration.launch_service_provider.description }</p>
+          <h3>Launch Provider: <span>{ rocket.configuration.launch_service_provider.name }</span></h3>
+          <p><span>{ rocket.configuration.launch_service_provider.description }</span></p>
           <a href={ rocket.configuration.launch_service_provider.info_url }>Provider Website</a>
         </div>
         <button onClick={ () => 

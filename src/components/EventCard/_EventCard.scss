@@ -44,10 +44,7 @@ article.event-card {
 
     a {
       width: 100%;
-      background-color: $primary-dark;
-      color: $secondary-light;
-      margin: 2px;
-      padding: 4px;
+      @include link-style;
     }
   }
 

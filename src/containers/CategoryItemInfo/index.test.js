@@ -8,7 +8,7 @@ describe('CategoryItemInfo', () => {
   let item = mockRockets.results[2];
   let category = 'rockets';
   let isLoading = false;
-  let hasErrored = true;
+  let hasErrored = '';
 
   let wrapper;
   beforeEach(() => {
@@ -23,6 +23,16 @@ describe('CategoryItemInfo', () => {
   })
 
   it('should match component snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should match component snapshot for loading', () => {
+    wrapper.setProps({ isLoading: true })
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should match component snapshot for error', () => {
+    wrapper.setProps({ isLoading: true, hasErrored: 'Failed to Fetch' })
     expect(wrapper).toMatchSnapshot();
   })
 

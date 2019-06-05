@@ -16,10 +16,14 @@ exports[`NextLaunchInfo should match component snapshot 1`] = `
     </h3>
     <p>
       Type: 
-      Earth Science
+      <span>
+        Earth Science
+      </span>
     </p>
     <p>
-      The first sea launch of Long March 11 rocket. It carries two Jilin-1 Earth observation satellites.
+      <span>
+        The first sea launch of Long March 11 rocket. It carries two Jilin-1 Earth observation satellites.
+      </span>
     </p>
     <a
       href="https://spacelaunchnow.me/launch/long-march-11-jilin-1-1927"
@@ -32,19 +36,28 @@ exports[`NextLaunchInfo should match component snapshot 1`] = `
   >
     <h3>
       Rocket: 
-      Long March 11
+      <span>
+        Long March 11
+      </span>
     </h3>
     <p>
       Thrust: 
-      1177
-      kN
+      <span>
+        1177
+        kN
+      </span>
     </p>
     <p>
       Height:  
-      20
-      M Width: 
-      2
-      M
+      <span>
+        20
+        M
+      </span>
+       Width: 
+      <span>
+        2
+        M
+      </span>
     </p>
     <a
       href="https://en.wikipedia.org/wiki/Long_March_11"
@@ -53,11 +66,14 @@ exports[`NextLaunchInfo should match component snapshot 1`] = `
     </a>
     <h3>
       Launch Provider: 
-      China National Space Administration
-       
+      <span>
+        China National Space Administration
+      </span>
     </h3>
     <p>
-      The China National Space Administration (CNSA) is the national space agency of the People's Republic of China. It is responsible for the national space program and for planning and development of space activities. CNSA and China Aerospace Corporation (CASC) assumed the authority over space development efforts previously held by the Ministry of Aerospace Industry. The CNSA has many launch sites around China with their orbital sites located in Jiuquan, Xichang, Taiyuan and Wenchang.
+      <span>
+        The China National Space Administration (CNSA) is the national space agency of the People's Republic of China. It is responsible for the national space program and for planning and development of space activities. CNSA and China Aerospace Corporation (CASC) assumed the authority over space development efforts previously held by the Ministry of Aerospace Industry. The CNSA has many launch sites around China with their orbital sites located in Jiuquan, Xichang, Taiyuan and Wenchang.
+      </span>
     </p>
     <a
       href="http://www.cnsa.gov.cn/"
@@ -89,10 +105,14 @@ exports[`NextLaunchInfo should match component snapshot with launches without mi
     </h3>
     <p>
       Type: 
-      Unknown
+      <span>
+        Unknown
+      </span>
     </p>
     <p>
-      Unknown
+      <span>
+        Unknown
+      </span>
     </p>
     <a
       href="https://spacelaunchnow.me/launch/long-march-11-jilin-1-1927"
@@ -105,19 +125,28 @@ exports[`NextLaunchInfo should match component snapshot with launches without mi
   >
     <h3>
       Rocket: 
-      Long March 11
+      <span>
+        Long March 11
+      </span>
     </h3>
     <p>
       Thrust: 
-      1177
-      kN
+      <span>
+        1177
+        kN
+      </span>
     </p>
     <p>
       Height:  
-      20
-      M Width: 
-      2
-      M
+      <span>
+        20
+        M
+      </span>
+       Width: 
+      <span>
+        2
+        M
+      </span>
     </p>
     <a
       href="https://en.wikipedia.org/wiki/Long_March_11"
@@ -126,11 +155,14 @@ exports[`NextLaunchInfo should match component snapshot with launches without mi
     </a>
     <h3>
       Launch Provider: 
-      China National Space Administration
-       
+      <span>
+        China National Space Administration
+      </span>
     </h3>
     <p>
-      The China National Space Administration (CNSA) is the national space agency of the People's Republic of China. It is responsible for the national space program and for planning and development of space activities. CNSA and China Aerospace Corporation (CASC) assumed the authority over space development efforts previously held by the Ministry of Aerospace Industry. The CNSA has many launch sites around China with their orbital sites located in Jiuquan, Xichang, Taiyuan and Wenchang.
+      <span>
+        The China National Space Administration (CNSA) is the national space agency of the People's Republic of China. It is responsible for the national space program and for planning and development of space activities. CNSA and China Aerospace Corporation (CASC) assumed the authority over space development efforts previously held by the Ministry of Aerospace Industry. The CNSA has many launch sites around China with their orbital sites located in Jiuquan, Xichang, Taiyuan and Wenchang.
+      </span>
     </p>
     <a
       href="http://www.cnsa.gov.cn/"
