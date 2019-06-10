@@ -1,4 +1,4 @@
-# Trapper Keeper
+# SpaceXplorer
 
 ### [Live Demo](https://nimsum.github.io/spacexplorer/)
 
