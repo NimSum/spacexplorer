@@ -1,6 +1,7 @@
 # SpaceXplorer
 
 ### [Live Demo](https://nimsum.github.io/spacexplorer/)
+### [User Strories](https://gist.github.com/NimSum/bdd1781932571d49400770213138dc98)
 
 ## Description
 This project is a simple app that shows users space exploration related "things". The app allows for users to immedidately know when the upcoming rocket launches are going to be, learn about upcoming space related event. The users can also browse other space related categories such as Astronauts and Rockets to learn more about them. 
