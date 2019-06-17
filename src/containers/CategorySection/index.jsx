@@ -18,7 +18,7 @@ export class CategorySection extends Component {
   checkAndUpdate() {
     this.setState({ showInfo: false })
     const categorySelected = this.props[this.props.category];
-    if (categorySelected.next) {
+    if (categorySelected.count) {
       // const randomItem = Math.floor(Math.random() * 19);
       this.generateCards(categorySelected)
       this.setState({ cardInfoToRender: categorySelected.results[2] })
