@@ -19,9 +19,9 @@ export class CategorySection extends Component {
     this.setState({ showInfo: false })
     const categorySelected = this.props[this.props.category];
     if (categorySelected.next) {
-      const randomItem = Math.floor(Math.random() * 19);
+      // const randomItem = Math.floor(Math.random() * 19);
       this.generateCards(categorySelected)
-      this.setState({ cardInfoToRender: categorySelected.results[randomItem] })
+      this.setState({ cardInfoToRender: categorySelected.results[2] })
     } else this.props.selectCategory(this.props.category);
   }
 
