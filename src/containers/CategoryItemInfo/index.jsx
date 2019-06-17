@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import AstronautCard from '../../components/AstronautCard';
 import RocketCard from '../../components/RocketCard';
 import rocketLaunchGif from '../../images/rocket-launch.gif';
+import LaunchProviderCard from '../../components/LaunchProviderCard';
 
 export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
 
@@ -22,7 +23,9 @@ export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
       case 'orbiters':
         return (<div>Orbiters... In work</div>)
       default:
-        return (<div>Launch Providers... In work</div>)
+        return (< LaunchProviderCard 
+          launchProvider={item} 
+          detailed={ true } />);
     }
   }
   

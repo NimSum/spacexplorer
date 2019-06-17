@@ -5,6 +5,7 @@ import RocketCard from '../../components/RocketCard';
 import AstronautCard from '../../components/AstronautCard';
 import CategoryItemInfo from '../CategoryItemInfo';
 import PropTypes from 'prop-types';
+import LaunchProviderCard from '../../components/LaunchProviderCard';
 
 export class CategorySection extends Component {
   constructor() {
@@ -45,7 +46,8 @@ export class CategorySection extends Component {
         return (< AstronautCard 
           astronaut={item} showInfo={ this.showInfo } key={item.id} />);
       default:
-        return <p>In work...</p>
+        return (< LaunchProviderCard 
+          launchProvider={item} showInfo={ this.showInfo } key={item.id} />);
     }
   }
 
