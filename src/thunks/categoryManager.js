@@ -15,6 +15,10 @@ const categoryManager = category => {
           const astronauts = await fetchAnything(apiUrls.astronauts);
           dispatch(action.addAstronauts(astronauts));
           break;
+        case 'orbiters':
+          const orbiters = await fetchAnything(apiUrls.orbiters);
+          dispatch(action.addOrbiters(orbiters));
+          break;
         case 'launch_providers':
           const launch_providers = await fetchAnything(apiUrls.launch_providers);
           dispatch(action.addLaunchProviders(launch_providers));
