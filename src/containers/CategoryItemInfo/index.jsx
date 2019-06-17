@@ -5,6 +5,7 @@ import AstronautCard from '../../components/AstronautCard';
 import RocketCard from '../../components/RocketCard';
 import rocketLaunchGif from '../../images/rocket-launch.gif';
 import LaunchProviderCard from '../../components/LaunchProviderCard';
+import OrbiterCard from '../../components/OrbiterCard';
 
 export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
 
@@ -21,11 +22,13 @@ export const CategoryItemInfo = ({ item, category, isLoading, hasErrored }) => {
       case 'space_stations':
         return (<div>Space Stations.. In work</div>)
       case 'orbiters':
-        return (<div>Orbiters... In work</div>)
+        return < OrbiterCard 
+        orbiter={ item } 
+        detailed={ true } />;
       default:
-        return (< LaunchProviderCard 
+        return < LaunchProviderCard 
           launchProvider={item} 
-          detailed={ true } />);
+          detailed={ true } />;
     }
   }
   

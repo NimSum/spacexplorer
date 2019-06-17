@@ -6,6 +6,8 @@ import AstronautCard from '../../components/AstronautCard';
 import CategoryItemInfo from '../CategoryItemInfo';
 import PropTypes from 'prop-types';
 import LaunchProviderCard from '../../components/LaunchProviderCard';
+import OrbiterCard from '../../components/OrbiterCard';
+
 
 export class CategorySection extends Component {
   constructor() {
@@ -41,7 +43,8 @@ export class CategorySection extends Component {
       case 'space_stations':
           return <p>In work...</p>
       case 'orbiters':
-        return <p>In work...</p>
+        return (< OrbiterCard 
+          orbiter={item} showInfo={ this.showInfo } key={item.id} />);
       case 'astronauts':
         return (< AstronautCard 
           astronaut={item} showInfo={ this.showInfo } key={item.id} />);
