@@ -21,7 +21,7 @@ export class AsideEvents extends Component {
     try {
       const events = await fetchAnything(apiUrls.upcomingEvents);
       this.props.addUpcomingEvents(events);
-      this.setState({ events: events.results })
+      this.setState({ events: events.results.slice(0, 4) })
     } catch(error) {
       this.setState({ error: error.message });
     }
