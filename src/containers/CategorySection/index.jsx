@@ -63,6 +63,7 @@ export class CategorySection extends Component {
   }
   
   componentDidUpdate(prevProps) {
+    console.log(prevProps)
     if(prevProps !== this.props) this.checkAndUpdate();
   }
 
