@@ -56,54 +56,6 @@ exports[`CategoryMenu should match snapshot with menu shown 1`] = `
         Astronauts
       </span>
     </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      style={
-        Object {
-          "borderBottom": "1px solid #9EA9F0",
-          "color": "#FFEAFE",
-          "padding": "5px",
-          "textDecoration": "none",
-        }
-      }
-      to="/about/space_stations"
-    >
-      <span>
-        Space Stations
-      </span>
-    </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      style={
-        Object {
-          "borderBottom": "1px solid #9EA9F0",
-          "color": "#FFEAFE",
-          "padding": "5px",
-          "textDecoration": "none",
-        }
-      }
-      to="/about/orbiters"
-    >
-      <span>
-        Orbiters
-      </span>
-    </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      style={
-        Object {
-          "borderBottom": "1px solid #9EA9F0",
-          "color": "#FFEAFE",
-          "padding": "5px",
-          "textDecoration": "none",
-        }
-      }
-      to="/about/launch_providers"
-    >
-      <span>
-        Launch Providers
-      </span>
-    </NavLink>
     <Link
       style={
         Object {

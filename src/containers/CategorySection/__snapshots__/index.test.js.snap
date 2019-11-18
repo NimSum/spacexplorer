@@ -6,6 +6,142 @@ exports[`CategorySection should match component snapshot 1`] = `
 >
   <Connect(CategoryItemInfo)
     category="astronauts"
+    item={
+      Object {
+        "agency": Object {
+          "id": 44,
+          "name": "National Aeronautics and Space Administration",
+          "type": "Government",
+          "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+        },
+        "bio": "Clarence William Nelson II (born September 29, 1942) is an American politician serving as the senior United States Senator from Florida, first elected to that seat in 2000. A member of the Democratic Party, he previously served in the Florida House of Representatives from 1972 to 1978 and in the United States House of Representatives from 1979 to 1991. In January 1986, he became the second sitting member of Congress to fly in space when he served as a payload specialist on the Space Shuttle Columbia.",
+        "date_of_birth": "1942-09-29",
+        "date_of_death": null,
+        "flights": Array [
+          Object {
+            "id": "bbb4c25a-152d-4402-beee-2f62969b98c1",
+            "launch_library_id": 188,
+            "mission": Object {
+              "id": 682,
+              "launch_library_id": 920,
+              "name": "STS-61-C",
+              "type": "Communications",
+            },
+            "name": "Space Shuttle Columbia / OV-102 | STS-61-C",
+            "net": "1986-01-12T11:55:00Z",
+            "orbit": "LEO",
+            "pad": Object {
+              "id": 87,
+              "location": Object {
+                "id": 27,
+                "name": "Kennedy Space Center, FL, USA",
+              },
+              "name": "Launch Complex 39A, Kennedy Space Center, FL",
+            },
+            "rocket": Object {
+              "configuration": Object {
+                "full_name": "Space Shuttle Columbia OV-102",
+                "id": 170,
+                "image_url": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/space2520shuttle2520columbia2520ov-102_image_20190222030326.jpeg",
+                "launch_service_provider": Object {
+                  "id": 44,
+                  "name": "National Aeronautics and Space Administration",
+                  "type": "Government",
+                  "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+                },
+                "name": "Space Shuttle Columbia OV-102",
+                "url": "https://spacelaunchnow.me/api/3.3.1/config/launcher/170/",
+              },
+              "id": 314,
+            },
+            "slug": "https://spacelaunchnow.me/launch/space-shuttle-columbia-ov-102-sts-61-c-188",
+            "status": Object {
+              "id": 3,
+              "name": "Success",
+            },
+            "url": "https://spacelaunchnow.me/api/3.3.1/launch/bbb4c25a-152d-4402-beee-2f62969b98c1/",
+            "window_end": "1986-01-12T11:55:00Z",
+            "window_start": "1986-01-12T11:55:00Z",
+          },
+        ],
+        "id": 596,
+        "instagram": null,
+        "landings": Array [
+          Object {
+            "destination": "Low Earth Orbit",
+            "id": 67,
+            "launch": Object {
+              "id": "bbb4c25a-152d-4402-beee-2f62969b98c1",
+              "image": "https://daszojo4xmsc6.cloudfront.net/media/launcher_images/space2520shuttle2520columbia2520ov-102_image_20190222030326.jpeg",
+              "landing": null,
+              "landing_success": null,
+              "launch_library_id": 188,
+              "launcher": null,
+              "location": "Kennedy Space Center, FL, USA",
+              "mission": "STS-61-C",
+              "mission_type": "Communications",
+              "name": "Space Shuttle Columbia / OV-102 | STS-61-C",
+              "net": "1986-01-12T11:55:00Z",
+              "orbit": "LEO",
+              "pad": "Launch Complex 39A, Kennedy Space Center, FL",
+              "slug": "https://spacelaunchnow.me/launch/space-shuttle-columbia-ov-102-sts-61-c-188",
+              "status": Object {
+                "id": 3,
+                "name": "Success",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/launch/bbb4c25a-152d-4402-beee-2f62969b98c1/",
+              "window_end": "1986-01-12T11:55:00Z",
+              "window_start": "1986-01-12T11:55:00Z",
+            },
+            "mission_end": "1986-01-18T13:58:00Z",
+            "spacecraft": Object {
+              "configuration": Object {
+                "agency": Object {
+                  "id": 44,
+                  "name": "National Aeronautics and Space Administration",
+                  "type": "Government",
+                  "url": "https://spacelaunchnow.me/api/3.3.1/agencies/44/",
+                },
+                "id": 14,
+                "image_url": "https://daszojo4xmsc6.cloudfront.net/media/orbiter_images/space2520shuttle_image_20190207032524.jpeg",
+                "in_use": false,
+                "name": "Space Shuttle",
+                "type": Object {
+                  "id": 1,
+                  "name": "Unknown",
+                },
+                "url": "https://spacelaunchnow.me/api/3.3.1/config/spacecraft/14/",
+              },
+              "description": "Space Shuttle Columbia (Orbiter Vehicle Designation: OV-102) was the first space-rated orbiter in NASA's Space Shuttle fleet. It launched for the first time on mission STS-1 on April 12, 1981, the first flight of the Space Shuttle program. Over 22 years of service, it completed 27 missions before disintegrating during re-entry near the end of its 28th mission, STS-107 on February 1, 2003, resulting in the deaths of all seven crew members.",
+              "id": 36,
+              "name": "Space Shuttle Columbia",
+              "serial_number": "OV-102",
+              "status": Object {
+                "id": 3,
+                "name": "Destroyed",
+              },
+              "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/36/",
+            },
+            "url": "https://spacelaunchnow.me/api/3.3.1/spacecraft/flight/67/",
+          },
+        ],
+        "name": "Bill Nelson",
+        "nationality": "American",
+        "profile_image": "https://daszojo4xmsc6.cloudfront.net/media/astronaut_images/bill2520nelson_image_20190211162351.jpeg",
+        "profile_image_thumbnail": "https://daszojo4xmsc6.cloudfront.net/media/default/cache/15/18/151821a1575b1c84201de6e3e4f11d73.jpg",
+        "status": Object {
+          "id": 2,
+          "name": "Retired",
+        },
+        "twitter": null,
+        "type": Object {
+          "id": 4,
+          "name": "Non-Astronaut Passenger",
+        },
+        "url": "https://spacelaunchnow.me/api/3.3.1/astronaut/596/",
+        "wiki": "https://en.wikipedia.org/wiki/Bill_Nelson",
+      }
+    }
   />
   <h3
     className="sticky-title"

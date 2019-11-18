@@ -19,7 +19,7 @@ exports[`NextLaunchCard should match component snapshot 1`] = `
     className="info-side"
   >
     <h3>
-      Jun 04 10:00 PM
+      Jun 04 11:00 PM
     </h3>
     <p>
       Mission: 
